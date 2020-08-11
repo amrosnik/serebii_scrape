@@ -3,8 +3,19 @@ import urllib.request
 import time
 from bs4 import BeautifulSoup
 
-## At time of writing, the newest generation is Gen VIII, so we expect 893 Pokemon 
+## At time of writing, the newest generation is Gen VIII, so we expect 893 Pokemon
+## we also expect the following for other attributes: 
 total_num = 893
+
+possible_types = ["normal", "fire", "grass", "water", "fighting", "flying", 
+"poison", "ground", "rock", "bug", "ghost", "electric",
+"psychic", "ice", "dragon", "dark", "steel", "fairy"]
+
+possible_genders = ["genderless", "female", "male"]
+
+possible_egg_groups = ["monster", "human-like", "water 1", "water 2", "water 3", "bug", 
+"mineral", "flying", "amorphous", "field", "fairy", "ditto", "grass", "dragon", 
+"no eggs discovered", "gender unknown"]
 
 ## Link to the best Pokedex around: 
 url = 'https://www.serebii.net/pokemon/all.shtml'
@@ -31,60 +42,99 @@ elif len(hrefs) > total_num:
     print("Either there's more than "+str(total_num)+" Pokemon now, or we're actually scraping Digimon data...")
     exit()
 
-possible_types = ["normal", "fire", "grass", "water", "fighting", "flying", 
-"poison", "ground", "rock", "bug", "ghost", "electric",
-"psychic", "ice", "dragon", "dark", "steel", "fairy"]
-
-possible_genders = ["genderless", "female", "male"]
-
-possible_egg_groups = ["monster", "human-like", "water 1", "water 2", "water 3", "bug", 
-"mineral", "flying", "amorphous", "field", "fairy", "ditto", "grass", "dragon", 
-"no eggs discovered", "gender unknown"]
+def check_type(types_found,regional_check=True):
+    reference = set(possible_types)
+    newb = set(types_found)
+    if len(newb) == 0 and not regional_check:
+        print("Empty set of types")
+    elif (not reference & newb and len(newb) > 0): 
+        print("No identifiable type found!")
 
 ## we need to loop through *all* Pokemon listed on this page. 
-for i in range(0,len(hrefs)):
+#for i in range(0,len(hrefs)):
+misfits = [350, 412, 478, 491, 554, 647, 719, 740, 799, 887, 888]
+for i in misfits:    
     orig_link = 'https://www.serebii.net'+hrefs[i]
     orig_response = requests.get(orig_link)
     orig_soup = BeautifulSoup(orig_response.text, "html.parser")
+    name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON 
      
+    print("my name is",name,"# is ",i+1)
     ## determine Type 
     cens = orig_soup.find('td',{"class":"cen"}).findAll('tr') # the first class="cen" is always the Type section. 
-    # but there may be multiple Types, and if there are Alola and Galarian versions, the Types may differ. 
-    # these different versions are separated by 'tr' tags. 
-    standard_type = cens[0].findAll('a')['href']
-    standard_type = standard_type.split('/')[3] #split up entry to get TYPE_OF_POKEMON 
-    # TODO: double-check this works if the standard type actually has two types! test w/ Bulbasaur
-    if len(cens) > 1: 
-        for i in (1,len(cens)):
-            alolan = cens.find(text='Alolan')
-            galarian = cens.find(text='Galarian Type')
+    if len(cens) == 0: 
+        # the 'tr' tags only appear if there is at least one regional variant
+        trs = False
+        cens = orig_soup.find('td',{"class":"cen"})
+        standard_type = [a.attrs['href'] for a in cens.findAll('a')]
+    else:
+        trs = True
+        intermed = cens[0].findAll('a')
+        standard_type = [a.attrs['href'] for a in intermed]
+
+    ## EXCEPTIONS THAT MUST BE HANDLED: 
+    # Hoopa, 720
+    # Oricorio, 741
+    # Necrozma, 800 
+    # Zacian, 888
+    # Zamazenta, 889
+    # Meloetta, 648
+    # Darmanitan, 555 
+    # Shaymin, 492
+    # Rotom, 479
+    # Wormadam, 413
+    # Castform, 351
+
+    intermed_type = [x.split('/')[1] for x in standard_type]
+    for x in range(len(standard_type)): 
+        if "dex" in intermed_type[x]:
+            # some Pokemon have special forms that are unique to them. The types for these 
+            # unique variants that result in a change in type are given via /pokedex-SOMETHING links, 
+            # so they need to be parsed differently. 
+            standard_type[x] = standard_type[x].split('/')[2]
+            standard_type[x] = standard_type[x].split('.')[0]
+        elif intermed_type[x] == "pokemon":
+            standard_type[x] = standard_type[x].split('/')[3]
+    check_type(standard_type,regional_check=False)
+
+    print("you're my type, "+name+"! got ",standard_type)
+    alolan_form = galarian_form = False
+    alolan_type = galarian_type = []
+    if trs: 
+        for i in range(1,len(cens)):
+            alolan = cens[i].find(text='Alolan')
+            galarian = cens[i].find(text='Galarian')
             if alolan:
                 alolan_form = True 
-                alolan_type = cens[i].findAll('a')['href']
-                alolan_type = alolan_type.split('/')[3]
-                # TODO: double-check this works if the Alolan type actually has two types! test w/ Raichu 
+                alolan_type = cens[i].findAll('a')
+                alolan_type = [a.attrs['href'] for a in alolan_type]
+                alolan_type = [x.split('/')[3] for x in alolan_type]
+                print("Alolan type(s): ",alolan_type)
                 # TODO: functionalize this bit of code? I use it 3 times...
                 galarian_form = False
-            elif galarian:
+            if galarian:
                 galarian_form = True 
-                galarian_type = cens[i].findAll('a')['href']
-                galarian_type = alolan_type.split('/')[3]
-                # TODO: double-check this works if the Galarian type actually has two types! test w/ Meowth
+                galarian_type = cens[i].findAll('a')
+                galarian_type = [a.attrs['href'] for a in galarian_type]
+                galarian_type = [x.split('/')[3] for x in galarian_type]
+                print("Galarian type(s): ",galarian_type)
                 alolan_form = False
             else:
                 alolan_form = False
                 galarian_form = False
-    # TODO TEST: make sure that the types found 
-    
-    # use the "Alternate forms" section to look for Alola, Galar, and other Alternate Forms? 
+            # TODO: check if there are non-standard types for some Pokemon! (the misfits)
+    check_type(alolan_type)
+    check_type(galarian_type)
+
+    # use the "Alternate forms" section to look for non-regional other Alternate Forms? 
 
     ## Mega evolution
         # search page for alt="Mega Evolution Artwork"
     ## Gigantamax 
         # search page for alt="Gigantamax"
      
+    """
     ## get Pokedex number 
-    name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON 
     if i < 10: 
         index = '00'+str(i)
     elif i >= 10 and i < 100: 
@@ -112,3 +162,4 @@ for i in range(0,len(hrefs)):
     # [ miscellaneous variations] : unclear where these will show up. More research needed. 
 
     time.sleep(1)
+    """
