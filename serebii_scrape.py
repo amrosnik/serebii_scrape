@@ -53,7 +53,9 @@ def check_type(types_found,regional_check=True):
 ## we need to loop through *all* Pokemon listed on this page. 
 #for i in range(0,len(hrefs)):
 misfits = [350, 412, 478, 491, 554, 647, 719, 740, 799, 887, 888]
-for i in misfits:    
+misfits_abridged = [887,888]
+for i in misfits:  
+    indiv_types = dict()  
     orig_link = 'https://www.serebii.net'+hrefs[i]
     orig_response = requests.get(orig_link)
     orig_soup = BeautifulSoup(orig_response.text, "html.parser")
@@ -96,6 +98,7 @@ for i in misfits:
         elif intermed_type[x] == "pokemon":
             standard_type[x] = standard_type[x].split('/')[3]
     check_type(standard_type,regional_check=False)
+    indiv_types.update({"Standard Type" : standard_type})
 
     print("you're my type, "+name+"! got ",standard_type)
     alolan_form = galarian_form = False
@@ -122,9 +125,30 @@ for i in misfits:
             else:
                 alolan_form = False
                 galarian_form = False
+    
+        normal_find = [ cen.find(text='Normal') for cen in cens ]
+        unique_variations = []
+        if not all(normal_find): # if we have NO mention of a "Standard/Normal type", 
+        # then we check for the names of these exclusively unique variations
+            for j in range(len(cens)):
+                #if normal_find[j]:
+                    # TODO: refactor so that here we find the Standard Type 
+                    # TODO: refactor to check for Alola, Galar flags here 
+                if not normal_find[j]:
+                    tds = cens[j].find(['td'])
+                    new_type_name = tds.contents[0]
+                    unique_variations.append(new_type_name)
+                    new_type = cens[j].findAll('a')
+                    new_type = [a.attrs['href'] for a in new_type]
+                    new_type = [x.split('/')[2] for x in new_type ] 
+                    new_type = [x.split('.')[0] for x in new_type ] 
+                    indiv_types.update({new_type_name : new_type})
             # TODO: check if there are non-standard types for some Pokemon! (the misfits)
     check_type(alolan_type)
     check_type(galarian_type)
+    print(indiv_types)
+
+    # TODO: make a dictionary with all the types!! 
 
     # use the "Alternate forms" section to look for non-regional other Alternate Forms? 
 
