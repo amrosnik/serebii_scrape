@@ -50,30 +50,23 @@ def check_type(types_found,regional_check=True):
     elif (not reference & newb and len(newb) > 0): 
         print("No identifiable type found!")
 
+def split_by_dex(type_array):
+    intermed_type = [x.split('/')[1] for x in type_array]
+    for x in range(len(type_array)): 
+        if "dex" in intermed_type[x]:
+        # some Pokemon have special forms that are unique to them. The types for these 
+        # unique variants that result in a change in type are given via /pokedex-SOMETHING links, 
+        # so they need to be parsed differently. 
+            type_array[x] = type_array[x].split('/')[2]
+            type_array[x] = type_array[x].split('.')[0]
+        elif intermed_type[x] == "pokemon":
+            type_array[x] = type_array[x].split('/')[3]
+    return(type_array)
+
+
 ## we need to loop through *all* Pokemon listed on this page. 
 #for i in range(0,len(hrefs)):
 misfits = [350, 412, 478, 491, 554, 647, 719, 740, 799, 887, 888]
-misfits_abridged = [887,888]
-for i in misfits:  
-    indiv_types = dict()  
-    orig_link = 'https://www.serebii.net'+hrefs[i]
-    orig_response = requests.get(orig_link)
-    orig_soup = BeautifulSoup(orig_response.text, "html.parser")
-    name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON 
-     
-    print("my name is",name,"# is ",i+1)
-    ## determine Type 
-    cens = orig_soup.find('td',{"class":"cen"}).findAll('tr') # the first class="cen" is always the Type section. 
-    if len(cens) == 0: 
-        # the 'tr' tags only appear if there is at least one regional variant
-        trs = False
-        cens = orig_soup.find('td',{"class":"cen"})
-        standard_type = [a.attrs['href'] for a in cens.findAll('a')]
-    else:
-        trs = True
-        intermed = cens[0].findAll('a')
-        standard_type = [a.attrs['href'] for a in intermed]
-
     ## EXCEPTIONS THAT MUST BE HANDLED: 
     # Hoopa, 720
     # Oricorio, 741
@@ -87,68 +80,74 @@ for i in misfits:
     # Wormadam, 413
     # Castform, 351
 
-    intermed_type = [x.split('/')[1] for x in standard_type]
-    for x in range(len(standard_type)): 
-        if "dex" in intermed_type[x]:
-            # some Pokemon have special forms that are unique to them. The types for these 
-            # unique variants that result in a change in type are given via /pokedex-SOMETHING links, 
-            # so they need to be parsed differently. 
-            standard_type[x] = standard_type[x].split('/')[2]
-            standard_type[x] = standard_type[x].split('.')[0]
-        elif intermed_type[x] == "pokemon":
-            standard_type[x] = standard_type[x].split('/')[3]
-    check_type(standard_type,regional_check=False)
-    indiv_types.update({"Standard Type" : standard_type})
+gen_i = range(0,150)
+gen_ii = range(150,250)
+gen_iii = range(250,385)
+gen_iv = range(385,492)
+gen_v = range(492,648)
+gen_vi = range(648,720)
+gen_vii = range(720,808)
+gen_viii = range(808,892)
 
-    print("you're my type, "+name+"! got ",standard_type)
-    alolan_form = galarian_form = False
-    alolan_type = galarian_type = []
-    if trs: 
-        for i in range(1,len(cens)):
-            alolan = cens[i].find(text='Alolan')
-            galarian = cens[i].find(text='Galarian')
-            if alolan:
-                alolan_form = True 
-                alolan_type = cens[i].findAll('a')
-                alolan_type = [a.attrs['href'] for a in alolan_type]
-                alolan_type = [x.split('/')[3] for x in alolan_type]
-                print("Alolan type(s): ",alolan_type)
-                # TODO: functionalize this bit of code? I use it 3 times...
-                galarian_form = False
-            if galarian:
-                galarian_form = True 
-                galarian_type = cens[i].findAll('a')
-                galarian_type = [a.attrs['href'] for a in galarian_type]
-                galarian_type = [x.split('/')[3] for x in galarian_type]
-                print("Galarian type(s): ",galarian_type)
-                alolan_form = False
-            else:
-                alolan_form = False
-                galarian_form = False
-    
+for i in range(24,27):  
+    indiv_types = dict()  
+    orig_link = 'https://www.serebii.net'+hrefs[i]
+    name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON      
+    if i == 554:
+        orig_link = 'https://www.serebii.net'+'/pokedex-swsh/'+name
+    orig_response = requests.get(orig_link)
+    orig_soup = BeautifulSoup(orig_response.text, "html.parser")
+    print("my name is",name,"# is ",i+1)
+    ## determine Type 
+    cens = orig_soup.find('td',{"class":"cen"}).findAll('tr') # the first class="cen" is always the Type section. 
+    if len(cens) == 0: 
+        # the 'tr' tags only appear if there is at least one regional variant
+        cens = orig_soup.find('td',{"class":"cen"})
+        standard_type = [a.attrs['href'] for a in cens.findAll('a')]
+        standard_type = split_by_dex(standard_type)
+        check_type(standard_type,regional_check=False)
+        indiv_types.update({"Standard Type" : standard_type})
+    else:
+        intermed = cens[0].findAll('a')
+        standard_type = [a.attrs['href'] for a in intermed]
+
+        # first, check if we have a "Normal Type". If present, this will serve as the default type
+        # then, search for regional variations or unique variations 
         normal_find = [ cen.find(text='Normal') for cen in cens ]
         unique_variations = []
-        if not all(normal_find): # if we have NO mention of a "Standard/Normal type", 
-        # then we check for the names of these exclusively unique variations
+        if not all(normal_find): 
             for j in range(len(cens)):
-                #if normal_find[j]:
-                    # TODO: refactor so that here we find the Standard Type 
-                    # TODO: refactor to check for Alola, Galar flags here 
-                if not normal_find[j]:
+                if normal_find[j]:
+                    if "Standard Type" in indiv_types:
+                        print("WARNING: There is more than one standard type?!")
+                    else:
+                        intermed = cens[j].findAll('a')
+                        standard_type = [a.attrs['href'] for a in intermed]
+                        standard_type = split_by_dex(standard_type)
+                        indiv_types.update({"Standard Type" : standard_type})
+                else:
                     tds = cens[j].find(['td'])
                     new_type_name = tds.contents[0]
-                    unique_variations.append(new_type_name)
+                    if new_type_name in indiv_types:
+                        print("WARNING: Same non-standard type appears twice?!")
+                        new_type_name = new_type_name+" #2"
+                    #unique_variations.append(new_type_name)
                     new_type = cens[j].findAll('a')
                     new_type = [a.attrs['href'] for a in new_type]
-                    new_type = [x.split('/')[2] for x in new_type ] 
-                    new_type = [x.split('.')[0] for x in new_type ] 
+                    new_type = split_by_dex(new_type)
                     indiv_types.update({new_type_name : new_type})
-            # TODO: check if there are non-standard types for some Pokemon! (the misfits)
-    check_type(alolan_type)
-    check_type(galarian_type)
+    if "Alolan" in indiv_types:
+        alolan_form = True
+    else: 
+        alolan_form = False
+                    
+    if "Galarian" in indiv_types:
+        galarian_form = True
+    else:
+        galarian_form = False
+    for i in indiv_types:
+        check_type(indiv_types[i])
     print(indiv_types)
-
-    # TODO: make a dictionary with all the types!! 
 
     # use the "Alternate forms" section to look for non-regional other Alternate Forms? 
 
@@ -182,8 +181,7 @@ for i in misfits:
     # Gender differences: search to see if this section exists once in correct Pokedex 
     # Egg Groups 
     # Shiny (look for "Shiny Sprite"; not all may have this)
-    # should I even bother with the Shadow thing? hard to figure out where to scrape the data... 
-    # [ miscellaneous variations] : unclear where these will show up. More research needed. 
+    # [ miscellaneous variations that may involve variations without type changes ]  
 
     time.sleep(1)
     """
