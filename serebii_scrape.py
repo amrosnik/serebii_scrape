@@ -89,7 +89,7 @@ gen_vi = range(648,720)
 gen_vii = range(720,808)
 gen_viii = range(808,892)
 
-for i in range(24,27):  
+for i in range(24,25):  
     indiv_types = dict()  
     orig_link = 'https://www.serebii.net'+hrefs[i]
     name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON      
@@ -145,18 +145,10 @@ for i in range(24,27):
         galarian_form = True
     else:
         galarian_form = False
-    for i in indiv_types:
-        check_type(indiv_types[i])
+    for k in indiv_types:
+        check_type(indiv_types[k])
     print(indiv_types)
 
-    # use the "Alternate forms" section to look for non-regional other Alternate Forms? 
-
-    ## Mega evolution
-        # search page for alt="Mega Evolution Artwork"
-    ## Gigantamax 
-        # search page for alt="Gigantamax"
-     
-    """
     ## get Pokedex number 
     if i < 10: 
         index = '00'+str(i)
@@ -168,7 +160,7 @@ for i in range(24,27):
     ## make sure we have the correct Pokedex version.
     ## for Pokemon in Gen I-VII, we'll take data from the Gen VII Pokedex
     if i < 809: 
-        pokedex_link = 'https://www.serebii.net/pokedex-sm'+index+".shtml"
+        pokedex_link = 'https://www.serebii.net/pokedex-sm/'+index+".shtml"
     ## for Pokemon in Gen VIII, we'll take data from the Gen VIII Pokedex  
     else: 
         pokedex_link = 'https://www.serebii.net/pokedex-swsh/'+name+'/' 
@@ -176,6 +168,26 @@ for i in range(24,27):
     dex_response = requests.get(pokedex_link)
     dex_soup = BeautifulSoup(dex_response.text, "html.parser")
 
+    ## use dextable to look for: Egg Group, Evolutionary Chain 
+    dextables = dex_soup.findAll('table',{"class":"dextable"})
+    print(len(dextables))
+    evoln_table = [dextable.find(text="Evolutionary Chain") for dextable in dextables]
+    evoln_index = [True if evoln == "Evolutionary Chain" else False for evoln in evoln_table]
+    #evoln_table = dextables[evoln_index]
+    # .find(text="Egg Group") 
+    print(evoln_index)
+
+
+
+    # use the "Alternate forms" section to look for non-regional other Alternate Forms? 
+
+    ## Mega evolution
+        # search page for alt="Mega Evolution Artwork"
+    ## Gigantamax 
+        # search page for alt="Gigantamax"
+     
+    """
+    
     ## now that we have the Pokedex entry data, let's get some more attributes!
     # Gender Ratio 
     # Gender differences: search to see if this section exists once in correct Pokedex 
