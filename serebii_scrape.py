@@ -2,6 +2,7 @@ import requests
 import urllib.request
 import time
 from bs4 import BeautifulSoup
+import re
 
 ## At time of writing, the newest generation is Gen VIII, so we expect 893 Pokemon
 ## we also expect the following for other attributes: 
@@ -89,7 +90,7 @@ gen_vi = range(648,720)
 gen_vii = range(720,808)
 gen_viii = range(808,892)
 
-for i in range(24,25):  
+for i in range(1,3):  
     indiv_types = dict()  
     orig_link = 'https://www.serebii.net'+hrefs[i]
     name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON      
@@ -150,12 +151,13 @@ for i in range(24,25):
     print(indiv_types)
 
     ## get Pokedex number 
+    ## remember, Python indexes start at ONE, so the actual pokedex index is...i+1
     if i < 10: 
-        index = '00'+str(i)
+        index = '00'+str(i+1)
     elif i >= 10 and i < 100: 
-        index = '0'+str(i)
+        index = '0'+str(i+1)
     else: 
-        index = str(i)
+        index = str(i+1)
 
     ## make sure we have the correct Pokedex version.
     ## for Pokemon in Gen I-VII, we'll take data from the Gen VII Pokedex
@@ -170,12 +172,32 @@ for i in range(24,25):
 
     ## use dextable to look for: Egg Group, Evolutionary Chain 
     dextables = dex_soup.findAll('table',{"class":"dextable"})
-    print(len(dextables))
+    #print(len(dextables))
     evoln_table = [dextable.find(text="Evolutionary Chain") for dextable in dextables]
-    evoln_index = [True if evoln == "Evolutionary Chain" else False for evoln in evoln_table]
-    #evoln_table = dextables[evoln_index]
-    # .find(text="Egg Group") 
-    print(evoln_index)
+    evoln_index = evoln_table.index("Evolutionary Chain")
+    evoln_chain = dextables[evoln_index]
+    evoln_trs = evoln_chain.findAll('tr')
+    # the second tr is the one we want. the first one denotes we are looking for an Evolutionary Chain
+    evoln_chain_forreal = evoln_trs[1] #.contents
+    find_evolns = evoln_chain_forreal.findAll('td',{"class":"pkmn"})
+    evolns_as = [z.find('a').attrs['href'] for z in find_evolns]
+    self_finder = [re.search(index,z) for z in evolns_as]
+    self_index = [ z for z in self_finder if z is not None]
+    self_index = self_finder.index(self_index[0]) # we hopefully should only have one element here...test this
+    print(self_index)
+    if len(evolns_as) > 1: 
+        is_it_in_an_evoln_chain = True 
+        if len(evolns_as) > self_index: # this breaks for the final stage of an evoln chain 
+            does_it_evolve = True
+        else:
+            does_it_evolve = False
+    else:
+        is_it_in_an_evoln_chain = False 
+    #find_evolns = [ evoln.findAll('td') for evoln in evoln_chain_forreal ] 
+    # TODO: probs will need to write this finding + find index + subsequent finding of correct tr tag 
+    # into a function... 
+    # TODO: ensure that we don't catch Mega Evoln in this process... 
+    print(is_it_in_an_evoln_chain, does_it_evolve)
 
 
 
