@@ -90,7 +90,7 @@ gen_vi = range(648,720)
 gen_vii = range(720,808)
 gen_viii = range(808,892)
 
-for i in range(1,3):  
+for i in range(24,26):  
     indiv_types = dict()  
     orig_link = 'https://www.serebii.net'+hrefs[i]
     name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON      
@@ -183,26 +183,45 @@ for i in range(1,3):
     evolns_as = [z.find('a').attrs['href'] for z in find_evolns]
     self_finder = [re.search(index,z) for z in evolns_as]
     self_index = [ z for z in self_finder if z is not None]
-    self_index = self_finder.index(self_index[0]) # we hopefully should only have one element here...test this
-    print(self_index)
-    if len(evolns_as) > 1: 
+    self_index = [ self_finder.index(i) for i in self_index ]
+    num_evolns = len(evolns_as)
+    if num_evolns > 1: 
         is_it_in_an_evoln_chain = True 
-        if len(evolns_as) > self_index: # this breaks for the final stage of an evoln chain 
-            does_it_evolve = True
-        else:
-            does_it_evolve = False
+        if len(self_index) > 1: 
+            if num_evolns > len(self_index): 
+                # if we are in this scenario, we have a Pokemon that can Gigantamax and/or Mega Evolve
+                if max(self_index) == (num_evolns - 1):
+                    does_it_evolve = False
+                    if (max(self_index)-1 in self_index): 
+                    # if the two largest numbers in the self_index are indices for this Pokemon, 
+                    # it is at the end of its evolutionary chain AND it has multiple possible forms.
+                    # those additional forms may be: regional variations, unique variations, 
+                    # Mega Evolutions, or Gigantamax evolutions.
+                        mega = True # TODO: NOT NECESSARILY TRUE! need to work on this logic
+                        gigantamax = False # TODO: NOT NECESSARILY TRUE! need to work on this logic
+                    else:
+                        mega = False 
+                        gigantamax = False
+            else:
+                does_it_evolve = False
+        elif len(self_index) == 1:
+            mega = False
+            gigantamax = False
+            if self_index[0] == (num_evolns -1):
+                does_it_evolve = False
+            elif self_index[0] < (num_evolns -1):
+                does_it_evolve = True   
     else:
         is_it_in_an_evoln_chain = False 
+        does_it_evolve = False
+        mega = False
+        gigantamax = False
     #find_evolns = [ evoln.findAll('td') for evoln in evoln_chain_forreal ] 
     # TODO: probs will need to write this finding + find index + subsequent finding of correct tr tag 
     # into a function... 
-    # TODO: ensure that we don't catch Mega Evoln in this process... 
-    print(is_it_in_an_evoln_chain, does_it_evolve)
+    print(is_it_in_an_evoln_chain, does_it_evolve, mega, gigantamax)
 
-
-
-    # use the "Alternate forms" section to look for non-regional other Alternate Forms? 
-
+    # use the "Alternate forms" section to look for non-regional other Alternate Forms
     ## Mega evolution
         # search page for alt="Mega Evolution Artwork"
     ## Gigantamax 
