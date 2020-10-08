@@ -61,12 +61,15 @@ hrefs = [a.attrs['href'] for a in (table.find('a') for table in soup.findAll('ta
 ######## FUNCTION DEFINITIONS ########
 
 def which_generation(num):
+    gen = 999
     for (lower,upper) in generations:
         if (lower <= num <= upper): 
-            return(generations.index((lower,upper))+1)
-        else:
-            print("WARNING: THIS POKEDEX NUMBER DOES NOT EXIST. RETURNING 999 AS GENERATION NUMBER")
-            return(999)
+            gen = generations.index((lower,upper))+1
+    if gen != 999:
+        return(gen)
+    else:
+        print("WARNING: THIS POKEDEX NUMBER,",num, " DOES NOT EXIST. RETURNING 999 AS GENERATION NUMBER")
+        return(999)
 
 def check_type(types_found,regional_check=True):
     reference = set(possible_types)
@@ -123,8 +126,8 @@ def get_types_and_variants(i):
             for j in range(len(cens)):
                 if normal_find[j]:
                     if "Standard Type" in indiv_types:
-                        print("WARNING: There is more than one standard type?!")
-                    else:
+                        print("WARNING: For ,*",name,"* There is more than one standard type?!")
+                    else: 
                         intermed = cens[j].findAll('a')
                         standard_type = [a.attrs['href'] for a in intermed]
                         standard_type = split_by_dex(standard_type)
@@ -133,7 +136,7 @@ def get_types_and_variants(i):
                     tds = cens[j].find(['td'])
                     new_type_name = tds.contents[0]
                     if new_type_name in indiv_types:
-                        print("WARNING: Same non-standard type appears twice?!")
+                        print("WARNING: For ,*",name,"* Same non-standard type appears twice?!")
                         new_type_name = new_type_name+" #2"
                     #unique_variations.append(new_type_name)
                     new_type = cens[j].findAll('a')

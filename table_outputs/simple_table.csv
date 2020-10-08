@@ -1,0 +1,894 @@
+generation,name,number,type
+1,bulbasaur,1,"{'Standard Type': ['grass', 'poison']}"
+1,ivysaur,2,"{'Standard Type': ['grass', 'poison']}"
+1,venusaur,3,"{'Standard Type': ['grass', 'poison']}"
+1,charmander,4,{'Standard Type': ['fire']}
+1,charmeleon,5,{'Standard Type': ['fire']}
+1,charizard,6,"{'Standard Type': ['fire', 'flying']}"
+1,squirtle,7,{'Standard Type': ['water']}
+1,wartortle,8,{'Standard Type': ['water']}
+1,blastoise,9,{'Standard Type': ['water']}
+1,caterpie,10,{'Standard Type': ['bug']}
+1,metapod,11,{'Standard Type': ['bug']}
+1,butterfree,12,"{'Standard Type': ['bug', 'flying']}"
+1,weedle,13,"{'Standard Type': ['bug', 'poison']}"
+1,kakuna,14,"{'Standard Type': ['bug', 'poison']}"
+1,beedrill,15,"{'Standard Type': ['bug', 'poison']}"
+1,pidgey,16,"{'Standard Type': ['normal', 'flying']}"
+1,pidgeotto,17,"{'Standard Type': ['normal', 'flying']}"
+1,pidgeot,18,"{'Standard Type': ['normal', 'flying']}"
+1,rattata,19,"{'Standard Type': ['normal'], 'Alolan': ['dark', 'normal']}"
+1,raticate,20,"{'Standard Type': ['normal'], 'Alolan': ['dark', 'normal']}"
+1,spearow,21,"{'Standard Type': ['normal', 'flying']}"
+1,fearow,22,"{'Standard Type': ['normal', 'flying']}"
+1,ekans,23,{'Standard Type': ['poison']}
+1,arbok,24,{'Standard Type': ['poison']}
+1,pikachu,25,{'Standard Type': ['electric']}
+1,raichu,26,"{'Standard Type': ['electric'], 'Alolan': ['electric', 'psychic']}"
+1,sandshrew,27,"{'Standard Type': ['ground'], 'Alolan': ['ice', 'steel']}"
+1,sandslash,28,"{'Standard Type': ['ground'], 'Alolan': ['ice', 'steel']}"
+1,nidoranf,29,{'Standard Type': ['poison']}
+1,nidorina,30,{'Standard Type': ['poison']}
+1,nidoqueen,31,"{'Standard Type': ['poison', 'ground']}"
+1,nidoranm,32,{'Standard Type': ['poison']}
+1,nidorino,33,{'Standard Type': ['poison']}
+1,nidoking,34,"{'Standard Type': ['poison', 'ground']}"
+1,clefairy,35,{'Standard Type': ['fairy']}
+1,clefable,36,{'Standard Type': ['fairy']}
+1,vulpix,37,"{'Standard Type': ['fire'], 'Alolan': ['ice']}"
+1,ninetales,38,"{'Standard Type': ['fire'], 'Alolan': ['ice', 'fairy']}"
+1,jigglypuff,39,"{'Standard Type': ['normal', 'fairy']}"
+1,wigglytuff,40,"{'Standard Type': ['normal', 'fairy']}"
+1,zubat,41,"{'Standard Type': ['poison', 'flying']}"
+1,golbat,42,"{'Standard Type': ['poison', 'flying']}"
+1,oddish,43,"{'Standard Type': ['grass', 'poison']}"
+1,gloom,44,"{'Standard Type': ['grass', 'poison']}"
+1,vileplume,45,"{'Standard Type': ['grass', 'poison']}"
+1,paras,46,"{'Standard Type': ['bug', 'grass']}"
+1,parasect,47,"{'Standard Type': ['bug', 'grass']}"
+1,venonat,48,"{'Standard Type': ['bug', 'poison']}"
+1,venomoth,49,"{'Standard Type': ['bug', 'poison']}"
+1,diglett,50,"{'Standard Type': ['ground'], 'Alolan': ['ground', 'steel']}"
+1,dugtrio,51,"{'Standard Type': ['ground'], 'Alolan': ['ground', 'steel']}"
+1,meowth,52,"{'Standard Type': ['normal'], 'Alolan': ['dark'], 'Galarian': ['steel']}"
+1,persian,53,"{'Standard Type': ['normal'], 'Alolan': ['dark']}"
+1,psyduck,54,{'Standard Type': ['water']}
+1,golduck,55,{'Standard Type': ['water']}
+1,mankey,56,{'Standard Type': ['fighting']}
+1,primeape,57,{'Standard Type': ['fighting']}
+1,growlithe,58,{'Standard Type': ['fire']}
+1,arcanine,59,{'Standard Type': ['fire']}
+1,poliwag,60,{'Standard Type': ['water']}
+1,poliwhirl,61,{'Standard Type': ['water']}
+1,poliwrath,62,"{'Standard Type': ['water', 'fighting']}"
+1,abra,63,{'Standard Type': ['psychic']}
+1,kadabra,64,{'Standard Type': ['psychic']}
+1,alakazam,65,{'Standard Type': ['psychic']}
+1,machop,66,{'Standard Type': ['fighting']}
+1,machoke,67,{'Standard Type': ['fighting']}
+1,machamp,68,{'Standard Type': ['fighting']}
+1,bellsprout,69,"{'Standard Type': ['grass', 'poison']}"
+1,weepinbell,70,"{'Standard Type': ['grass', 'poison']}"
+1,victreebel,71,"{'Standard Type': ['grass', 'poison']}"
+1,tentacool,72,"{'Standard Type': ['water', 'poison']}"
+1,tentacruel,73,"{'Standard Type': ['water', 'poison']}"
+1,geodude,74,"{'Standard Type': ['rock', 'ground'], 'Alolan': ['rock', 'electric']}"
+1,graveler,75,"{'Standard Type': ['rock', 'ground'], 'Alolan': ['rock', 'electric']}"
+1,golem,76,"{'Standard Type': ['rock', 'ground'], 'Alolan': ['rock', 'electric']}"
+1,ponyta,77,"{'Standard Type': ['fire'], 'Galarian': ['psychic']}"
+1,rapidash,78,"{'Standard Type': ['fire'], 'Galarian': ['psychic', 'fairy']}"
+1,slowpoke,79,"{'Standard Type': ['water', 'psychic'], 'Galarian': ['psychic']}"
+1,slowbro,80,"{'Standard Type': ['water', 'psychic'], 'Galarian': ['poison', 'psychic']}"
+1,magnemite,81,"{'Standard Type': ['electric', 'steel']}"
+1,magneton,82,"{'Standard Type': ['electric', 'steel']}"
+1,farfetch'd,83,"{'Standard Type': ['normal', 'flying'], 'Galarian': ['fighting']}"
+1,doduo,84,"{'Standard Type': ['normal', 'flying']}"
+1,dodrio,85,"{'Standard Type': ['normal', 'flying']}"
+1,seel,86,{'Standard Type': ['water']}
+1,dewgong,87,"{'Standard Type': ['water', 'ice']}"
+1,grimer,88,"{'Standard Type': ['poison'], 'Alolan': ['poison', 'dark']}"
+1,muk,89,"{'Standard Type': ['poison'], 'Alolan': ['poison', 'dark']}"
+1,shellder,90,{'Standard Type': ['water']}
+1,cloyster,91,"{'Standard Type': ['water', 'ice']}"
+1,gastly,92,"{'Standard Type': ['ghost', 'poison']}"
+1,haunter,93,"{'Standard Type': ['ghost', 'poison']}"
+1,gengar,94,"{'Standard Type': ['ghost', 'poison']}"
+1,onix,95,"{'Standard Type': ['rock', 'ground']}"
+1,drowzee,96,{'Standard Type': ['psychic']}
+1,hypno,97,{'Standard Type': ['psychic']}
+1,krabby,98,{'Standard Type': ['water']}
+1,kingler,99,{'Standard Type': ['water']}
+1,voltorb,100,{'Standard Type': ['electric']}
+1,electrode,101,{'Standard Type': ['electric']}
+1,exeggcute,102,"{'Standard Type': ['grass', 'psychic']}"
+1,exeggutor,103,"{'Standard Type': ['grass', 'psychic'], 'Alolan': ['grass', 'dragon']}"
+1,cubone,104,{'Standard Type': ['ground']}
+1,marowak,105,"{'Standard Type': ['ground'], 'Alolan': ['fire', 'ghost']}"
+1,hitmonlee,106,{'Standard Type': ['fighting']}
+1,hitmonchan,107,{'Standard Type': ['fighting']}
+1,lickitung,108,{'Standard Type': ['normal']}
+1,koffing,109,{'Standard Type': ['poison']}
+1,weezing,110,"{'Standard Type': ['poison'], 'Galarian': ['poison', 'fairy']}"
+1,rhyhorn,111,"{'Standard Type': ['ground', 'rock']}"
+1,rhydon,112,"{'Standard Type': ['ground', 'rock']}"
+1,chansey,113,{'Standard Type': ['normal']}
+1,tangela,114,{'Standard Type': ['grass']}
+1,kangaskhan,115,{'Standard Type': ['normal']}
+1,horsea,116,{'Standard Type': ['water']}
+1,seadra,117,{'Standard Type': ['water']}
+1,goldeen,118,{'Standard Type': ['water']}
+1,seaking,119,{'Standard Type': ['water']}
+1,staryu,120,{'Standard Type': ['water']}
+1,starmie,121,"{'Standard Type': ['water', 'psychic']}"
+1,mr.mime,122,"{'Standard Type': ['psychic', 'fairy'], 'Galarian': ['ice', 'psychic']}"
+1,scyther,123,"{'Standard Type': ['bug', 'flying']}"
+1,jynx,124,"{'Standard Type': ['ice', 'psychic']}"
+1,electabuzz,125,{'Standard Type': ['electric']}
+1,magmar,126,{'Standard Type': ['fire']}
+1,pinsir,127,{'Standard Type': ['bug']}
+1,tauros,128,{'Standard Type': ['normal']}
+1,magikarp,129,{'Standard Type': ['water']}
+1,gyarados,130,"{'Standard Type': ['water', 'flying']}"
+1,lapras,131,"{'Standard Type': ['water', 'ice']}"
+1,ditto,132,{'Standard Type': ['normal']}
+1,eevee,133,{'Standard Type': ['normal']}
+1,vaporeon,134,{'Standard Type': ['water']}
+1,jolteon,135,{'Standard Type': ['electric']}
+1,flareon,136,{'Standard Type': ['fire']}
+1,porygon,137,{'Standard Type': ['normal']}
+1,omanyte,138,"{'Standard Type': ['rock', 'water']}"
+1,omastar,139,"{'Standard Type': ['rock', 'water']}"
+1,kabuto,140,"{'Standard Type': ['rock', 'water']}"
+1,kabutops,141,"{'Standard Type': ['rock', 'water']}"
+1,aerodactyl,142,"{'Standard Type': ['rock', 'flying']}"
+1,snorlax,143,{'Standard Type': ['normal']}
+1,articuno,144,"{'Standard Type': ['ice', 'flying']}"
+1,zapdos,145,"{'Standard Type': ['electric', 'flying']}"
+1,moltres,146,"{'Standard Type': ['fire', 'flying']}"
+1,dratini,147,{'Standard Type': ['dragon']}
+1,dragonair,148,{'Standard Type': ['dragon']}
+1,dragonite,149,"{'Standard Type': ['dragon', 'flying']}"
+1,mewtwo,150,{'Standard Type': ['psychic']}
+1,mew,151,{'Standard Type': ['psychic']}
+2,chikorita,152,{'Standard Type': ['grass']}
+2,bayleef,153,{'Standard Type': ['grass']}
+2,meganium,154,{'Standard Type': ['grass']}
+2,cyndaquil,155,{'Standard Type': ['fire']}
+2,quilava,156,{'Standard Type': ['fire']}
+2,typhlosion,157,{'Standard Type': ['fire']}
+2,totodile,158,{'Standard Type': ['water']}
+2,croconaw,159,{'Standard Type': ['water']}
+2,feraligatr,160,{'Standard Type': ['water']}
+2,sentret,161,{'Standard Type': ['normal']}
+2,furret,162,{'Standard Type': ['normal']}
+2,hoothoot,163,"{'Standard Type': ['normal', 'flying']}"
+2,noctowl,164,"{'Standard Type': ['normal', 'flying']}"
+2,ledyba,165,"{'Standard Type': ['bug', 'flying']}"
+2,ledian,166,"{'Standard Type': ['bug', 'flying']}"
+2,spinarak,167,"{'Standard Type': ['bug', 'poison']}"
+2,ariados,168,"{'Standard Type': ['bug', 'poison']}"
+2,crobat,169,"{'Standard Type': ['poison', 'flying']}"
+2,chinchou,170,"{'Standard Type': ['water', 'electric']}"
+2,lanturn,171,"{'Standard Type': ['water', 'electric']}"
+2,pichu,172,{'Standard Type': ['electric']}
+2,cleffa,173,{'Standard Type': ['fairy']}
+2,igglybuff,174,"{'Standard Type': ['normal', 'fairy']}"
+2,togepi,175,{'Standard Type': ['fairy']}
+2,togetic,176,"{'Standard Type': ['fairy', 'flying']}"
+2,natu,177,"{'Standard Type': ['psychic', 'flying']}"
+2,xatu,178,"{'Standard Type': ['psychic', 'flying']}"
+2,mareep,179,{'Standard Type': ['electric']}
+2,flaaffy,180,{'Standard Type': ['electric']}
+2,ampharos,181,{'Standard Type': ['electric']}
+2,bellossom,182,{'Standard Type': ['grass']}
+2,marill,183,"{'Standard Type': ['water', 'fairy']}"
+2,azumarill,184,"{'Standard Type': ['water', 'fairy']}"
+2,sudowoodo,185,{'Standard Type': ['rock']}
+2,politoed,186,{'Standard Type': ['water']}
+2,hoppip,187,"{'Standard Type': ['grass', 'flying']}"
+2,skiploom,188,"{'Standard Type': ['grass', 'flying']}"
+2,jumpluff,189,"{'Standard Type': ['grass', 'flying']}"
+2,aipom,190,{'Standard Type': ['normal']}
+2,sunkern,191,{'Standard Type': ['grass']}
+2,sunflora,192,{'Standard Type': ['grass']}
+2,yanma,193,"{'Standard Type': ['bug', 'flying']}"
+2,wooper,194,"{'Standard Type': ['water', 'ground']}"
+2,quagsire,195,"{'Standard Type': ['water', 'ground']}"
+2,espeon,196,{'Standard Type': ['psychic']}
+2,umbreon,197,{'Standard Type': ['dark']}
+2,murkrow,198,"{'Standard Type': ['dark', 'flying']}"
+2,slowking,199,"{'Standard Type': ['water', 'psychic']}"
+2,misdreavus,200,{'Standard Type': ['ghost']}
+2,unown,201,{'Standard Type': ['psychic']}
+2,wobbuffet,202,{'Standard Type': ['psychic']}
+2,girafarig,203,"{'Standard Type': ['normal', 'psychic']}"
+2,pineco,204,{'Standard Type': ['bug']}
+2,forretress,205,"{'Standard Type': ['bug', 'steel']}"
+2,dunsparce,206,{'Standard Type': ['normal']}
+2,gligar,207,"{'Standard Type': ['ground', 'flying']}"
+2,steelix,208,"{'Standard Type': ['steel', 'ground']}"
+2,snubbull,209,{'Standard Type': ['fairy']}
+2,granbull,210,{'Standard Type': ['fairy']}
+2,qwilfish,211,"{'Standard Type': ['water', 'poison']}"
+2,scizor,212,"{'Standard Type': ['bug', 'steel']}"
+2,shuckle,213,"{'Standard Type': ['bug', 'rock']}"
+2,heracross,214,"{'Standard Type': ['bug', 'fighting']}"
+2,sneasel,215,"{'Standard Type': ['dark', 'ice']}"
+2,teddiursa,216,{'Standard Type': ['normal']}
+2,ursaring,217,{'Standard Type': ['normal']}
+2,slugma,218,{'Standard Type': ['fire']}
+2,magcargo,219,"{'Standard Type': ['fire', 'rock']}"
+2,swinub,220,"{'Standard Type': ['ice', 'ground']}"
+2,piloswine,221,"{'Standard Type': ['ice', 'ground']}"
+2,corsola,222,"{'Standard Type': ['water', 'rock'], 'Galarian': ['ghost']}"
+2,remoraid,223,{'Standard Type': ['water']}
+2,octillery,224,{'Standard Type': ['water']}
+2,delibird,225,"{'Standard Type': ['ice', 'flying']}"
+2,mantine,226,"{'Standard Type': ['water', 'flying']}"
+2,skarmory,227,"{'Standard Type': ['steel', 'flying']}"
+2,houndour,228,"{'Standard Type': ['dark', 'fire']}"
+2,houndoom,229,"{'Standard Type': ['dark', 'fire']}"
+2,kingdra,230,"{'Standard Type': ['water', 'dragon']}"
+2,phanpy,231,{'Standard Type': ['ground']}
+2,donphan,232,{'Standard Type': ['ground']}
+2,porygon2,233,{'Standard Type': ['normal']}
+2,stantler,234,{'Standard Type': ['normal']}
+2,smeargle,235,{'Standard Type': ['normal']}
+2,tyrogue,236,{'Standard Type': ['fighting']}
+2,hitmontop,237,{'Standard Type': ['fighting']}
+2,smoochum,238,"{'Standard Type': ['ice', 'psychic']}"
+2,elekid,239,{'Standard Type': ['electric']}
+2,magby,240,{'Standard Type': ['fire']}
+2,miltank,241,{'Standard Type': ['normal']}
+2,blissey,242,{'Standard Type': ['normal']}
+2,raikou,243,{'Standard Type': ['electric']}
+2,entei,244,{'Standard Type': ['fire']}
+2,suicune,245,{'Standard Type': ['water']}
+2,larvitar,246,"{'Standard Type': ['rock', 'ground']}"
+2,pupitar,247,"{'Standard Type': ['rock', 'ground']}"
+2,tyranitar,248,"{'Standard Type': ['rock', 'dark']}"
+2,lugia,249,"{'Standard Type': ['psychic', 'flying']}"
+2,ho-oh,250,"{'Standard Type': ['fire', 'flying']}"
+2,celebi,251,"{'Standard Type': ['psychic', 'grass']}"
+3,treecko,252,{'Standard Type': ['grass']}
+3,grovyle,253,{'Standard Type': ['grass']}
+3,sceptile,254,{'Standard Type': ['grass']}
+3,torchic,255,{'Standard Type': ['fire']}
+3,combusken,256,"{'Standard Type': ['fire', 'fighting']}"
+3,blaziken,257,"{'Standard Type': ['fire', 'fighting']}"
+3,mudkip,258,{'Standard Type': ['water']}
+3,marshtomp,259,"{'Standard Type': ['water', 'ground']}"
+3,swampert,260,"{'Standard Type': ['water', 'ground']}"
+3,poochyena,261,{'Standard Type': ['dark']}
+3,mightyena,262,{'Standard Type': ['dark']}
+3,zigzagoon,263,"{'Standard Type': ['normal'], 'Galarian': ['dark', 'normal']}"
+3,linoone,264,"{'Standard Type': ['normal'], 'Galarian': ['dark', 'normal']}"
+3,wurmple,265,{'Standard Type': ['bug']}
+3,silcoon,266,{'Standard Type': ['bug']}
+3,beautifly,267,"{'Standard Type': ['bug', 'flying']}"
+3,cascoon,268,{'Standard Type': ['bug']}
+3,dustox,269,"{'Standard Type': ['bug', 'poison']}"
+3,lotad,270,"{'Standard Type': ['water', 'grass']}"
+3,lombre,271,"{'Standard Type': ['water', 'grass']}"
+3,ludicolo,272,"{'Standard Type': ['water', 'grass']}"
+3,seedot,273,{'Standard Type': ['grass']}
+3,nuzleaf,274,"{'Standard Type': ['grass', 'dark']}"
+3,shiftry,275,"{'Standard Type': ['grass', 'dark']}"
+3,taillow,276,"{'Standard Type': ['normal', 'flying']}"
+3,swellow,277,"{'Standard Type': ['normal', 'flying']}"
+3,wingull,278,"{'Standard Type': ['water', 'flying']}"
+3,pelipper,279,"{'Standard Type': ['water', 'flying']}"
+3,ralts,280,"{'Standard Type': ['psychic', 'fairy']}"
+3,kirlia,281,"{'Standard Type': ['psychic', 'fairy']}"
+3,gardevoir,282,"{'Standard Type': ['psychic', 'fairy']}"
+3,surskit,283,"{'Standard Type': ['bug', 'water']}"
+3,masquerain,284,"{'Standard Type': ['bug', 'flying']}"
+3,shroomish,285,{'Standard Type': ['grass']}
+3,breloom,286,"{'Standard Type': ['grass', 'fighting']}"
+3,slakoth,287,{'Standard Type': ['normal']}
+3,vigoroth,288,{'Standard Type': ['normal']}
+3,slaking,289,{'Standard Type': ['normal']}
+3,nincada,290,"{'Standard Type': ['bug', 'ground']}"
+3,ninjask,291,"{'Standard Type': ['bug', 'flying']}"
+3,shedinja,292,"{'Standard Type': ['bug', 'ghost']}"
+3,whismur,293,{'Standard Type': ['normal']}
+3,loudred,294,{'Standard Type': ['normal']}
+3,exploud,295,{'Standard Type': ['normal']}
+3,makuhita,296,{'Standard Type': ['fighting']}
+3,hariyama,297,{'Standard Type': ['fighting']}
+3,azurill,298,"{'Standard Type': ['normal', 'fairy']}"
+3,nosepass,299,{'Standard Type': ['rock']}
+3,skitty,300,{'Standard Type': ['normal']}
+3,delcatty,301,{'Standard Type': ['normal']}
+3,sableye,302,"{'Standard Type': ['dark', 'ghost']}"
+3,mawile,303,"{'Standard Type': ['steel', 'fairy']}"
+3,aron,304,"{'Standard Type': ['steel', 'rock']}"
+3,lairon,305,"{'Standard Type': ['steel', 'rock']}"
+3,aggron,306,"{'Standard Type': ['steel', 'rock']}"
+3,meditite,307,"{'Standard Type': ['fighting', 'psychic']}"
+3,medicham,308,"{'Standard Type': ['fighting', 'psychic']}"
+3,electrike,309,{'Standard Type': ['electric']}
+3,manectric,310,{'Standard Type': ['electric']}
+3,plusle,311,{'Standard Type': ['electric']}
+3,minun,312,{'Standard Type': ['electric']}
+3,volbeat,313,{'Standard Type': ['bug']}
+3,illumise,314,{'Standard Type': ['bug']}
+3,roselia,315,"{'Standard Type': ['grass', 'poison']}"
+3,gulpin,316,{'Standard Type': ['poison']}
+3,swalot,317,{'Standard Type': ['poison']}
+3,carvanha,318,"{'Standard Type': ['water', 'dark']}"
+3,sharpedo,319,"{'Standard Type': ['water', 'dark']}"
+3,wailmer,320,{'Standard Type': ['water']}
+3,wailord,321,{'Standard Type': ['water']}
+3,numel,322,"{'Standard Type': ['fire', 'ground']}"
+3,camerupt,323,"{'Standard Type': ['fire', 'ground']}"
+3,torkoal,324,{'Standard Type': ['fire']}
+3,spoink,325,{'Standard Type': ['psychic']}
+3,grumpig,326,{'Standard Type': ['psychic']}
+3,spinda,327,{'Standard Type': ['normal']}
+3,trapinch,328,{'Standard Type': ['ground']}
+3,vibrava,329,"{'Standard Type': ['ground', 'dragon']}"
+3,flygon,330,"{'Standard Type': ['ground', 'dragon']}"
+3,cacnea,331,{'Standard Type': ['grass']}
+3,cacturne,332,"{'Standard Type': ['grass', 'dark']}"
+3,swablu,333,"{'Standard Type': ['normal', 'flying']}"
+3,altaria,334,"{'Standard Type': ['dragon', 'flying']}"
+3,zangoose,335,{'Standard Type': ['normal']}
+3,seviper,336,{'Standard Type': ['poison']}
+3,lunatone,337,"{'Standard Type': ['rock', 'psychic']}"
+3,solrock,338,"{'Standard Type': ['rock', 'psychic']}"
+3,barboach,339,"{'Standard Type': ['water', 'ground']}"
+3,whiscash,340,"{'Standard Type': ['water', 'ground']}"
+3,corphish,341,{'Standard Type': ['water']}
+3,crawdaunt,342,"{'Standard Type': ['water', 'dark']}"
+3,baltoy,343,"{'Standard Type': ['ground', 'psychic']}"
+3,claydol,344,"{'Standard Type': ['ground', 'psychic']}"
+3,lileep,345,"{'Standard Type': ['rock', 'grass']}"
+3,cradily,346,"{'Standard Type': ['rock', 'grass']}"
+3,anorith,347,"{'Standard Type': ['rock', 'bug']}"
+3,armaldo,348,"{'Standard Type': ['rock', 'bug']}"
+3,feebas,349,{'Standard Type': ['water']}
+3,milotic,350,{'Standard Type': ['water']}
+3,castform,351,"{'Standard Type': ['normal'], 'Sunny Form': ['fire'], 'Rainy Form': ['water'], 'Snowy Form': ['ice']}"
+3,kecleon,352,{'Standard Type': ['normal']}
+3,shuppet,353,{'Standard Type': ['ghost']}
+3,banette,354,{'Standard Type': ['ghost']}
+3,duskull,355,{'Standard Type': ['ghost']}
+3,dusclops,356,{'Standard Type': ['ghost']}
+3,tropius,357,"{'Standard Type': ['grass', 'flying']}"
+3,chimecho,358,{'Standard Type': ['psychic']}
+3,absol,359,{'Standard Type': ['dark']}
+3,wynaut,360,{'Standard Type': ['psychic']}
+3,snorunt,361,{'Standard Type': ['ice']}
+3,glalie,362,{'Standard Type': ['ice']}
+3,spheal,363,"{'Standard Type': ['ice', 'water']}"
+3,sealeo,364,"{'Standard Type': ['ice', 'water']}"
+3,walrein,365,"{'Standard Type': ['ice', 'water']}"
+3,clamperl,366,{'Standard Type': ['water']}
+3,huntail,367,{'Standard Type': ['water']}
+3,gorebyss,368,{'Standard Type': ['water']}
+3,relicanth,369,"{'Standard Type': ['water', 'rock']}"
+3,luvdisc,370,{'Standard Type': ['water']}
+3,bagon,371,{'Standard Type': ['dragon']}
+3,shelgon,372,{'Standard Type': ['dragon']}
+3,salamence,373,"{'Standard Type': ['dragon', 'flying']}"
+3,beldum,374,"{'Standard Type': ['steel', 'psychic']}"
+3,metang,375,"{'Standard Type': ['steel', 'psychic']}"
+3,metagross,376,"{'Standard Type': ['steel', 'psychic']}"
+3,regirock,377,{'Standard Type': ['rock']}
+3,regice,378,{'Standard Type': ['ice']}
+3,registeel,379,{'Standard Type': ['steel']}
+3,latias,380,"{'Standard Type': ['dragon', 'psychic']}"
+3,latios,381,"{'Standard Type': ['dragon', 'psychic']}"
+3,kyogre,382,{'Standard Type': ['water']}
+3,groudon,383,{'Standard Type': ['ground']}
+3,rayquaza,384,"{'Standard Type': ['dragon', 'flying']}"
+3,jirachi,385,"{'Standard Type': ['steel', 'psychic']}"
+3,deoxys,386,{'Standard Type': ['psychic']}
+4,turtwig,387,{'Standard Type': ['grass']}
+4,grotle,388,{'Standard Type': ['grass']}
+4,torterra,389,"{'Standard Type': ['grass', 'ground']}"
+4,chimchar,390,{'Standard Type': ['fire']}
+4,monferno,391,"{'Standard Type': ['fire', 'fighting']}"
+4,infernape,392,"{'Standard Type': ['fire', 'fighting']}"
+4,piplup,393,{'Standard Type': ['water']}
+4,prinplup,394,{'Standard Type': ['water']}
+4,empoleon,395,"{'Standard Type': ['water', 'steel']}"
+4,starly,396,"{'Standard Type': ['normal', 'flying']}"
+4,staravia,397,"{'Standard Type': ['normal', 'flying']}"
+4,staraptor,398,"{'Standard Type': ['normal', 'flying']}"
+4,bidoof,399,{'Standard Type': ['normal']}
+4,bibarel,400,"{'Standard Type': ['normal', 'water']}"
+4,kricketot,401,{'Standard Type': ['bug']}
+4,kricketune,402,{'Standard Type': ['bug']}
+4,shinx,403,{'Standard Type': ['electric']}
+4,luxio,404,{'Standard Type': ['electric']}
+4,luxray,405,{'Standard Type': ['electric']}
+4,budew,406,"{'Standard Type': ['grass', 'poison']}"
+4,roserade,407,"{'Standard Type': ['grass', 'poison']}"
+4,cranidos,408,{'Standard Type': ['rock']}
+4,rampardos,409,{'Standard Type': ['rock']}
+4,shieldon,410,"{'Standard Type': ['rock', 'steel']}"
+4,bastiodon,411,"{'Standard Type': ['rock', 'steel']}"
+4,burmy,412,{'Standard Type': ['bug']}
+4,wormadam,413,"{'Plant Cloak': ['bug', 'grass'], 'Sandy Cloak': ['bug', 'ground'], 'Trash Cloak': ['bug', 'steel']}"
+4,mothim,414,"{'Standard Type': ['bug', 'flying']}"
+4,combee,415,"{'Standard Type': ['bug', 'flying']}"
+4,vespiquen,416,"{'Standard Type': ['bug', 'flying']}"
+4,pachirisu,417,{'Standard Type': ['electric']}
+4,buizel,418,{'Standard Type': ['water']}
+4,floatzel,419,{'Standard Type': ['water']}
+4,cherubi,420,{'Standard Type': ['grass']}
+4,cherrim,421,{'Standard Type': ['grass']}
+4,shellos,422,{'Standard Type': ['water']}
+4,gastrodon,423,"{'Standard Type': ['water', 'ground']}"
+4,ambipom,424,{'Standard Type': ['normal']}
+4,drifloon,425,"{'Standard Type': ['ghost', 'flying']}"
+4,drifblim,426,"{'Standard Type': ['ghost', 'flying']}"
+4,buneary,427,{'Standard Type': ['normal']}
+4,lopunny,428,{'Standard Type': ['normal']}
+4,mismagius,429,{'Standard Type': ['ghost']}
+4,honchkrow,430,"{'Standard Type': ['dark', 'flying']}"
+4,glameow,431,{'Standard Type': ['normal']}
+4,purugly,432,{'Standard Type': ['normal']}
+4,chingling,433,{'Standard Type': ['psychic']}
+4,stunky,434,"{'Standard Type': ['poison', 'dark']}"
+4,skuntank,435,"{'Standard Type': ['poison', 'dark']}"
+4,bronzor,436,"{'Standard Type': ['steel', 'psychic']}"
+4,bronzong,437,"{'Standard Type': ['steel', 'psychic']}"
+4,bonsly,438,{'Standard Type': ['rock']}
+4,mimejr.,439,"{'Standard Type': ['psychic', 'fairy']}"
+4,happiny,440,{'Standard Type': ['normal']}
+4,chatot,441,"{'Standard Type': ['normal', 'flying']}"
+4,spiritomb,442,"{'Standard Type': ['ghost', 'dark']}"
+4,gible,443,"{'Standard Type': ['dragon', 'ground']}"
+4,gabite,444,"{'Standard Type': ['dragon', 'ground']}"
+4,garchomp,445,"{'Standard Type': ['dragon', 'ground']}"
+4,munchlax,446,{'Standard Type': ['normal']}
+4,riolu,447,{'Standard Type': ['fighting']}
+4,lucario,448,"{'Standard Type': ['fighting', 'steel']}"
+4,hippopotas,449,{'Standard Type': ['ground']}
+4,hippowdon,450,{'Standard Type': ['ground']}
+4,skorupi,451,"{'Standard Type': ['poison', 'bug']}"
+4,drapion,452,"{'Standard Type': ['poison', 'dark']}"
+4,croagunk,453,"{'Standard Type': ['poison', 'fighting']}"
+4,toxicroak,454,"{'Standard Type': ['poison', 'fighting']}"
+4,carnivine,455,{'Standard Type': ['grass']}
+4,finneon,456,{'Standard Type': ['water']}
+4,lumineon,457,{'Standard Type': ['water']}
+4,mantyke,458,"{'Standard Type': ['water', 'flying']}"
+4,snover,459,"{'Standard Type': ['grass', 'ice']}"
+4,abomasnow,460,"{'Standard Type': ['grass', 'ice']}"
+4,weavile,461,"{'Standard Type': ['dark', 'ice']}"
+4,magnezone,462,"{'Standard Type': ['electric', 'steel']}"
+4,lickilicky,463,{'Standard Type': ['normal']}
+4,rhyperior,464,"{'Standard Type': ['ground', 'rock']}"
+4,tangrowth,465,{'Standard Type': ['grass']}
+4,electivire,466,{'Standard Type': ['electric']}
+4,magmortar,467,{'Standard Type': ['fire']}
+4,togekiss,468,"{'Standard Type': ['fairy', 'flying']}"
+4,yanmega,469,"{'Standard Type': ['bug', 'flying']}"
+4,leafeon,470,{'Standard Type': ['grass']}
+4,glaceon,471,{'Standard Type': ['ice']}
+4,gliscor,472,"{'Standard Type': ['ground', 'flying']}"
+4,mamoswine,473,"{'Standard Type': ['ice', 'ground']}"
+4,porygon-z,474,{'Standard Type': ['normal']}
+4,gallade,475,"{'Standard Type': ['psychic', 'fighting']}"
+4,probopass,476,"{'Standard Type': ['rock', 'steel']}"
+4,dusknoir,477,{'Standard Type': ['ghost']}
+4,froslass,478,"{'Standard Type': ['ice', 'ghost']}"
+4,rotom,479,"{'Rotom': ['electric', 'ghost'], 'Frost Rotom': ['electric', 'ice'], 'Heat Rotom': ['electric', 'fire'], 'Mow Rotom': ['electric', 'grass'], 'Fan Rotom': ['electric', 'flying'], 'Wash Rotom': ['electric', 'water'], 'Rotom Dex': ['electric']}"
+4,uxie,480,{'Standard Type': ['psychic']}
+4,mesprit,481,{'Standard Type': ['psychic']}
+4,azelf,482,{'Standard Type': ['psychic']}
+4,dialga,483,"{'Standard Type': ['steel', 'dragon']}"
+4,palkia,484,"{'Standard Type': ['water', 'dragon']}"
+4,heatran,485,"{'Standard Type': ['fire', 'steel']}"
+4,regigigas,486,{'Standard Type': ['normal']}
+4,giratina,487,"{'Standard Type': ['ghost', 'dragon']}"
+4,cresselia,488,{'Standard Type': ['psychic']}
+4,phione,489,{'Standard Type': ['water']}
+4,manaphy,490,{'Standard Type': ['water']}
+4,darkrai,491,{'Standard Type': ['dark']}
+4,shaymin,492,"{'Land Forme': ['grass'], 'Sky Forme': ['grass', 'flying']}"
+4,arceus,493,{'Standard Type': ['normal']}
+5,victini,494,"{'Standard Type': ['psychic', 'fire']}"
+5,snivy,495,{'Standard Type': ['grass']}
+5,servine,496,{'Standard Type': ['grass']}
+5,serperior,497,{'Standard Type': ['grass']}
+5,tepig,498,{'Standard Type': ['fire']}
+5,pignite,499,"{'Standard Type': ['fire', 'fighting']}"
+5,emboar,500,"{'Standard Type': ['fire', 'fighting']}"
+5,oshawott,501,{'Standard Type': ['water']}
+5,dewott,502,{'Standard Type': ['water']}
+5,samurott,503,{'Standard Type': ['water']}
+5,patrat,504,{'Standard Type': ['normal']}
+5,watchog,505,{'Standard Type': ['normal']}
+5,lillipup,506,{'Standard Type': ['normal']}
+5,herdier,507,{'Standard Type': ['normal']}
+5,stoutland,508,{'Standard Type': ['normal']}
+5,purrloin,509,{'Standard Type': ['dark']}
+5,liepard,510,{'Standard Type': ['dark']}
+5,pansage,511,{'Standard Type': ['grass']}
+5,simisage,512,{'Standard Type': ['grass']}
+5,pansear,513,{'Standard Type': ['fire']}
+5,simisear,514,{'Standard Type': ['fire']}
+5,panpour,515,{'Standard Type': ['water']}
+5,simipour,516,{'Standard Type': ['water']}
+5,munna,517,{'Standard Type': ['psychic']}
+5,musharna,518,{'Standard Type': ['psychic']}
+5,pidove,519,"{'Standard Type': ['normal', 'flying']}"
+5,tranquill,520,"{'Standard Type': ['normal', 'flying']}"
+5,unfezant,521,"{'Standard Type': ['normal', 'flying']}"
+5,blitzle,522,{'Standard Type': ['electric']}
+5,zebstrika,523,{'Standard Type': ['electric']}
+5,roggenrola,524,{'Standard Type': ['rock']}
+5,boldore,525,{'Standard Type': ['rock']}
+5,gigalith,526,{'Standard Type': ['rock']}
+5,woobat,527,"{'Standard Type': ['psychic', 'flying']}"
+5,swoobat,528,"{'Standard Type': ['psychic', 'flying']}"
+5,drilbur,529,{'Standard Type': ['ground']}
+5,excadrill,530,"{'Standard Type': ['ground', 'steel']}"
+5,audino,531,{'Standard Type': ['normal']}
+5,timburr,532,{'Standard Type': ['fighting']}
+5,gurdurr,533,{'Standard Type': ['fighting']}
+5,conkeldurr,534,{'Standard Type': ['fighting']}
+5,tympole,535,{'Standard Type': ['water']}
+5,palpitoad,536,"{'Standard Type': ['water', 'ground']}"
+5,seismitoad,537,"{'Standard Type': ['water', 'ground']}"
+5,throh,538,{'Standard Type': ['fighting']}
+5,sawk,539,{'Standard Type': ['fighting']}
+5,sewaddle,540,"{'Standard Type': ['bug', 'grass']}"
+5,swadloon,541,"{'Standard Type': ['bug', 'grass']}"
+5,leavanny,542,"{'Standard Type': ['bug', 'grass']}"
+5,venipede,543,"{'Standard Type': ['bug', 'poison']}"
+5,whirlipede,544,"{'Standard Type': ['bug', 'poison']}"
+5,scolipede,545,"{'Standard Type': ['bug', 'poison']}"
+5,cottonee,546,"{'Standard Type': ['grass', 'fairy']}"
+5,whimsicott,547,"{'Standard Type': ['grass', 'fairy']}"
+5,petilil,548,{'Standard Type': ['grass']}
+5,lilligant,549,{'Standard Type': ['grass']}
+5,basculin,550,{'Standard Type': ['water']}
+5,sandile,551,"{'Standard Type': ['ground', 'dark']}"
+5,krokorok,552,"{'Standard Type': ['ground', 'dark']}"
+5,krookodile,553,"{'Standard Type': ['ground', 'dark']}"
+5,darumaka,554,"{'Standard Type': ['fire'], 'Galarian': ['ice']}"
+5,darmanitan,555,"{'Standard Type': ['fire'], 'Zen Mode': ['fire', 'psychic'], 'Galarian': ['ice'], 'Zen Mode #2': ['ice', 'fire']}"
+5,maractus,556,{'Standard Type': ['grass']}
+5,dwebble,557,"{'Standard Type': ['bug', 'rock']}"
+5,crustle,558,"{'Standard Type': ['bug', 'rock']}"
+5,scraggy,559,"{'Standard Type': ['dark', 'fighting']}"
+5,scrafty,560,"{'Standard Type': ['dark', 'fighting']}"
+5,sigilyph,561,"{'Standard Type': ['psychic', 'flying']}"
+5,yamask,562,"{'Standard Type': ['ghost'], 'Galarian': ['ground', 'ghost']}"
+5,cofagrigus,563,{'Standard Type': ['ghost']}
+5,tirtouga,564,"{'Standard Type': ['water', 'rock']}"
+5,carracosta,565,"{'Standard Type': ['water', 'rock']}"
+5,archen,566,"{'Standard Type': ['rock', 'flying']}"
+5,archeops,567,"{'Standard Type': ['rock', 'flying']}"
+5,trubbish,568,{'Standard Type': ['poison']}
+5,garbodor,569,{'Standard Type': ['poison']}
+5,zorua,570,{'Standard Type': ['dark']}
+5,zoroark,571,{'Standard Type': ['dark']}
+5,minccino,572,{'Standard Type': ['normal']}
+5,cinccino,573,{'Standard Type': ['normal']}
+5,gothita,574,{'Standard Type': ['psychic']}
+5,gothorita,575,{'Standard Type': ['psychic']}
+5,gothitelle,576,{'Standard Type': ['psychic']}
+5,solosis,577,{'Standard Type': ['psychic']}
+5,duosion,578,{'Standard Type': ['psychic']}
+5,reuniclus,579,{'Standard Type': ['psychic']}
+5,ducklett,580,"{'Standard Type': ['water', 'flying']}"
+5,swanna,581,"{'Standard Type': ['water', 'flying']}"
+5,vanillite,582,{'Standard Type': ['ice']}
+5,vanillish,583,{'Standard Type': ['ice']}
+5,vanilluxe,584,{'Standard Type': ['ice']}
+5,deerling,585,"{'Standard Type': ['normal', 'grass']}"
+5,sawsbuck,586,"{'Standard Type': ['normal', 'grass']}"
+5,emolga,587,"{'Standard Type': ['electric', 'flying']}"
+5,karrablast,588,{'Standard Type': ['bug']}
+5,escavalier,589,"{'Standard Type': ['bug', 'steel']}"
+5,foongus,590,"{'Standard Type': ['grass', 'poison']}"
+5,amoonguss,591,"{'Standard Type': ['grass', 'poison']}"
+5,frillish,592,"{'Standard Type': ['water', 'ghost']}"
+5,jellicent,593,"{'Standard Type': ['water', 'ghost']}"
+5,alomomola,594,{'Standard Type': ['water']}
+5,joltik,595,"{'Standard Type': ['bug', 'electric']}"
+5,galvantula,596,"{'Standard Type': ['bug', 'electric']}"
+5,ferroseed,597,"{'Standard Type': ['grass', 'steel']}"
+5,ferrothorn,598,"{'Standard Type': ['grass', 'steel']}"
+5,klink,599,{'Standard Type': ['steel']}
+5,klang,600,{'Standard Type': ['steel']}
+5,klinklang,601,{'Standard Type': ['steel']}
+5,tynamo,602,{'Standard Type': ['electric']}
+5,eelektrik,603,{'Standard Type': ['electric']}
+5,eelektross,604,{'Standard Type': ['electric']}
+5,elgyem,605,{'Standard Type': ['psychic']}
+5,beheeyem,606,{'Standard Type': ['psychic']}
+5,litwick,607,"{'Standard Type': ['ghost', 'fire']}"
+5,lampent,608,"{'Standard Type': ['ghost', 'fire']}"
+5,chandelure,609,"{'Standard Type': ['ghost', 'fire']}"
+5,axew,610,{'Standard Type': ['dragon']}
+5,fraxure,611,{'Standard Type': ['dragon']}
+5,haxorus,612,{'Standard Type': ['dragon']}
+5,cubchoo,613,{'Standard Type': ['ice']}
+5,beartic,614,{'Standard Type': ['ice']}
+5,cryogonal,615,{'Standard Type': ['ice']}
+5,shelmet,616,{'Standard Type': ['bug']}
+5,accelgor,617,{'Standard Type': ['bug']}
+5,stunfisk,618,"{'Standard Type': ['ground', 'electric'], 'Galarian': ['ground', 'steel']}"
+5,mienfoo,619,{'Standard Type': ['fighting']}
+5,mienshao,620,{'Standard Type': ['fighting']}
+5,druddigon,621,{'Standard Type': ['dragon']}
+5,golett,622,"{'Standard Type': ['ground', 'ghost']}"
+5,golurk,623,"{'Standard Type': ['ground', 'ghost']}"
+5,pawniard,624,"{'Standard Type': ['dark', 'steel']}"
+5,bisharp,625,"{'Standard Type': ['dark', 'steel']}"
+5,bouffalant,626,{'Standard Type': ['normal']}
+5,rufflet,627,"{'Standard Type': ['normal', 'flying']}"
+5,braviary,628,"{'Standard Type': ['normal', 'flying']}"
+5,vullaby,629,"{'Standard Type': ['dark', 'flying']}"
+5,mandibuzz,630,"{'Standard Type': ['dark', 'flying']}"
+5,heatmor,631,{'Standard Type': ['fire']}
+5,durant,632,"{'Standard Type': ['bug', 'steel']}"
+5,deino,633,"{'Standard Type': ['dark', 'dragon']}"
+5,zweilous,634,"{'Standard Type': ['dark', 'dragon']}"
+5,hydreigon,635,"{'Standard Type': ['dark', 'dragon']}"
+5,larvesta,636,"{'Standard Type': ['bug', 'fire']}"
+5,volcarona,637,"{'Standard Type': ['bug', 'fire']}"
+5,cobalion,638,"{'Standard Type': ['steel', 'fighting']}"
+5,terrakion,639,"{'Standard Type': ['rock', 'fighting']}"
+5,virizion,640,"{'Standard Type': ['grass', 'fighting']}"
+5,tornadus,641,{'Standard Type': ['flying']}
+5,thundurus,642,"{'Standard Type': ['electric', 'flying']}"
+5,reshiram,643,"{'Standard Type': ['dragon', 'fire']}"
+5,zekrom,644,"{'Standard Type': ['dragon', 'electric']}"
+5,landorus,645,"{'Standard Type': ['ground', 'flying']}"
+5,kyurem,646,"{'Standard Type': ['dragon', 'ice']}"
+5,keldeo,647,"{'Standard Type': ['water', 'fighting']}"
+5,meloetta,648,"{'Aria Forme': ['normal', 'psychic'], 'Pirouette Forme': ['normal', 'fighting']}"
+5,genesect,649,"{'Standard Type': ['bug', 'steel']}"
+6,chespin,650,{'Standard Type': ['grass']}
+6,quilladin,651,{'Standard Type': ['grass']}
+6,chesnaught,652,"{'Standard Type': ['grass', 'fighting']}"
+6,fennekin,653,{'Standard Type': ['fire']}
+6,braixen,654,{'Standard Type': ['fire']}
+6,delphox,655,"{'Standard Type': ['fire', 'psychic']}"
+6,froakie,656,{'Standard Type': ['water']}
+6,frogadier,657,{'Standard Type': ['water']}
+6,greninja,658,"{'Standard Type': ['water', 'dark']}"
+6,bunnelby,659,{'Standard Type': ['normal']}
+6,diggersby,660,"{'Standard Type': ['normal', 'ground']}"
+6,fletchling,661,"{'Standard Type': ['normal', 'flying']}"
+6,fletchinder,662,"{'Standard Type': ['fire', 'flying']}"
+6,talonflame,663,"{'Standard Type': ['fire', 'flying']}"
+6,scatterbug,664,{'Standard Type': ['bug']}
+6,spewpa,665,{'Standard Type': ['bug']}
+6,vivillon,666,"{'Standard Type': ['bug', 'flying']}"
+6,litleo,667,"{'Standard Type': ['fire', 'normal']}"
+6,pyroar,668,"{'Standard Type': ['fire', 'normal']}"
+6,flabebe,669,{'Standard Type': ['fairy']}
+6,floette,670,{'Standard Type': ['fairy']}
+6,florges,671,{'Standard Type': ['fairy']}
+6,skiddo,672,{'Standard Type': ['grass']}
+6,gogoat,673,{'Standard Type': ['grass']}
+6,pancham,674,{'Standard Type': ['fighting']}
+6,pangoro,675,"{'Standard Type': ['fighting', 'dark']}"
+6,furfrou,676,{'Standard Type': ['normal']}
+6,espurr,677,{'Standard Type': ['psychic']}
+6,meowstic,678,{'Standard Type': ['psychic']}
+6,honedge,679,"{'Standard Type': ['steel', 'ghost']}"
+6,doublade,680,"{'Standard Type': ['steel', 'ghost']}"
+6,aegislash,681,"{'Standard Type': ['steel', 'ghost']}"
+6,spritzee,682,{'Standard Type': ['fairy']}
+6,aromatisse,683,{'Standard Type': ['fairy']}
+6,swirlix,684,{'Standard Type': ['fairy']}
+6,slurpuff,685,{'Standard Type': ['fairy']}
+6,inkay,686,"{'Standard Type': ['dark', 'psychic']}"
+6,malamar,687,"{'Standard Type': ['dark', 'psychic']}"
+6,binacle,688,"{'Standard Type': ['rock', 'water']}"
+6,barbaracle,689,"{'Standard Type': ['rock', 'water']}"
+6,skrelp,690,"{'Standard Type': ['poison', 'water']}"
+6,dragalge,691,"{'Standard Type': ['poison', 'dragon']}"
+6,clauncher,692,{'Standard Type': ['water']}
+6,clawitzer,693,{'Standard Type': ['water']}
+6,helioptile,694,"{'Standard Type': ['electric', 'normal']}"
+6,heliolisk,695,"{'Standard Type': ['electric', 'normal']}"
+6,tyrunt,696,"{'Standard Type': ['rock', 'dragon']}"
+6,tyrantrum,697,"{'Standard Type': ['rock', 'dragon']}"
+6,amaura,698,"{'Standard Type': ['rock', 'ice']}"
+6,aurorus,699,"{'Standard Type': ['rock', 'ice']}"
+6,sylveon,700,{'Standard Type': ['fairy']}
+6,hawlucha,701,"{'Standard Type': ['fighting', 'flying']}"
+6,dedenne,702,"{'Standard Type': ['electric', 'fairy']}"
+6,carbink,703,"{'Standard Type': ['rock', 'fairy']}"
+6,goomy,704,{'Standard Type': ['dragon']}
+6,sliggoo,705,{'Standard Type': ['dragon']}
+6,goodra,706,{'Standard Type': ['dragon']}
+6,klefki,707,"{'Standard Type': ['steel', 'fairy']}"
+6,phantump,708,"{'Standard Type': ['ghost', 'grass']}"
+6,trevenant,709,"{'Standard Type': ['ghost', 'grass']}"
+6,pumpkaboo,710,"{'Standard Type': ['ghost', 'grass']}"
+6,gourgeist,711,"{'Standard Type': ['ghost', 'grass']}"
+6,bergmite,712,{'Standard Type': ['ice']}
+6,avalugg,713,{'Standard Type': ['ice']}
+6,noibat,714,"{'Standard Type': ['flying', 'dragon']}"
+6,noivern,715,"{'Standard Type': ['flying', 'dragon']}"
+6,xerneas,716,{'Standard Type': ['fairy']}
+6,yveltal,717,"{'Standard Type': ['dark', 'flying']}"
+6,zygarde,718,"{'Standard Type': ['dragon', 'ground']}"
+6,diancie,719,"{'Standard Type': ['rock', 'fairy']}"
+6,hoopa,720,"{'Hoopa Confined': ['psychic', 'ghost'], 'Hoopa Unbound': ['psychic', 'dark']}"
+6,volcanion,721,"{'Standard Type': ['fire', 'water']}"
+7,rowlet,722,"{'Standard Type': ['grass', 'flying']}"
+7,dartrix,723,"{'Standard Type': ['grass', 'flying']}"
+7,decidueye,724,"{'Standard Type': ['grass', 'ghost']}"
+7,litten,725,{'Standard Type': ['fire']}
+7,torracat,726,{'Standard Type': ['fire']}
+7,incineroar,727,"{'Standard Type': ['fire', 'dark']}"
+7,popplio,728,{'Standard Type': ['water']}
+7,brionne,729,{'Standard Type': ['water']}
+7,primarina,730,"{'Standard Type': ['water', 'fairy']}"
+7,pikipek,731,"{'Standard Type': ['normal', 'flying']}"
+7,trumbeak,732,"{'Standard Type': ['normal', 'flying']}"
+7,toucannon,733,"{'Standard Type': ['normal', 'flying']}"
+7,yungoos,734,{'Standard Type': ['normal']}
+7,gumshoos,735,{'Standard Type': ['normal']}
+7,grubbin,736,{'Standard Type': ['bug']}
+7,charjabug,737,"{'Standard Type': ['bug', 'electric']}"
+7,vikavolt,738,"{'Standard Type': ['bug', 'electric']}"
+7,crabrawler,739,{'Standard Type': ['fighting']}
+7,crabominable,740,"{'Standard Type': ['fighting', 'ice']}"
+7,oricorio,741,"{'Baile Style': ['fire', 'flying'], 'Pom-Pom Style': ['electric', 'flying'], ""Pa'u Style"": ['psychic', 'flying'], 'Sensu Style': ['ghost', 'flying']}"
+7,cutiefly,742,"{'Standard Type': ['bug', 'fairy']}"
+7,ribombee,743,"{'Standard Type': ['bug', 'fairy']}"
+7,rockruff,744,{'Standard Type': ['rock']}
+7,lycanroc,745,{'Standard Type': ['rock']}
+7,wishiwashi,746,{'Standard Type': ['water']}
+7,mareanie,747,"{'Standard Type': ['poison', 'water']}"
+7,toxapex,748,"{'Standard Type': ['poison', 'water']}"
+7,mudbray,749,{'Standard Type': ['ground']}
+7,mudsdale,750,{'Standard Type': ['ground']}
+7,dewpider,751,"{'Standard Type': ['water', 'bug']}"
+7,araquanid,752,"{'Standard Type': ['water', 'bug']}"
+7,fomantis,753,{'Standard Type': ['grass']}
+7,lurantis,754,{'Standard Type': ['grass']}
+7,morelull,755,"{'Standard Type': ['grass', 'fairy']}"
+7,shiinotic,756,"{'Standard Type': ['grass', 'fairy']}"
+7,salandit,757,"{'Standard Type': ['poison', 'fire']}"
+7,salazzle,758,"{'Standard Type': ['poison', 'fire']}"
+7,stufful,759,"{'Standard Type': ['normal', 'fighting']}"
+7,bewear,760,"{'Standard Type': ['normal', 'fighting']}"
+7,bounsweet,761,{'Standard Type': ['grass']}
+7,steenee,762,{'Standard Type': ['grass']}
+7,tsareena,763,{'Standard Type': ['grass']}
+7,comfey,764,{'Standard Type': ['fairy']}
+7,oranguru,765,"{'Standard Type': ['normal', 'psychic']}"
+7,passimian,766,{'Standard Type': ['fighting']}
+7,wimpod,767,"{'Standard Type': ['bug', 'water']}"
+7,golisopod,768,"{'Standard Type': ['bug', 'water']}"
+7,sandygast,769,"{'Standard Type': ['ghost', 'ground']}"
+7,palossand,770,"{'Standard Type': ['ghost', 'ground']}"
+7,pyukumuku,771,{'Standard Type': ['water']}
+7,type:null,772,{'Standard Type': ['normal']}
+7,silvally,773,{'Standard Type': ['normal']}
+7,minior,774,"{'Standard Type': ['rock', 'flying']}"
+7,komala,775,{'Standard Type': ['normal']}
+7,turtonator,776,"{'Standard Type': ['fire', 'dragon']}"
+7,togedemaru,777,"{'Standard Type': ['electric', 'steel']}"
+7,mimikyu,778,"{'Standard Type': ['ghost', 'fairy']}"
+7,bruxish,779,"{'Standard Type': ['water', 'psychic']}"
+7,drampa,780,"{'Standard Type': ['normal', 'dragon']}"
+7,dhelmise,781,"{'Standard Type': ['ghost', 'grass']}"
+7,jangmo-o,782,{'Standard Type': ['dragon']}
+7,hakamo-o,783,"{'Standard Type': ['dragon', 'fighting']}"
+7,kommo-o,784,"{'Standard Type': ['dragon', 'fighting']}"
+7,tapukoko,785,"{'Standard Type': ['electric', 'fairy']}"
+7,tapulele,786,"{'Standard Type': ['psychic', 'fairy']}"
+7,tapubulu,787,"{'Standard Type': ['grass', 'fairy']}"
+7,tapufini,788,"{'Standard Type': ['water', 'fairy']}"
+7,cosmog,789,{'Standard Type': ['psychic']}
+7,cosmoem,790,{'Standard Type': ['psychic']}
+7,solgaleo,791,"{'Standard Type': ['psychic', 'steel']}"
+7,lunala,792,"{'Standard Type': ['psychic', 'ghost']}"
+7,nihilego,793,"{'Standard Type': ['rock', 'poison']}"
+7,buzzwole,794,"{'Standard Type': ['bug', 'fighting']}"
+7,pheromosa,795,"{'Standard Type': ['bug', 'fighting']}"
+7,xurkitree,796,{'Standard Type': ['electric']}
+7,celesteela,797,"{'Standard Type': ['steel', 'flying']}"
+7,kartana,798,"{'Standard Type': ['grass', 'steel']}"
+7,guzzlord,799,"{'Standard Type': ['dark', 'dragon']}"
+7,necrozma,800,"{'Standard Type': ['psychic'], 'Dusk Mane': ['psychic', 'steel'], 'Dawn Wings': ['psychic', 'ghost']}"
+7,magearna,801,"{'Standard Type': ['steel', 'fairy']}"
+7,marshadow,802,"{'Standard Type': ['fighting', 'ghost']}"
+7,poipole,803,{'Standard Type': ['poison']}
+7,naganadel,804,"{'Standard Type': ['poison', 'dragon']}"
+7,stakataka,805,"{'Standard Type': ['rock', 'steel']}"
+7,blacephalon,806,"{'Standard Type': ['fire', 'ghost']}"
+7,zeraora,807,{'Standard Type': ['electric']}
+7,meltan,808,{'Standard Type': ['steel']}
+7,melmetal,809,{'Standard Type': ['steel']}
+8,grookey,810,{'Standard Type': ['grass']}
+8,thwackey,811,{'Standard Type': ['grass']}
+8,rillaboom,812,{'Standard Type': ['grass']}
+8,scorbunny,813,{'Standard Type': ['fire']}
+8,raboot,814,{'Standard Type': ['fire']}
+8,cinderace,815,{'Standard Type': ['fire']}
+8,sobble,816,{'Standard Type': ['water']}
+8,drizzile,817,{'Standard Type': ['water']}
+8,inteleon,818,{'Standard Type': ['water']}
+8,skwovet,819,{'Standard Type': ['normal']}
+8,greedent,820,{'Standard Type': ['normal']}
+8,rookidee,821,{'Standard Type': ['flying']}
+8,corvisquire,822,{'Standard Type': ['flying']}
+8,corviknight,823,"{'Standard Type': ['flying', 'steel']}"
+8,blipbug,824,{'Standard Type': ['bug']}
+8,dottler,825,"{'Standard Type': ['bug', 'psychic']}"
+8,orbeetle,826,"{'Standard Type': ['bug', 'psychic']}"
+8,nickit,827,{'Standard Type': ['dark']}
+8,thievul,828,{'Standard Type': ['dark']}
+8,gossifleur,829,{'Standard Type': ['grass']}
+8,eldegoss,830,{'Standard Type': ['grass']}
+8,wooloo,831,{'Standard Type': ['normal']}
+8,dubwool,832,{'Standard Type': ['normal']}
+8,chewtle,833,{'Standard Type': ['water']}
+8,drednaw,834,"{'Standard Type': ['water', 'rock']}"
+8,yamper,835,{'Standard Type': ['electric']}
+8,boltund,836,{'Standard Type': ['electric']}
+8,rolycoly,837,{'Standard Type': ['rock']}
+8,carkol,838,"{'Standard Type': ['rock', 'fire']}"
+8,coalossal,839,"{'Standard Type': ['rock', 'fire']}"
+8,applin,840,"{'Standard Type': ['grass', 'dragon']}"
+8,flapple,841,"{'Standard Type': ['grass', 'dragon']}"
+8,appletun,842,"{'Standard Type': ['grass', 'dragon']}"
+8,silicobra,843,{'Standard Type': ['ground']}
+8,sandaconda,844,{'Standard Type': ['ground']}
+8,cramorant,845,"{'Standard Type': ['flying', 'water']}"
+8,arrokuda,846,{'Standard Type': ['water']}
+8,barraskewda,847,{'Standard Type': ['water']}
+8,toxel,848,"{'Standard Type': ['electric', 'poison']}"
+8,toxtricity,849,"{'Standard Type': ['electric', 'poison']}"
+8,sizzlipede,850,"{'Standard Type': ['fire', 'bug']}"
+8,centiskorch,851,"{'Standard Type': ['fire', 'bug']}"
+8,clobbopus,852,{'Standard Type': ['fighting']}
+8,grapploct,853,{'Standard Type': ['fighting']}
+8,sinistea,854,{'Standard Type': ['ghost']}
+8,polteageist,855,{'Standard Type': ['ghost']}
+8,hatenna,856,{'Standard Type': ['psychic']}
+8,hattrem,857,{'Standard Type': ['psychic']}
+8,hatterene,858,"{'Standard Type': ['psychic', 'fairy']}"
+8,impidimp,859,"{'Standard Type': ['dark', 'fairy']}"
+8,morgrem,860,"{'Standard Type': ['dark', 'fairy']}"
+8,grimmsnarl,861,"{'Standard Type': ['dark', 'fairy']}"
+8,obstagoon,862,"{'Standard Type': ['dark', 'normal']}"
+8,perrserker,863,{'Standard Type': ['steel']}
+8,cursola,864,{'Standard Type': ['ghost']}
+8,sirfetch'd,865,{'Standard Type': ['fighting']}
+8,mr.rime,866,"{'Standard Type': ['ice', 'psychic']}"
+8,runerigus,867,"{'Standard Type': ['ground', 'ghost']}"
+8,milcery,868,{'Standard Type': ['fairy']}
+8,alcremie,869,{'Standard Type': ['fairy']}
+8,falinks,870,{'Standard Type': ['fighting']}
+8,pincurchin,871,{'Standard Type': ['electric']}
+8,snom,872,"{'Standard Type': ['ice', 'bug']}"
+8,frosmoth,873,"{'Standard Type': ['ice', 'bug']}"
+8,stonjourner,874,{'Standard Type': ['rock']}
+8,eiscue,875,{'Standard Type': ['ice']}
+8,indeedee,876,"{'Standard Type': ['psychic', 'normal']}"
+8,morpeko,877,"{'Standard Type': ['electric', 'dark']}"
+8,cufant,878,{'Standard Type': ['steel']}
+8,copperajah,879,{'Standard Type': ['steel']}
+8,dracozolt,880,"{'Standard Type': ['electric', 'dragon']}"
+8,arctozolt,881,"{'Standard Type': ['electric', 'ice']}"
+8,dracovish,882,"{'Standard Type': ['water', 'dragon']}"
+8,arctovish,883,"{'Standard Type': ['water', 'ice']}"
+8,duraludon,884,"{'Standard Type': ['steel', 'dragon']}"
+8,dreepy,885,"{'Standard Type': ['dragon', 'ghost']}"
+8,drakloak,886,"{'Standard Type': ['dragon', 'ghost']}"
+8,dragapult,887,"{'Standard Type': ['dragon', 'ghost']}"
+8,zacian,888,"{'Hero of Many Battles': ['fairy'], 'Crowned Sword': ['fairy', 'steel']}"
+8,zamazenta,889,"{'Hero of Many Battles': ['fighting'], 'Crowned Shield': ['fighting', 'steel']}"
+8,eternatus,890,"{'Standard Type': ['poison', 'dragon']}"
+8,kubfu,891,{'Standard Type': ['fighting']}
+8,urshifu,892,"{'Standard Type': ['fighting', 'dark']}"
+8,zarude,893,"{'Standard Type': ['dark', 'grass']}"
