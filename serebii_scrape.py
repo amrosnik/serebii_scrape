@@ -90,8 +90,7 @@ gen_vi = range(648,720)
 gen_vii = range(720,808)
 gen_viii = range(808,892)
 
-for i in range(24,26):  
-    indiv_types = dict()  
+def get_soup(i):
     orig_link = 'https://www.serebii.net'+hrefs[i]
     name = hrefs[i].split('/')[2] #split up entry to get NAME_OF_POKEMON      
     if i == 554:
@@ -99,6 +98,11 @@ for i in range(24,26):
     orig_response = requests.get(orig_link)
     orig_soup = BeautifulSoup(orig_response.text, "html.parser")
     print("my name is",name,"# is ",i+1)
+    return(orig_soup,orig_response)
+
+def get_types_and_variants(i):  
+    indiv_types = dict()  
+    orig_soup,orig_response = get_soup(i)
     ## determine Type 
     cens = orig_soup.find('td',{"class":"cen"}).findAll('tr') # the first class="cen" is always the Type section. 
     if len(cens) == 0: 
@@ -148,8 +152,11 @@ for i in range(24,26):
         galarian_form = False
     for k in indiv_types:
         check_type(indiv_types[k])
-    print(indiv_types)
+    return(indiv_types)
 
+for i in range(24,26):
+
+    indiv_types = get_types_and_variants(i)
     ## get Pokedex number 
     ## remember, Python indexes start at ONE, so the actual pokedex index is...i+1
     if i < 10: 
@@ -226,6 +233,7 @@ for i in range(24,26):
         # search page for alt="Mega Evolution Artwork"
     ## Gigantamax 
         # search page for alt="Gigantamax"
+        # since Gigantamax is a Gen VIII thing only, will need to use this page for ALL Pokemon to check this. -_- 
      
     """
     
