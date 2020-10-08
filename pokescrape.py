@@ -28,6 +28,16 @@ possible_egg_groups = ["monster", "human-like", "water 1", "water 2", "water 3",
 "mineral", "flying", "amorphous", "field", "fairy", "ditto", "grass", "dragon", 
 "no eggs discovered", "gender unknown"]
 
+gen_i = (0,151)
+gen_ii = (152,251)
+gen_iii = (252,386)
+gen_iv = (387,493)
+gen_v = (494,649)
+gen_vi = (650,721)
+gen_vii = (722,809)
+gen_viii = (810,893)
+generations = [gen_i,gen_ii,gen_iii,gen_iv,gen_v,gen_vi,gen_vii,gen_viii]
+
 ########  GET THE MASTER LIST OF LINKS, HREFS ########
 ## Link to the best Pokedex around: 
 url = 'https://www.serebii.net/pokemon/all.shtml'
@@ -49,6 +59,14 @@ hrefs = [a.attrs['href'] for a in (table.find('a') for table in soup.findAll('ta
 
 ######## ######## ########
 ######## FUNCTION DEFINITIONS ########
+
+def which_generation(num):
+    for (lower,upper) in generations:
+        if (lower <= num <= upper): 
+            return(generations.index((lower,upper))+1)
+        else:
+            print("WARNING: THIS POKEDEX NUMBER DOES NOT EXIST. RETURNING 999 AS GENERATION NUMBER")
+            return(999)
 
 def check_type(types_found,regional_check=True):
     reference = set(possible_types)
@@ -78,12 +96,12 @@ def get_soup(i):
         orig_link = 'https://www.serebii.net'+'/pokedex-swsh/'+name
     orig_response = requests.get(orig_link)
     orig_soup = BeautifulSoup(orig_response.text, "html.parser")
-    print("my name is",name,"# is ",i+1)
-    return(orig_soup,orig_response)
+    #print("my name is",name,"# is ",i+1)
+    return(orig_soup,orig_response,name)
 
 def get_types_and_variants(i):  
     indiv_types = dict()  
-    orig_soup,orig_response = get_soup(i)
+    orig_soup,orig_response,name = get_soup(i)
     ## determine Type 
     cens = orig_soup.find('td',{"class":"cen"}).findAll('tr') # the first class="cen" is always the Type section. 
     if len(cens) == 0: 
@@ -133,5 +151,5 @@ def get_types_and_variants(i):
         galarian_form = False
     for k in indiv_types:
         check_type(indiv_types[k])
-    return(indiv_types)
+    return(indiv_types,name)
 

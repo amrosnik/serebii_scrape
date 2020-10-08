@@ -29,18 +29,12 @@ misfits = [350, 412, 478, 491, 554, 647, 719, 740, 799, 887, 888]
     # Wormadam, 413
     # Castform, 351
 
-gen_i = range(0,150)
-gen_ii = range(150,250)
-gen_iii = range(250,385)
-gen_iv = range(385,492)
-gen_v = range(492,648)
-gen_vi = range(648,720)
-gen_vii = range(720,808)
-gen_viii = range(808,892)
-
 for i in range(24,26):
 
-    indiv_types = scrape.get_types_and_variants(i)
+    indiv_types,name = scrape.get_types_and_variants(i)
+    print(name,indiv_types)
+    gen = scrape.which_generation(i+1)
+    print(gen)
     ## get Pokedex number 
     ## remember, Python indexes start at ONE, so the actual pokedex index is...i+1
     if i < 10: 
