@@ -35,19 +35,21 @@ misfits = [350, 412, 478, 491, 554, 647, 719, 740, 799, 887, 888]
 
 simple_table = pd.DataFrame()
 for i in range(0,scrape.total_num):
-
     indiv_types,name = scrape.get_types_and_variants(i)
     gen = scrape.which_generation(i+1)
 
-    new_row = {'name': name, 'number': int(i+1), 'generation': int(gen), 'type': indiv_types}
-    simple_table = simple_table.append(new_row,ignore_index=True)
+    for key in indiv_types.keys():
+        new_row = {'name': name, 'number': int(i+1), 'generation': int(gen),'type_name':key, 'type': indiv_types[key]}
+        simple_table = simple_table.append(new_row,ignore_index=True)
 
+#print(simple_table)
+#exit(0)
 simple_table['number'] = simple_table['number'].astype('int32')
 simple_table['generation'] = simple_table['generation'].astype('int32')
 simple_table.to_csv('table_outputs/simple_table.csv',index=False)
-
 exit(0)
-## here and below is for playing around with adding functionality. will clean up later 
+
+## below is for playing around with adding functionality. will clean up later 
 
 for i in range(24,26):
 

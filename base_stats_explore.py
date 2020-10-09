@@ -25,3 +25,17 @@ import pokescrape as scrape
 ## for whatever reason there are FIVE things I can't account for.
 
 ## I'll probably just do the join and see what happens.   
+
+
+#### read in data
+simple_table = pd.read_csv('table_outputs/simple_table.csv',header=0)
+
+bulba_table = pd.read_csv('external_inputs/bulbapedia_baseStatsList.csv',header=0)
+bulba_table['Pokémon'] = bulba_table['Pokémon'].str.lower()
+
+#### expand simple_table such that we have a row for every type entry
+simple_subset = simple_table[simple_table['name']=='meowth']
+print(simple_subset)
+
+bulba_subset = bulba_table[bulba_table['Pokémon'].str.contains('meowth')]
+print(bulba_subset)
