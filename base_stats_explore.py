@@ -2,6 +2,7 @@ import pandas as pd
 import pokescrape as scrape
 
 pd.set_option('display.max_row', 1050)
+pd.set_option('display.max_column', 10)
 #### This script file will be used to manipulate the * simple_table * saved in table_outputs/
 #### for the sake of initial data exploration. 
 
@@ -51,10 +52,10 @@ bulba_table = bulba_table[['Pokémon', '#','form_name','HP','Attack','Defense','
 
 #### expand simple_table such that we have a row for every type entry
 # TODO: play around with exception cases, like pikachu or pumpkaboo
-#simple_subset = simple_table[simple_table['name']=='castform']
+#simple_subset = simple_table[simple_table['name']=='eevee']
 #print(simple_subset)
 
-#bulba_subset = bulba_table[bulba_table['Pokémon']=='castform']
+#bulba_subset = bulba_table[bulba_table['Pokémon']=='eevee']
 #print(bulba_subset)
 
 #both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
@@ -66,27 +67,51 @@ def join_simple_bulba(pokename):
     both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
     return(both_subset)
 
-#print(join_simple_bulba('castform'))
+#print(join_simple_bulba('eevee'))
 #exit(0)
 
-
-## TODO: make a loop to iterate over all the unique names of Pokemon within simple_table
-## TODO: figure out a way to do NaN handling for cases when there is a form_name but no corresponding type_name
-## ...there should be about 50 Mega + 32 rando = 82 cases.
-## ...in all cases, the type info should be copied from the 'standard' entry for that species
+## Now let's get to joins! 
 poke_names = simple_table.name.unique()
 bulba_names = bulba_table.Pokémon.unique()
 if len(poke_names) != len(bulba_names):
     print("WARNING! simple_table AND bulba_table HAVE DIFFERENT TOTAL NUMBERS OF UNIQUE POKEMON SPECIES. Please look at the data and see if one of them is out-of-date or erroneous.")
 
+## iterate over all the unique names of Pokemon within simple_table and join the two data sources
 big_joined_table = pd.DataFrame()
-for name in poke_names:
+simples = simple_table.columns
+bulbas = bulba_table.columns
+
+
+for name in poke_names[0:151]:
     joined_table = join_simple_bulba(name)
     ## if we have Mega Evolution data, let's drop it for now.
     ## maybe I'll include it at some point, but my assumption 
     ## that Mega Evolutions have the same type as the standard forms
     ## is not true for several species, and...Mega Evolution is a temporary state anyway.
     joined_table = joined_table[~joined_table['form_name'].str.contains('mega',na=False)]
+
+    ## if all simple_table columns are NaN, then check if there is a standard type row.
+    ## if there is, copy its simple_table data into it 
+    standard_type_row = joined_table[joined_table['type_name'] == 'standard']
+    if len(joined_table[joined_table[simples].isna().any(axis=1)]) > 0:
+        print("simple_table columns are NaN")
+        if len(standard_type_row) > 1:
+            print("WARNING! we have multiple standard type rows for whatever reason.")
+        elif len(standard_type_row) == 1:
+            print("there exists a standard type row! Now let's copy standard type data for our missing type data for this special form.")
+            joined_table['name'].fillna(value=standard_type_row['name'].values[0],inplace=True)
+            joined_table['number'].fillna(value=standard_type_row['number'].values[0],inplace=True)
+            joined_table['type_name'].fillna(value=standard_type_row['type_name'].values[0],inplace=True)
+            joined_table['type'].fillna(value=standard_type_row['type'].values[0],inplace=True)
+            joined_table['generation'].fillna(value=standard_type_row['generation'].values[0],inplace=True)          
+        elif len(standard_type_row) == 0:
+            print("WARNING: We don't have a standard type row. Will need to look to some other row for filling in these data.")
+    #print(joined_table)
     big_joined_table = big_joined_table.append(joined_table,ignore_index=True)
 
-print(big_joined_table.iloc[:,0:8])
+print(big_joined_table)
+
+## TODO: figure out a way to do NaN handling for cases when there is a form_name but no corresponding type_name
+## ...there should be about 50 Mega + 32 rando = 82 cases.
+## ...in all cases, the type info should be copied from the 'standard' entry for that species
+
