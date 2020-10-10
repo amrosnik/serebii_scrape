@@ -113,7 +113,7 @@ def get_types_and_variants(i):
         standard_type = [a.attrs['href'] for a in cens.findAll('a')]
         standard_type = split_by_dex(standard_type)
         check_type(standard_type,regional_check=False)
-        indiv_types.update({"standard type" : standard_type})
+        indiv_types.update({"standard" : standard_type})
     else:
         intermed = cens[0].findAll('a')
         standard_type = [a.attrs['href'] for a in intermed]
@@ -125,13 +125,13 @@ def get_types_and_variants(i):
         if not all(normal_find): 
             for j in range(len(cens)):
                 if normal_find[j]:
-                    if "standard type" in indiv_types:
+                    if "standard" in indiv_types:
                         print("WARNING: For ,*",name,"* There is more than one standard type?!")
                     else: 
                         intermed = cens[j].findAll('a')
                         standard_type = [a.attrs['href'] for a in intermed]
                         standard_type = split_by_dex(standard_type)
-                        indiv_types.update({"standard type" : standard_type})
+                        indiv_types.update({"standard" : standard_type})
                 else:
                     tds = cens[j].find(['td'])
                     new_type_name = tds.contents[0]
