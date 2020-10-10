@@ -145,8 +145,8 @@ generation,name,number,type,type_name
 1,seaking,119,['water'],standard
 1,staryu,120,['water'],standard
 1,starmie,121,"['water', 'psychic']",standard
-1,mr.mime,122,"['psychic', 'fairy']",standard
-1,mr.mime,122,"['ice', 'psychic']",galarian
+1,mr. mime,122,"['psychic', 'fairy']",standard
+1,mr. mime,122,"['ice', 'psychic']",galarian
 1,scyther,123,"['bug', 'flying']",standard
 1,jynx,124,"['ice', 'psychic']",standard
 1,electabuzz,125,['electric'],standard

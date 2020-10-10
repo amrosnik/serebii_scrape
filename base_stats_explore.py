@@ -1,6 +1,7 @@
 import pandas as pd
 import pokescrape as scrape
 
+pd.set_option('display.max_row', 1050)
 #### This script file will be used to manipulate the * simple_table * saved in table_outputs/
 #### for the sake of initial data exploration. 
 
@@ -50,27 +51,42 @@ bulba_table = bulba_table[['Pokémon', '#','form_name','HP','Attack','Defense','
 
 #### expand simple_table such that we have a row for every type entry
 # TODO: play around with exception cases, like pikachu or pumpkaboo
-simple_subset = simple_table[simple_table['name']=='meowth']
+#simple_subset = simple_table[simple_table['name']=='meowth']
 #print(simple_subset['type_name'].values)
 
-bulba_subset = bulba_table[bulba_table['Pokémon'].str.contains('meowth')]
+#bulba_subset = bulba_table[bulba_table['Pokémon'].str.contains('meowth')]
 #print(bulba_subset['form_name'].values)
 
-both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
+#both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
 #print(both_subset[0:10])
 
 def join_simple_bulba(pokename):
     simple_subset = simple_table[simple_table['name']==pokename]
-    bulba_subset = bulba_table[bulba_table['Pokémon'].str.contains(pokename)]
+    bulba_subset = bulba_table[bulba_table['Pokémon']==pokename]
     both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
     return(both_subset)
 
-print(join_simple_bulba('meowth'))
+#print(join_simple_bulba('meowth'))
 
 ## TODO: make a loop to iterate over all the unique names of Pokemon within simple_table
-## ...and double-check both tables have identical lists of unique names!
 ## ...then iterate through that list
 ## ...append big new DataFrame after each join_simple_bulba() call 
 ## TODO: figure out a way to do NaN handling for cases when there is a form_name but no corresponding type_name
 ## ...there should be about 50 Mega + 32 rando = 82 cases.
 ## ...in all cases, the type info should be copied from the 'standard' entry for that species
+poke_names = simple_table.name.unique()
+bulba_names = bulba_table.Pokémon.unique()
+if len(poke_names) != len(bulba_names):
+    print("WARNING! simple_table AND bulba_table HAVE DIFFERENT TOTAL NUMBERS OF UNIQUE POKEMON SPECIES. Please look at the data and see if one of them is out-of-date or erroneous.")
+
+big_joined_table = pd.DataFrame()
+for name in poke_names[0:151]:
+    joined_table = join_simple_bulba(name)
+    ## if we have Mega Evolution data, let's drop it for now.
+    ## maybe I'll include it at some point, but my assumption 
+    ## that Mega Evolutions have the same type as the standard forms
+    ## is not true for several species, and...Mega Evolution is a temporary state anyway.
+    joined_table = joined_table[~joined_table['form_name'].str.contains('mega')]
+    big_joined_table = big_joined_table.append(joined_table,ignore_index=True)
+
+print(big_joined_table.iloc[:,0:8])
