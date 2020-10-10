@@ -36,6 +36,8 @@ simple_table = simple_table[['name', 'number','type_name','type','generation']]
 bulba_table = pd.read_csv('external_inputs/bulbapedia_baseStatsList_no-word-form.csv',header=0)
 # making the names lowercase will make life easier
 bulba_table['Pokémon'] = bulba_table['Pokémon'].str.lower()
+# let's make a new column out of anything in parentheses. 
+# This will be the bulba_table equivalent of the type_name column 
 names_and_types = bulba_table['Pokémon'].str.split(pat="(",expand=True)
 bulba_table['Pokémon'] = names_and_types[0]
 bulba_table['Pokémon'] = bulba_table['Pokémon'].str.strip()
@@ -43,12 +45,11 @@ bulba_table['form_name'] = names_and_types[1].str.replace(")","").fillna("standa
 bulba_table = bulba_table[['Pokémon', '#','form_name','HP','Attack','Defense','Sp. Attack', 
         'Sp. Defense', 'Speed','Total','Average']]
 #bulba_table = bulba_table.set_index(['Pokémon','form_name'])
-# let's make a new column out of anything in parentheses. 
-# This will be the bulba_table equivalent of the type_name column 
 #print(bulba_table)
 
-#exit(0)
+
 #### expand simple_table such that we have a row for every type entry
+# TODO: play around with exception cases, like pikachu or pumpkaboo
 simple_subset = simple_table[simple_table['name']=='meowth']
 #print(simple_subset['type_name'].values)
 
@@ -56,4 +57,20 @@ bulba_subset = bulba_table[bulba_table['Pokémon'].str.contains('meowth')]
 #print(bulba_subset['form_name'].values)
 
 both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
-print(both_subset[0:10])
+#print(both_subset[0:10])
+
+def join_simple_bulba(pokename):
+    simple_subset = simple_table[simple_table['name']==pokename]
+    bulba_subset = bulba_table[bulba_table['Pokémon'].str.contains(pokename)]
+    both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
+    return(both_subset)
+
+print(join_simple_bulba('meowth'))
+
+## TODO: make a loop to iterate over all the unique names of Pokemon within simple_table
+## ...and double-check both tables have identical lists of unique names!
+## ...then iterate through that list
+## ...append big new DataFrame after each join_simple_bulba() call 
+## TODO: figure out a way to do NaN handling for cases when there is a form_name but no corresponding type_name
+## ...there should be about 50 Mega + 32 rando = 82 cases.
+## ...in all cases, the type info should be copied from the 'standard' entry for that species
