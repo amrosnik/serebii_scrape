@@ -471,7 +471,7 @@ generation,name,number,type,type_name
 4,bronzor,436,"['steel', 'psychic']",standard
 4,bronzong,437,"['steel', 'psychic']",standard
 4,bonsly,438,['rock'],standard
-4,mimejr.,439,"['psychic', 'fairy']",standard
+4,mime jr.,439,"['psychic', 'fairy']",standard
 4,happiny,440,['normal'],standard
 4,chatot,441,"['normal', 'flying']",standard
 4,spiritomb,442,"['ghost', 'dark']",standard
@@ -821,7 +821,7 @@ generation,name,number,type,type_name
 7,sandygast,769,"['ghost', 'ground']",standard
 7,palossand,770,"['ghost', 'ground']",standard
 7,pyukumuku,771,['water'],standard
-7,type:null,772,['normal'],standard
+7,type: null,772,['normal'],standard
 7,silvally,773,['normal'],standard
 7,minior,774,"['rock', 'flying']",standard
 7,komala,775,['normal'],standard
@@ -834,10 +834,10 @@ generation,name,number,type,type_name
 7,jangmo-o,782,['dragon'],standard
 7,hakamo-o,783,"['dragon', 'fighting']",standard
 7,kommo-o,784,"['dragon', 'fighting']",standard
-7,tapukoko,785,"['electric', 'fairy']",standard
-7,tapulele,786,"['psychic', 'fairy']",standard
-7,tapubulu,787,"['grass', 'fairy']",standard
-7,tapufini,788,"['water', 'fairy']",standard
+7,tapu koko,785,"['electric', 'fairy']",standard
+7,tapu lele,786,"['psychic', 'fairy']",standard
+7,tapu bulu,787,"['grass', 'fairy']",standard
+7,tapu fini,788,"['water', 'fairy']",standard
 7,cosmog,789,['psychic'],standard
 7,cosmoem,790,['psychic'],standard
 7,solgaleo,791,"['psychic', 'steel']",standard
@@ -917,7 +917,7 @@ generation,name,number,type,type_name
 8,perrserker,863,['steel'],standard
 8,cursola,864,['ghost'],standard
 8,sirfetch'd,865,['fighting'],standard
-8,mr.rime,866,"['ice', 'psychic']",standard
+8,mr. rime,866,"['ice', 'psychic']",standard
 8,runerigus,867,"['ground', 'ghost']",standard
 8,milcery,868,['fairy'],standard
 8,alcremie,869,['fairy'],standard

@@ -47,15 +47,15 @@ bulba_table = bulba_table[['Pokémon', '#','form_name','HP','Attack','Defense','
         'Sp. Defense', 'Speed','Total','Average']]
 #bulba_table = bulba_table.set_index(['Pokémon','form_name'])
 #print(bulba_table)
-
+#exit(0)
 
 #### expand simple_table such that we have a row for every type entry
 # TODO: play around with exception cases, like pikachu or pumpkaboo
-#simple_subset = simple_table[simple_table['name']=='meowth']
-#print(simple_subset['type_name'].values)
+#simple_subset = simple_table[simple_table['name']=='castform']
+#print(simple_subset)
 
-#bulba_subset = bulba_table[bulba_table['Pokémon'].str.contains('meowth')]
-#print(bulba_subset['form_name'].values)
+#bulba_subset = bulba_table[bulba_table['Pokémon']=='castform']
+#print(bulba_subset)
 
 #both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
 #print(both_subset[0:10])
@@ -66,11 +66,11 @@ def join_simple_bulba(pokename):
     both_subset = pd.merge(simple_subset,bulba_subset,how='outer',left_on=['name','type_name'],right_on=['Pokémon','form_name'])
     return(both_subset)
 
-#print(join_simple_bulba('meowth'))
+#print(join_simple_bulba('castform'))
+#exit(0)
+
 
 ## TODO: make a loop to iterate over all the unique names of Pokemon within simple_table
-## ...then iterate through that list
-## ...append big new DataFrame after each join_simple_bulba() call 
 ## TODO: figure out a way to do NaN handling for cases when there is a form_name but no corresponding type_name
 ## ...there should be about 50 Mega + 32 rando = 82 cases.
 ## ...in all cases, the type info should be copied from the 'standard' entry for that species
@@ -80,13 +80,13 @@ if len(poke_names) != len(bulba_names):
     print("WARNING! simple_table AND bulba_table HAVE DIFFERENT TOTAL NUMBERS OF UNIQUE POKEMON SPECIES. Please look at the data and see if one of them is out-of-date or erroneous.")
 
 big_joined_table = pd.DataFrame()
-for name in poke_names[0:151]:
+for name in poke_names:
     joined_table = join_simple_bulba(name)
     ## if we have Mega Evolution data, let's drop it for now.
     ## maybe I'll include it at some point, but my assumption 
     ## that Mega Evolutions have the same type as the standard forms
     ## is not true for several species, and...Mega Evolution is a temporary state anyway.
-    joined_table = joined_table[~joined_table['form_name'].str.contains('mega')]
+    joined_table = joined_table[~joined_table['form_name'].str.contains('mega',na=False)]
     big_joined_table = big_joined_table.append(joined_table,ignore_index=True)
 
 print(big_joined_table.iloc[:,0:8])
