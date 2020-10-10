@@ -6,28 +6,6 @@ pd.set_option('display.max_column', 10)
 #### This script file will be used to manipulate the * simple_table * saved in table_outputs/
 #### for the sake of initial data exploration. 
 
-### Process:
-# 1. split out simple_table such that each row has ONE type entry on it.
-## e.g., if a species has a standard form and a Galarian form, 
-## it will have TWO rows for it in the expanded table. 
-# 2. import Bulbapedia table. For now, remove rows with "(Mega" 
-## because for now we're discounting Mega Evolution. 
-# 3. Join the two tables based on: name, number, and type name. 
-## Will somehow need to specify that "Standard Type" in expanded_table 
-## should map onto NO parentheses for a given species. 
-## Will need to add an exception for FUCKING DARMANITAN so can properly 
-## join on its Galarian Zen form.
-
-### notes: 
-## having done some poking around (haha) on the Bulbapedia table, 
-## for some reason I can't account for FIVE forms. 
-## The two tables have the same numbers of Galarian and Alolan forms. 
-## Excluding the Mega forms, and counting out all the special forms 
-## that don't have a type difference but a base stat difference, 
-## for whatever reason there are FIVE things I can't account for.
-
-## I'll probably just do the join and see what happens.   
-
 
 #### read in data
 simple_table = pd.read_csv('table_outputs/simple_table.csv',header=0)
@@ -50,7 +28,6 @@ bulba_table = bulba_table[['Pokémon', '#','form_name','HP','Attack','Defense','
 #print(bulba_table)
 #exit(0)
 
-#### expand simple_table such that we have a row for every type entry
 # TODO: play around with exception cases, like pikachu or pumpkaboo
 #simple_subset = simple_table[simple_table['name']=='eevee']
 #print(simple_subset)
@@ -111,7 +88,18 @@ for name in poke_names[0:151]:
 
 print(big_joined_table)
 
-## TODO: figure out a way to do NaN handling for cases when there is a form_name but no corresponding type_name
-## ...there should be about 50 Mega + 32 rando = 82 cases.
-## ...in all cases, the type info should be copied from the 'standard' entry for that species
+## TODO: figure out a way to do NaN handling for cases when there is a type_name but no corresponding form_name
+## ...there should be about 32 cases, excluding the 50 Mega Evolutions.
+## ...in all cases, the type info should be copied from the 'standard' entry for that species.
+## if there is no standard type row, I'll need to update that manually
 
+## Will need to add an exception for FUCKING DARMANITAN so can properly 
+## join on its Galarian Zen form.
+
+### notes: 
+## having done some poking around (haha) on the Bulbapedia table, 
+## for some reason I can't account for FIVE forms. 
+## The two tables have the same numbers of Galarian and Alolan forms. 
+## Excluding the Mega forms, and counting out all the special forms 
+## that don't have a type difference but a base stat difference, 
+## for whatever reason there are FIVE things I can't account for.
