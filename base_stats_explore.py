@@ -60,7 +60,7 @@ simples = simple_table.columns
 bulbas = bulba_table.columns
 
 
-for name in poke_names[450:500]:
+for name in poke_names[554:555]:
     joined_table = join_simple_bulba(name)
     ## if we have Mega Evolution data, let's drop it for now.
     ## maybe I'll include it at some point, but my assumption 
@@ -68,6 +68,7 @@ for name in poke_names[450:500]:
     ## is not true for several species, and...Mega Evolution is a temporary state anyway.
     joined_table = joined_table[~joined_table['form_name'].str.contains('mega',na=False)]
 
+    #print(joined_table.iloc[:,np.r_[1:4,5,7:12]])
     ## if all simple_table columns are NaN, then check if there is a standard type row.
     ## if there is, copy its simple_table data into it 
     standard_type_row = joined_table[joined_table['type_name'] == 'standard']
@@ -107,21 +108,23 @@ for name in poke_names[450:500]:
         joined_table = joined_table.drop(joined_table[joined_table['type_name']=='rotom dex'].index)
         #print(standard_type_row)
         #print(standard_form_row)
+    # Darmanitan (#555): easily my least favorite Pokemon because of all the exception handling for it. What a diva.
+    # Need to copy the Galarian type data to the Galarian Zen form.
+    if name == "darmanitan":
+        joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type_name']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type_name']].replace("standard","galarian form, zen mode")
+        joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type']].replace("['fire']","['ice', 'fire']")
     ## Drop any duplicate standard/normal rows 
 
     #print(joined_table)
     big_joined_table = big_joined_table.append(joined_table,ignore_index=True)
 
-print(big_joined_table.iloc[:,np.r_[0:3,5,7:10]])
+print(big_joined_table.iloc[:,np.r_[1:4,5,7:12]])
 #big_joined_table.to_pickle("./joined_table_pickle.pkl")
 
 ## TODO: figure out a way to do NaN handling for cases when there is a type_name but no corresponding form_name
 ## ...there should be about 32 cases, excluding the 50 Mega Evolutions.
 ## ...in all cases, the type info should be copied from the 'standard' entry for that species.
 ## if there is no standard type row, I'll need to update that manually
-
-## Will need to add an exception for FUCKING DARMANITAN so can properly 
-## join on its Galarian Zen form.
 
 ### notes: 
 ## having done some poking around (haha) on the Bulbapedia table, 
