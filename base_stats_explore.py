@@ -1,5 +1,5 @@
 import pandas as pd
-import pokescrape as scrape
+#import pokescrape as scrape
 import numpy as np
 
 pd.set_option('display.max_row', 1050)
@@ -60,7 +60,7 @@ simples = simple_table.columns
 bulbas = bulba_table.columns
 
 
-for name in poke_names[554:555]:
+for name in poke_names[700:750]:
     joined_table = join_simple_bulba(name)
     ## if we have Mega Evolution data, let's drop it for now.
     ## maybe I'll include it at some point, but my assumption 
@@ -106,19 +106,47 @@ for name in poke_names[554:555]:
         joined_table['type_name'].replace(to_replace='^rotom',value='standard',regex=True,inplace=True)
         joined_table = joined_table.drop(standard_form_row.index)
         joined_table = joined_table.drop(joined_table[joined_table['type_name']=='rotom dex'].index)
-        #print(standard_type_row)
-        #print(standard_form_row)
     # Darmanitan (#555): easily my least favorite Pokemon because of all the exception handling for it. What a diva.
     # Need to copy the Galarian type data to the Galarian Zen form.
     if name == "darmanitan":
         joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type_name']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type_name']].replace("standard","galarian form, zen mode")
         joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type']].replace("['fire']","['ice', 'fire']")
+    # The Gen V legendaries have two forms, Incarnate or Therian. There is no "standard" form, 
+    # so let's drop the sad attempt to make a standard form. Note the type is the same for both forms. 
+    if name == "tornadus" or name == "thundurus" or name == "landorus":
+        joined_table = joined_table.drop(standard_type_row.index)
+    # Aegislash (#681) has two forms, neither of which is "standard"
+    if name == "aegislash":
+        joined_table = joined_table.drop(standard_type_row.index)    
+    # Pumpkaboo and Gourgeist (#710 and 711) have multiple sizes, and "average size" is the standard form.
+    if name == "pumpkaboo" or name == "gourgeist":
+        joined_table = joined_table.drop(standard_type_row.index)    
+    # Zygarde (#718) is the coolest. Let's consider its 50% forme the "average".
+    if name == "zygarde":
+        joined_table = joined_table.drop(standard_type_row.index)    
+    # Lycanroc (#745)'s midday form is the closest to an average 
+    if name == "lycanroc":
+        joined_table = joined_table.drop(standard_type_row.index)    
+    # Wishiwashi (#746) changes form based on battle stats, so let's consider its Solo Form the standard
+    if name == "wishiwashi":
+        solo_row = joined_table[joined_table['form_name'].str.contains('solo',regex=True,na=False)]
+        for x in bulbas:
+            if x != 'form_name':
+                joined_table[x].fillna(value=solo_row[x].values[0],inplace=True)
+            else:
+                joined_table[x].fillna(value='standard',inplace=True)
+        #print(standard_type_row)
+        #print(standard_form_row)
+
     ## Drop any duplicate standard/normal rows 
+        # Deoxys
+        # Darmanitan
+        # Kyurem
 
     #print(joined_table)
     big_joined_table = big_joined_table.append(joined_table,ignore_index=True)
 
-print(big_joined_table.iloc[:,np.r_[1:4,5,7:12]])
+print(big_joined_table.iloc[:,np.r_[1:3,5,7:9]])
 #big_joined_table.to_pickle("./joined_table_pickle.pkl")
 
 ## TODO: figure out a way to do NaN handling for cases when there is a type_name but no corresponding form_name
