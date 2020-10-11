@@ -60,7 +60,7 @@ simples = simple_table.columns
 bulbas = bulba_table.columns
 
 
-for name in poke_names[700:750]:
+for name in poke_names[850:900]:
     joined_table = join_simple_bulba(name)
     ## if we have Mega Evolution data, let's drop it for now.
     ## maybe I'll include it at some point, but my assumption 
@@ -135,6 +135,31 @@ for name in poke_names[700:750]:
                 joined_table[x].fillna(value=solo_row[x].values[0],inplace=True)
             else:
                 joined_table[x].fillna(value='standard',inplace=True)
+    # Minior (#774)'s meteor form is basically a standard form. Core forms only occur when HP changes, which is a fluctuating battle stat
+    if name == "minior":
+        meteor_row = joined_table[joined_table['form_name'].str.contains('meteor',regex=True,na=False)]
+        for x in bulbas:
+            if x != 'form_name':
+                joined_table[x].fillna(value=meteor_row[x].values[0],inplace=True)
+            else:
+                joined_table[x].fillna(value='standard',inplace=True)
+    # Toxtricity (#849)'s form depends on its Nature, so there's no standard form
+    if name == "toxtricity":
+        joined_table = joined_table.drop(standard_type_row.index)
+    # Eiscue (#875) Ice form seems to be the more stable one? 
+    if name == "eiscue":
+        ice_row = joined_table[joined_table['form_name'].str.contains('^ice',regex=True,na=False)]
+        for x in bulbas:
+            if x != 'form_name':
+                joined_table[x].fillna(value=ice_row[x].values[0],inplace=True)
+            else:
+                joined_table[x].fillna(value='standard',inplace=True)
+    # Indeedee (#876) has two equally probable gender forms, so I'm considering them equivalently "standard"
+    if name == "indeedee":
+        joined_table = joined_table.drop(standard_type_row.index)    
+    # Urshifu (#892)'s form depends on the conditions under which it's evolved, so there's no standard
+    if name == "urshifu":
+        joined_table = joined_table.drop(standard_type_row.index)
         #print(standard_type_row)
         #print(standard_form_row)
 
