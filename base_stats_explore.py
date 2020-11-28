@@ -59,8 +59,9 @@ big_joined_table = pd.DataFrame()
 simples = simple_table.columns
 bulbas = bulba_table.columns
 
-
 for name in poke_names:
+#for z in range(897,len(poke_names)):
+#    name = poke_names[z]
     joined_table = join_simple_bulba(name)
     ## if we have Mega Evolution data, let's drop it for now.
     ## maybe I'll include it at some point, but my assumption 
@@ -165,6 +166,10 @@ for name in poke_names:
         joined_table = joined_table.drop(standard_type_row.index)
         #print(standard_type_row)
         #print(standard_form_row)
+    # Calyrex (#898) has a standard form and two "rider" forms but the standard form is called Calyrex. 
+    if name == "calyrex":
+        joined_table['type_name'].replace(to_replace='^calyrex',value='standard',regex=True,inplace=True)
+        joined_table = joined_table.drop(joined_table[joined_table['type_name'].isna()].index)
 
     ## Drop any duplicate standard/normal rows. I found these for
         # Deoxys
