@@ -1,5 +1,5 @@
 import pandas as pd
-#import pokescrape as scrape
+import pokescrape as scrape
 import numpy as np
 
 pd.set_option('display.max_row', 1050)
@@ -8,6 +8,33 @@ pd.set_option('display.max_column', 16)
 #### for the sake of initial data exploration. 
 
 df = pd.read_pickle("./joined_table_pickle.pkl")
+
+## paranoid check to make sure the new data structure is consistent with the old one
+## will delete eventually
+## good news, everyone: they are consistent! and I actually found an error in the old one.
+"""
+old_df = pd.read_pickle("../../Downloads/early_joined_table_pickle.pkl")
+for i in range(len(df)):
+   #print(old_df.loc[i,'number'],old_df.loc[i,'type'],df.loc[i,'primary_type'],df.loc[i,'secondary_type'])
+   stripped_old = old_df.loc[i,'type'].replace('[,\[\]]','')
+   stripped_1 = df.loc[i,'primary_type'].replace('[,\[\]]','')
+   stripped_2 = df.loc[i,'secondary_type'].replace('[,\[\]]','')
+   if stripped_2 == "NONE":
+       stripped_2 = " " 
+   stripped_new = stripped_1 + " " + stripped_2
+   if stripped_1 in str(old_df.loc[i,'type']):
+       yay = 1 
+   else:
+       print("missing primary type")
+       print(old_df.loc[i,'number'],old_df.loc[i,'type'],stripped_1,stripped_2)
+   if stripped_2 != " ":
+      if stripped_2 in str(old_df.loc[i,'type']):
+          yay = 1 
+      else:
+          print("missing secondary type")
+          print(old_df.loc[i,'number'],old_df.loc[i,'type'],stripped_1,stripped_2)
+exit(0)
+"""
 
 ## best and worst in each category
 ## TODO: figure out a way to print this out better
@@ -47,4 +74,11 @@ print(df.iloc[df['stdev'].idxmin()])
 ## (also do the first approximation with only using the primary type) 
 ## (also do "pure" vs. "mixed" types for each type. "pure" meaning, pokemon with only one type. "mixed" otherwise.)
 
-## look for patterns in stat distributions for each type. 
+## look for patterns in stat distributions for each type.
+
+for x in scrape.possible_types:
+    print("********* NOW GROUPING FOR TYPE ",x," **********")
+    primary_type_grouping = df[df['primary_type'].str.contains(x,regex=True,na=False)]
+    secondary_type_grouping = df[df['secondary_type'].str.contains(x,regex=True,na=False)]
+    print(primary_type_grouping[['name','type_name','primary_type','secondary_type','form_name']])
+    print(secondary_type_grouping[['name','type_name','primary_type','secondary_type','form_name']])

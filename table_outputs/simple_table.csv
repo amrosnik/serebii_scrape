@@ -1,960 +1,960 @@
-generation,name,number,type,type_name
-1,bulbasaur,1,"['grass', 'poison']",standard
-1,ivysaur,2,"['grass', 'poison']",standard
-1,venusaur,3,"['grass', 'poison']",standard
-1,charmander,4,['fire'],standard
-1,charmeleon,5,['fire'],standard
-1,charizard,6,"['fire', 'flying']",standard
-1,squirtle,7,['water'],standard
-1,wartortle,8,['water'],standard
-1,blastoise,9,['water'],standard
-1,caterpie,10,['bug'],standard
-1,metapod,11,['bug'],standard
-1,butterfree,12,"['bug', 'flying']",standard
-1,weedle,13,"['bug', 'poison']",standard
-1,kakuna,14,"['bug', 'poison']",standard
-1,beedrill,15,"['bug', 'poison']",standard
-1,pidgey,16,"['normal', 'flying']",standard
-1,pidgeotto,17,"['normal', 'flying']",standard
-1,pidgeot,18,"['normal', 'flying']",standard
-1,rattata,19,['normal'],standard
-1,rattata,19,"['dark', 'normal']",alolan
-1,raticate,20,['normal'],standard
-1,raticate,20,"['dark', 'normal']",alolan
-1,spearow,21,"['normal', 'flying']",standard
-1,fearow,22,"['normal', 'flying']",standard
-1,ekans,23,['poison'],standard
-1,arbok,24,['poison'],standard
-1,pikachu,25,['electric'],standard
-1,raichu,26,['electric'],standard
-1,raichu,26,"['electric', 'psychic']",alolan
-1,sandshrew,27,['ground'],standard
-1,sandshrew,27,"['ice', 'steel']",alolan
-1,sandslash,28,['ground'],standard
-1,sandslash,28,"['ice', 'steel']",alolan
-1,nidoranf,29,['poison'],standard
-1,nidorina,30,['poison'],standard
-1,nidoqueen,31,"['poison', 'ground']",standard
-1,nidoranm,32,['poison'],standard
-1,nidorino,33,['poison'],standard
-1,nidoking,34,"['poison', 'ground']",standard
-1,clefairy,35,['fairy'],standard
-1,clefable,36,['fairy'],standard
-1,vulpix,37,['fire'],standard
-1,vulpix,37,['ice'],alolan
-1,ninetales,38,['fire'],standard
-1,ninetales,38,"['ice', 'fairy']",alolan
-1,jigglypuff,39,"['normal', 'fairy']",standard
-1,wigglytuff,40,"['normal', 'fairy']",standard
-1,zubat,41,"['poison', 'flying']",standard
-1,golbat,42,"['poison', 'flying']",standard
-1,oddish,43,"['grass', 'poison']",standard
-1,gloom,44,"['grass', 'poison']",standard
-1,vileplume,45,"['grass', 'poison']",standard
-1,paras,46,"['bug', 'grass']",standard
-1,parasect,47,"['bug', 'grass']",standard
-1,venonat,48,"['bug', 'poison']",standard
-1,venomoth,49,"['bug', 'poison']",standard
-1,diglett,50,['ground'],standard
-1,diglett,50,"['ground', 'steel']",alolan
-1,dugtrio,51,['ground'],standard
-1,dugtrio,51,"['ground', 'steel']",alolan
-1,meowth,52,['normal'],standard
-1,meowth,52,['dark'],alolan
-1,meowth,52,['steel'],galarian
-1,persian,53,['normal'],standard
-1,persian,53,['dark'],alolan
-1,psyduck,54,['water'],standard
-1,golduck,55,['water'],standard
-1,mankey,56,['fighting'],standard
-1,primeape,57,['fighting'],standard
-1,growlithe,58,['fire'],standard
-1,arcanine,59,['fire'],standard
-1,poliwag,60,['water'],standard
-1,poliwhirl,61,['water'],standard
-1,poliwrath,62,"['water', 'fighting']",standard
-1,abra,63,['psychic'],standard
-1,kadabra,64,['psychic'],standard
-1,alakazam,65,['psychic'],standard
-1,machop,66,['fighting'],standard
-1,machoke,67,['fighting'],standard
-1,machamp,68,['fighting'],standard
-1,bellsprout,69,"['grass', 'poison']",standard
-1,weepinbell,70,"['grass', 'poison']",standard
-1,victreebel,71,"['grass', 'poison']",standard
-1,tentacool,72,"['water', 'poison']",standard
-1,tentacruel,73,"['water', 'poison']",standard
-1,geodude,74,"['rock', 'ground']",standard
-1,geodude,74,"['rock', 'electric']",alolan
-1,graveler,75,"['rock', 'ground']",standard
-1,graveler,75,"['rock', 'electric']",alolan
-1,golem,76,"['rock', 'ground']",standard
-1,golem,76,"['rock', 'electric']",alolan
-1,ponyta,77,['fire'],standard
-1,ponyta,77,['psychic'],galarian
-1,rapidash,78,['fire'],standard
-1,rapidash,78,"['psychic', 'fairy']",galarian
-1,slowpoke,79,"['water', 'psychic']",standard
-1,slowpoke,79,['psychic'],galarian
-1,slowbro,80,"['water', 'psychic']",standard
-1,slowbro,80,"['poison', 'psychic']",galarian
-1,magnemite,81,"['electric', 'steel']",standard
-1,magneton,82,"['electric', 'steel']",standard
-1,farfetch'd,83,"['normal', 'flying']",standard
-1,farfetch'd,83,['fighting'],galarian
-1,doduo,84,"['normal', 'flying']",standard
-1,dodrio,85,"['normal', 'flying']",standard
-1,seel,86,['water'],standard
-1,dewgong,87,"['water', 'ice']",standard
-1,grimer,88,['poison'],standard
-1,grimer,88,"['poison', 'dark']",alolan
-1,muk,89,['poison'],standard
-1,muk,89,"['poison', 'dark']",alolan
-1,shellder,90,['water'],standard
-1,cloyster,91,"['water', 'ice']",standard
-1,gastly,92,"['ghost', 'poison']",standard
-1,haunter,93,"['ghost', 'poison']",standard
-1,gengar,94,"['ghost', 'poison']",standard
-1,onix,95,"['rock', 'ground']",standard
-1,drowzee,96,['psychic'],standard
-1,hypno,97,['psychic'],standard
-1,krabby,98,['water'],standard
-1,kingler,99,['water'],standard
-1,voltorb,100,['electric'],standard
-1,electrode,101,['electric'],standard
-1,exeggcute,102,"['grass', 'psychic']",standard
-1,exeggutor,103,"['grass', 'psychic']",standard
-1,exeggutor,103,"['grass', 'dragon']",alolan
-1,cubone,104,['ground'],standard
-1,marowak,105,['ground'],standard
-1,marowak,105,"['fire', 'ghost']",alolan
-1,hitmonlee,106,['fighting'],standard
-1,hitmonchan,107,['fighting'],standard
-1,lickitung,108,['normal'],standard
-1,koffing,109,['poison'],standard
-1,weezing,110,['poison'],standard
-1,weezing,110,"['poison', 'fairy']",galarian
-1,rhyhorn,111,"['ground', 'rock']",standard
-1,rhydon,112,"['ground', 'rock']",standard
-1,chansey,113,['normal'],standard
-1,tangela,114,['grass'],standard
-1,kangaskhan,115,['normal'],standard
-1,horsea,116,['water'],standard
-1,seadra,117,['water'],standard
-1,goldeen,118,['water'],standard
-1,seaking,119,['water'],standard
-1,staryu,120,['water'],standard
-1,starmie,121,"['water', 'psychic']",standard
-1,mr. mime,122,"['psychic', 'fairy']",standard
-1,mr. mime,122,"['ice', 'psychic']",galarian
-1,scyther,123,"['bug', 'flying']",standard
-1,jynx,124,"['ice', 'psychic']",standard
-1,electabuzz,125,['electric'],standard
-1,magmar,126,['fire'],standard
-1,pinsir,127,['bug'],standard
-1,tauros,128,['normal'],standard
-1,magikarp,129,['water'],standard
-1,gyarados,130,"['water', 'flying']",standard
-1,lapras,131,"['water', 'ice']",standard
-1,ditto,132,['normal'],standard
-1,eevee,133,['normal'],standard
-1,vaporeon,134,['water'],standard
-1,jolteon,135,['electric'],standard
-1,flareon,136,['fire'],standard
-1,porygon,137,['normal'],standard
-1,omanyte,138,"['rock', 'water']",standard
-1,omastar,139,"['rock', 'water']",standard
-1,kabuto,140,"['rock', 'water']",standard
-1,kabutops,141,"['rock', 'water']",standard
-1,aerodactyl,142,"['rock', 'flying']",standard
-1,snorlax,143,['normal'],standard
-1,articuno,144,"['ice', 'flying']",standard
-1,articuno,144,"['psychic', 'flying']",galarian
-1,zapdos,145,"['electric', 'flying']",standard
-1,zapdos,145,"['fighting', 'flying']",galarian
-1,moltres,146,"['fire', 'flying']",standard
-1,moltres,146,"['dark', 'flying']",galarian
-1,dratini,147,['dragon'],standard
-1,dragonair,148,['dragon'],standard
-1,dragonite,149,"['dragon', 'flying']",standard
-1,mewtwo,150,['psychic'],standard
-1,mew,151,['psychic'],standard
-2,chikorita,152,['grass'],standard
-2,bayleef,153,['grass'],standard
-2,meganium,154,['grass'],standard
-2,cyndaquil,155,['fire'],standard
-2,quilava,156,['fire'],standard
-2,typhlosion,157,['fire'],standard
-2,totodile,158,['water'],standard
-2,croconaw,159,['water'],standard
-2,feraligatr,160,['water'],standard
-2,sentret,161,['normal'],standard
-2,furret,162,['normal'],standard
-2,hoothoot,163,"['normal', 'flying']",standard
-2,noctowl,164,"['normal', 'flying']",standard
-2,ledyba,165,"['bug', 'flying']",standard
-2,ledian,166,"['bug', 'flying']",standard
-2,spinarak,167,"['bug', 'poison']",standard
-2,ariados,168,"['bug', 'poison']",standard
-2,crobat,169,"['poison', 'flying']",standard
-2,chinchou,170,"['water', 'electric']",standard
-2,lanturn,171,"['water', 'electric']",standard
-2,pichu,172,['electric'],standard
-2,cleffa,173,['fairy'],standard
-2,igglybuff,174,"['normal', 'fairy']",standard
-2,togepi,175,['fairy'],standard
-2,togetic,176,"['fairy', 'flying']",standard
-2,natu,177,"['psychic', 'flying']",standard
-2,xatu,178,"['psychic', 'flying']",standard
-2,mareep,179,['electric'],standard
-2,flaaffy,180,['electric'],standard
-2,ampharos,181,['electric'],standard
-2,bellossom,182,['grass'],standard
-2,marill,183,"['water', 'fairy']",standard
-2,azumarill,184,"['water', 'fairy']",standard
-2,sudowoodo,185,['rock'],standard
-2,politoed,186,['water'],standard
-2,hoppip,187,"['grass', 'flying']",standard
-2,skiploom,188,"['grass', 'flying']",standard
-2,jumpluff,189,"['grass', 'flying']",standard
-2,aipom,190,['normal'],standard
-2,sunkern,191,['grass'],standard
-2,sunflora,192,['grass'],standard
-2,yanma,193,"['bug', 'flying']",standard
-2,wooper,194,"['water', 'ground']",standard
-2,quagsire,195,"['water', 'ground']",standard
-2,espeon,196,['psychic'],standard
-2,umbreon,197,['dark'],standard
-2,murkrow,198,"['dark', 'flying']",standard
-2,slowking,199,"['water', 'psychic']",standard
-2,slowking,199,"['poison', 'psychic']",galarian
-2,misdreavus,200,['ghost'],standard
-2,unown,201,['psychic'],standard
-2,wobbuffet,202,['psychic'],standard
-2,girafarig,203,"['normal', 'psychic']",standard
-2,pineco,204,['bug'],standard
-2,forretress,205,"['bug', 'steel']",standard
-2,dunsparce,206,['normal'],standard
-2,gligar,207,"['ground', 'flying']",standard
-2,steelix,208,"['steel', 'ground']",standard
-2,snubbull,209,['fairy'],standard
-2,granbull,210,['fairy'],standard
-2,qwilfish,211,"['water', 'poison']",standard
-2,scizor,212,"['bug', 'steel']",standard
-2,shuckle,213,"['bug', 'rock']",standard
-2,heracross,214,"['bug', 'fighting']",standard
-2,sneasel,215,"['dark', 'ice']",standard
-2,teddiursa,216,['normal'],standard
-2,ursaring,217,['normal'],standard
-2,slugma,218,['fire'],standard
-2,magcargo,219,"['fire', 'rock']",standard
-2,swinub,220,"['ice', 'ground']",standard
-2,piloswine,221,"['ice', 'ground']",standard
-2,corsola,222,"['water', 'rock']",standard
-2,corsola,222,['ghost'],galarian
-2,remoraid,223,['water'],standard
-2,octillery,224,['water'],standard
-2,delibird,225,"['ice', 'flying']",standard
-2,mantine,226,"['water', 'flying']",standard
-2,skarmory,227,"['steel', 'flying']",standard
-2,houndour,228,"['dark', 'fire']",standard
-2,houndoom,229,"['dark', 'fire']",standard
-2,kingdra,230,"['water', 'dragon']",standard
-2,phanpy,231,['ground'],standard
-2,donphan,232,['ground'],standard
-2,porygon2,233,['normal'],standard
-2,stantler,234,['normal'],standard
-2,smeargle,235,['normal'],standard
-2,tyrogue,236,['fighting'],standard
-2,hitmontop,237,['fighting'],standard
-2,smoochum,238,"['ice', 'psychic']",standard
-2,elekid,239,['electric'],standard
-2,magby,240,['fire'],standard
-2,miltank,241,['normal'],standard
-2,blissey,242,['normal'],standard
-2,raikou,243,['electric'],standard
-2,entei,244,['fire'],standard
-2,suicune,245,['water'],standard
-2,larvitar,246,"['rock', 'ground']",standard
-2,pupitar,247,"['rock', 'ground']",standard
-2,tyranitar,248,"['rock', 'dark']",standard
-2,lugia,249,"['psychic', 'flying']",standard
-2,ho-oh,250,"['fire', 'flying']",standard
-2,celebi,251,"['psychic', 'grass']",standard
-3,treecko,252,['grass'],standard
-3,grovyle,253,['grass'],standard
-3,sceptile,254,['grass'],standard
-3,torchic,255,['fire'],standard
-3,combusken,256,"['fire', 'fighting']",standard
-3,blaziken,257,"['fire', 'fighting']",standard
-3,mudkip,258,['water'],standard
-3,marshtomp,259,"['water', 'ground']",standard
-3,swampert,260,"['water', 'ground']",standard
-3,poochyena,261,['dark'],standard
-3,mightyena,262,['dark'],standard
-3,zigzagoon,263,['normal'],standard
-3,zigzagoon,263,"['dark', 'normal']",galarian
-3,linoone,264,['normal'],standard
-3,linoone,264,"['dark', 'normal']",galarian
-3,wurmple,265,['bug'],standard
-3,silcoon,266,['bug'],standard
-3,beautifly,267,"['bug', 'flying']",standard
-3,cascoon,268,['bug'],standard
-3,dustox,269,"['bug', 'poison']",standard
-3,lotad,270,"['water', 'grass']",standard
-3,lombre,271,"['water', 'grass']",standard
-3,ludicolo,272,"['water', 'grass']",standard
-3,seedot,273,['grass'],standard
-3,nuzleaf,274,"['grass', 'dark']",standard
-3,shiftry,275,"['grass', 'dark']",standard
-3,taillow,276,"['normal', 'flying']",standard
-3,swellow,277,"['normal', 'flying']",standard
-3,wingull,278,"['water', 'flying']",standard
-3,pelipper,279,"['water', 'flying']",standard
-3,ralts,280,"['psychic', 'fairy']",standard
-3,kirlia,281,"['psychic', 'fairy']",standard
-3,gardevoir,282,"['psychic', 'fairy']",standard
-3,surskit,283,"['bug', 'water']",standard
-3,masquerain,284,"['bug', 'flying']",standard
-3,shroomish,285,['grass'],standard
-3,breloom,286,"['grass', 'fighting']",standard
-3,slakoth,287,['normal'],standard
-3,vigoroth,288,['normal'],standard
-3,slaking,289,['normal'],standard
-3,nincada,290,"['bug', 'ground']",standard
-3,ninjask,291,"['bug', 'flying']",standard
-3,shedinja,292,"['bug', 'ghost']",standard
-3,whismur,293,['normal'],standard
-3,loudred,294,['normal'],standard
-3,exploud,295,['normal'],standard
-3,makuhita,296,['fighting'],standard
-3,hariyama,297,['fighting'],standard
-3,azurill,298,"['normal', 'fairy']",standard
-3,nosepass,299,['rock'],standard
-3,skitty,300,['normal'],standard
-3,delcatty,301,['normal'],standard
-3,sableye,302,"['dark', 'ghost']",standard
-3,mawile,303,"['steel', 'fairy']",standard
-3,aron,304,"['steel', 'rock']",standard
-3,lairon,305,"['steel', 'rock']",standard
-3,aggron,306,"['steel', 'rock']",standard
-3,meditite,307,"['fighting', 'psychic']",standard
-3,medicham,308,"['fighting', 'psychic']",standard
-3,electrike,309,['electric'],standard
-3,manectric,310,['electric'],standard
-3,plusle,311,['electric'],standard
-3,minun,312,['electric'],standard
-3,volbeat,313,['bug'],standard
-3,illumise,314,['bug'],standard
-3,roselia,315,"['grass', 'poison']",standard
-3,gulpin,316,['poison'],standard
-3,swalot,317,['poison'],standard
-3,carvanha,318,"['water', 'dark']",standard
-3,sharpedo,319,"['water', 'dark']",standard
-3,wailmer,320,['water'],standard
-3,wailord,321,['water'],standard
-3,numel,322,"['fire', 'ground']",standard
-3,camerupt,323,"['fire', 'ground']",standard
-3,torkoal,324,['fire'],standard
-3,spoink,325,['psychic'],standard
-3,grumpig,326,['psychic'],standard
-3,spinda,327,['normal'],standard
-3,trapinch,328,['ground'],standard
-3,vibrava,329,"['ground', 'dragon']",standard
-3,flygon,330,"['ground', 'dragon']",standard
-3,cacnea,331,['grass'],standard
-3,cacturne,332,"['grass', 'dark']",standard
-3,swablu,333,"['normal', 'flying']",standard
-3,altaria,334,"['dragon', 'flying']",standard
-3,zangoose,335,['normal'],standard
-3,seviper,336,['poison'],standard
-3,lunatone,337,"['rock', 'psychic']",standard
-3,solrock,338,"['rock', 'psychic']",standard
-3,barboach,339,"['water', 'ground']",standard
-3,whiscash,340,"['water', 'ground']",standard
-3,corphish,341,['water'],standard
-3,crawdaunt,342,"['water', 'dark']",standard
-3,baltoy,343,"['ground', 'psychic']",standard
-3,claydol,344,"['ground', 'psychic']",standard
-3,lileep,345,"['rock', 'grass']",standard
-3,cradily,346,"['rock', 'grass']",standard
-3,anorith,347,"['rock', 'bug']",standard
-3,armaldo,348,"['rock', 'bug']",standard
-3,feebas,349,['water'],standard
-3,milotic,350,['water'],standard
-3,castform,351,['normal'],standard
-3,castform,351,['fire'],sunny form
-3,castform,351,['water'],rainy form
-3,castform,351,['ice'],snowy form
-3,kecleon,352,['normal'],standard
-3,shuppet,353,['ghost'],standard
-3,banette,354,['ghost'],standard
-3,duskull,355,['ghost'],standard
-3,dusclops,356,['ghost'],standard
-3,tropius,357,"['grass', 'flying']",standard
-3,chimecho,358,['psychic'],standard
-3,absol,359,['dark'],standard
-3,wynaut,360,['psychic'],standard
-3,snorunt,361,['ice'],standard
-3,glalie,362,['ice'],standard
-3,spheal,363,"['ice', 'water']",standard
-3,sealeo,364,"['ice', 'water']",standard
-3,walrein,365,"['ice', 'water']",standard
-3,clamperl,366,['water'],standard
-3,huntail,367,['water'],standard
-3,gorebyss,368,['water'],standard
-3,relicanth,369,"['water', 'rock']",standard
-3,luvdisc,370,['water'],standard
-3,bagon,371,['dragon'],standard
-3,shelgon,372,['dragon'],standard
-3,salamence,373,"['dragon', 'flying']",standard
-3,beldum,374,"['steel', 'psychic']",standard
-3,metang,375,"['steel', 'psychic']",standard
-3,metagross,376,"['steel', 'psychic']",standard
-3,regirock,377,['rock'],standard
-3,regice,378,['ice'],standard
-3,registeel,379,['steel'],standard
-3,latias,380,"['dragon', 'psychic']",standard
-3,latios,381,"['dragon', 'psychic']",standard
-3,kyogre,382,['water'],standard
-3,groudon,383,['ground'],standard
-3,rayquaza,384,"['dragon', 'flying']",standard
-3,jirachi,385,"['steel', 'psychic']",standard
-3,deoxys,386,['psychic'],standard
-4,turtwig,387,['grass'],standard
-4,grotle,388,['grass'],standard
-4,torterra,389,"['grass', 'ground']",standard
-4,chimchar,390,['fire'],standard
-4,monferno,391,"['fire', 'fighting']",standard
-4,infernape,392,"['fire', 'fighting']",standard
-4,piplup,393,['water'],standard
-4,prinplup,394,['water'],standard
-4,empoleon,395,"['water', 'steel']",standard
-4,starly,396,"['normal', 'flying']",standard
-4,staravia,397,"['normal', 'flying']",standard
-4,staraptor,398,"['normal', 'flying']",standard
-4,bidoof,399,['normal'],standard
-4,bibarel,400,"['normal', 'water']",standard
-4,kricketot,401,['bug'],standard
-4,kricketune,402,['bug'],standard
-4,shinx,403,['electric'],standard
-4,luxio,404,['electric'],standard
-4,luxray,405,['electric'],standard
-4,budew,406,"['grass', 'poison']",standard
-4,roserade,407,"['grass', 'poison']",standard
-4,cranidos,408,['rock'],standard
-4,rampardos,409,['rock'],standard
-4,shieldon,410,"['rock', 'steel']",standard
-4,bastiodon,411,"['rock', 'steel']",standard
-4,burmy,412,['bug'],standard
-4,wormadam,413,"['bug', 'grass']",plant cloak
-4,wormadam,413,"['bug', 'ground']",sandy cloak
-4,wormadam,413,"['bug', 'steel']",trash cloak
-4,mothim,414,"['bug', 'flying']",standard
-4,combee,415,"['bug', 'flying']",standard
-4,vespiquen,416,"['bug', 'flying']",standard
-4,pachirisu,417,['electric'],standard
-4,buizel,418,['water'],standard
-4,floatzel,419,['water'],standard
-4,cherubi,420,['grass'],standard
-4,cherrim,421,['grass'],standard
-4,shellos,422,['water'],standard
-4,gastrodon,423,"['water', 'ground']",standard
-4,ambipom,424,['normal'],standard
-4,drifloon,425,"['ghost', 'flying']",standard
-4,drifblim,426,"['ghost', 'flying']",standard
-4,buneary,427,['normal'],standard
-4,lopunny,428,['normal'],standard
-4,mismagius,429,['ghost'],standard
-4,honchkrow,430,"['dark', 'flying']",standard
-4,glameow,431,['normal'],standard
-4,purugly,432,['normal'],standard
-4,chingling,433,['psychic'],standard
-4,stunky,434,"['poison', 'dark']",standard
-4,skuntank,435,"['poison', 'dark']",standard
-4,bronzor,436,"['steel', 'psychic']",standard
-4,bronzong,437,"['steel', 'psychic']",standard
-4,bonsly,438,['rock'],standard
-4,mime jr.,439,"['psychic', 'fairy']",standard
-4,happiny,440,['normal'],standard
-4,chatot,441,"['normal', 'flying']",standard
-4,spiritomb,442,"['ghost', 'dark']",standard
-4,gible,443,"['dragon', 'ground']",standard
-4,gabite,444,"['dragon', 'ground']",standard
-4,garchomp,445,"['dragon', 'ground']",standard
-4,munchlax,446,['normal'],standard
-4,riolu,447,['fighting'],standard
-4,lucario,448,"['fighting', 'steel']",standard
-4,hippopotas,449,['ground'],standard
-4,hippowdon,450,['ground'],standard
-4,skorupi,451,"['poison', 'bug']",standard
-4,drapion,452,"['poison', 'dark']",standard
-4,croagunk,453,"['poison', 'fighting']",standard
-4,toxicroak,454,"['poison', 'fighting']",standard
-4,carnivine,455,['grass'],standard
-4,finneon,456,['water'],standard
-4,lumineon,457,['water'],standard
-4,mantyke,458,"['water', 'flying']",standard
-4,snover,459,"['grass', 'ice']",standard
-4,abomasnow,460,"['grass', 'ice']",standard
-4,weavile,461,"['dark', 'ice']",standard
-4,magnezone,462,"['electric', 'steel']",standard
-4,lickilicky,463,['normal'],standard
-4,rhyperior,464,"['ground', 'rock']",standard
-4,tangrowth,465,['grass'],standard
-4,electivire,466,['electric'],standard
-4,magmortar,467,['fire'],standard
-4,togekiss,468,"['fairy', 'flying']",standard
-4,yanmega,469,"['bug', 'flying']",standard
-4,leafeon,470,['grass'],standard
-4,glaceon,471,['ice'],standard
-4,gliscor,472,"['ground', 'flying']",standard
-4,mamoswine,473,"['ice', 'ground']",standard
-4,porygon-z,474,['normal'],standard
-4,gallade,475,"['psychic', 'fighting']",standard
-4,probopass,476,"['rock', 'steel']",standard
-4,dusknoir,477,['ghost'],standard
-4,froslass,478,"['ice', 'ghost']",standard
-4,rotom,479,"['electric', 'ghost']",rotom
-4,rotom,479,"['electric', 'ice']",frost rotom
-4,rotom,479,"['electric', 'fire']",heat rotom
-4,rotom,479,"['electric', 'grass']",mow rotom
-4,rotom,479,"['electric', 'flying']",fan rotom
-4,rotom,479,"['electric', 'water']",wash rotom
-4,rotom,479,['electric'],rotom dex
-4,uxie,480,['psychic'],standard
-4,mesprit,481,['psychic'],standard
-4,azelf,482,['psychic'],standard
-4,dialga,483,"['steel', 'dragon']",standard
-4,palkia,484,"['water', 'dragon']",standard
-4,heatran,485,"['fire', 'steel']",standard
-4,regigigas,486,['normal'],standard
-4,giratina,487,"['ghost', 'dragon']",standard
-4,cresselia,488,['psychic'],standard
-4,phione,489,['water'],standard
-4,manaphy,490,['water'],standard
-4,darkrai,491,['dark'],standard
-4,shaymin,492,['grass'],land forme
-4,shaymin,492,"['grass', 'flying']",sky forme
-4,arceus,493,['normal'],standard
-5,victini,494,"['psychic', 'fire']",standard
-5,snivy,495,['grass'],standard
-5,servine,496,['grass'],standard
-5,serperior,497,['grass'],standard
-5,tepig,498,['fire'],standard
-5,pignite,499,"['fire', 'fighting']",standard
-5,emboar,500,"['fire', 'fighting']",standard
-5,oshawott,501,['water'],standard
-5,dewott,502,['water'],standard
-5,samurott,503,['water'],standard
-5,patrat,504,['normal'],standard
-5,watchog,505,['normal'],standard
-5,lillipup,506,['normal'],standard
-5,herdier,507,['normal'],standard
-5,stoutland,508,['normal'],standard
-5,purrloin,509,['dark'],standard
-5,liepard,510,['dark'],standard
-5,pansage,511,['grass'],standard
-5,simisage,512,['grass'],standard
-5,pansear,513,['fire'],standard
-5,simisear,514,['fire'],standard
-5,panpour,515,['water'],standard
-5,simipour,516,['water'],standard
-5,munna,517,['psychic'],standard
-5,musharna,518,['psychic'],standard
-5,pidove,519,"['normal', 'flying']",standard
-5,tranquill,520,"['normal', 'flying']",standard
-5,unfezant,521,"['normal', 'flying']",standard
-5,blitzle,522,['electric'],standard
-5,zebstrika,523,['electric'],standard
-5,roggenrola,524,['rock'],standard
-5,boldore,525,['rock'],standard
-5,gigalith,526,['rock'],standard
-5,woobat,527,"['psychic', 'flying']",standard
-5,swoobat,528,"['psychic', 'flying']",standard
-5,drilbur,529,['ground'],standard
-5,excadrill,530,"['ground', 'steel']",standard
-5,audino,531,['normal'],standard
-5,timburr,532,['fighting'],standard
-5,gurdurr,533,['fighting'],standard
-5,conkeldurr,534,['fighting'],standard
-5,tympole,535,['water'],standard
-5,palpitoad,536,"['water', 'ground']",standard
-5,seismitoad,537,"['water', 'ground']",standard
-5,throh,538,['fighting'],standard
-5,sawk,539,['fighting'],standard
-5,sewaddle,540,"['bug', 'grass']",standard
-5,swadloon,541,"['bug', 'grass']",standard
-5,leavanny,542,"['bug', 'grass']",standard
-5,venipede,543,"['bug', 'poison']",standard
-5,whirlipede,544,"['bug', 'poison']",standard
-5,scolipede,545,"['bug', 'poison']",standard
-5,cottonee,546,"['grass', 'fairy']",standard
-5,whimsicott,547,"['grass', 'fairy']",standard
-5,petilil,548,['grass'],standard
-5,lilligant,549,['grass'],standard
-5,basculin,550,['water'],standard
-5,sandile,551,"['ground', 'dark']",standard
-5,krokorok,552,"['ground', 'dark']",standard
-5,krookodile,553,"['ground', 'dark']",standard
-5,darumaka,554,['fire'],standard
-5,darumaka,554,['ice'],galarian
-5,darmanitan,555,['fire'],standard
-5,darmanitan,555,"['ice', 'fire']",zen mode
-5,darmanitan,555,['ice'],galarian
-5,maractus,556,['grass'],standard
-5,dwebble,557,"['bug', 'rock']",standard
-5,crustle,558,"['bug', 'rock']",standard
-5,scraggy,559,"['dark', 'fighting']",standard
-5,scrafty,560,"['dark', 'fighting']",standard
-5,sigilyph,561,"['psychic', 'flying']",standard
-5,yamask,562,['ghost'],standard
-5,yamask,562,"['ground', 'ghost']",galarian
-5,cofagrigus,563,['ghost'],standard
-5,tirtouga,564,"['water', 'rock']",standard
-5,carracosta,565,"['water', 'rock']",standard
-5,archen,566,"['rock', 'flying']",standard
-5,archeops,567,"['rock', 'flying']",standard
-5,trubbish,568,['poison'],standard
-5,garbodor,569,['poison'],standard
-5,zorua,570,['dark'],standard
-5,zoroark,571,['dark'],standard
-5,minccino,572,['normal'],standard
-5,cinccino,573,['normal'],standard
-5,gothita,574,['psychic'],standard
-5,gothorita,575,['psychic'],standard
-5,gothitelle,576,['psychic'],standard
-5,solosis,577,['psychic'],standard
-5,duosion,578,['psychic'],standard
-5,reuniclus,579,['psychic'],standard
-5,ducklett,580,"['water', 'flying']",standard
-5,swanna,581,"['water', 'flying']",standard
-5,vanillite,582,['ice'],standard
-5,vanillish,583,['ice'],standard
-5,vanilluxe,584,['ice'],standard
-5,deerling,585,"['normal', 'grass']",standard
-5,sawsbuck,586,"['normal', 'grass']",standard
-5,emolga,587,"['electric', 'flying']",standard
-5,karrablast,588,['bug'],standard
-5,escavalier,589,"['bug', 'steel']",standard
-5,foongus,590,"['grass', 'poison']",standard
-5,amoonguss,591,"['grass', 'poison']",standard
-5,frillish,592,"['water', 'ghost']",standard
-5,jellicent,593,"['water', 'ghost']",standard
-5,alomomola,594,['water'],standard
-5,joltik,595,"['bug', 'electric']",standard
-5,galvantula,596,"['bug', 'electric']",standard
-5,ferroseed,597,"['grass', 'steel']",standard
-5,ferrothorn,598,"['grass', 'steel']",standard
-5,klink,599,['steel'],standard
-5,klang,600,['steel'],standard
-5,klinklang,601,['steel'],standard
-5,tynamo,602,['electric'],standard
-5,eelektrik,603,['electric'],standard
-5,eelektross,604,['electric'],standard
-5,elgyem,605,['psychic'],standard
-5,beheeyem,606,['psychic'],standard
-5,litwick,607,"['ghost', 'fire']",standard
-5,lampent,608,"['ghost', 'fire']",standard
-5,chandelure,609,"['ghost', 'fire']",standard
-5,axew,610,['dragon'],standard
-5,fraxure,611,['dragon'],standard
-5,haxorus,612,['dragon'],standard
-5,cubchoo,613,['ice'],standard
-5,beartic,614,['ice'],standard
-5,cryogonal,615,['ice'],standard
-5,shelmet,616,['bug'],standard
-5,accelgor,617,['bug'],standard
-5,stunfisk,618,"['ground', 'electric']",standard
-5,stunfisk,618,"['ground', 'steel']",galarian
-5,mienfoo,619,['fighting'],standard
-5,mienshao,620,['fighting'],standard
-5,druddigon,621,['dragon'],standard
-5,golett,622,"['ground', 'ghost']",standard
-5,golurk,623,"['ground', 'ghost']",standard
-5,pawniard,624,"['dark', 'steel']",standard
-5,bisharp,625,"['dark', 'steel']",standard
-5,bouffalant,626,['normal'],standard
-5,rufflet,627,"['normal', 'flying']",standard
-5,braviary,628,"['normal', 'flying']",standard
-5,vullaby,629,"['dark', 'flying']",standard
-5,mandibuzz,630,"['dark', 'flying']",standard
-5,heatmor,631,['fire'],standard
-5,durant,632,"['bug', 'steel']",standard
-5,deino,633,"['dark', 'dragon']",standard
-5,zweilous,634,"['dark', 'dragon']",standard
-5,hydreigon,635,"['dark', 'dragon']",standard
-5,larvesta,636,"['bug', 'fire']",standard
-5,volcarona,637,"['bug', 'fire']",standard
-5,cobalion,638,"['steel', 'fighting']",standard
-5,terrakion,639,"['rock', 'fighting']",standard
-5,virizion,640,"['grass', 'fighting']",standard
-5,tornadus,641,['flying'],standard
-5,thundurus,642,"['electric', 'flying']",standard
-5,reshiram,643,"['dragon', 'fire']",standard
-5,zekrom,644,"['dragon', 'electric']",standard
-5,landorus,645,"['ground', 'flying']",standard
-5,kyurem,646,"['dragon', 'ice']",standard
-5,keldeo,647,"['water', 'fighting']",standard
-5,meloetta,648,"['normal', 'psychic']",aria forme
-5,meloetta,648,"['normal', 'fighting']",pirouette forme
-5,genesect,649,"['bug', 'steel']",standard
-6,chespin,650,['grass'],standard
-6,quilladin,651,['grass'],standard
-6,chesnaught,652,"['grass', 'fighting']",standard
-6,fennekin,653,['fire'],standard
-6,braixen,654,['fire'],standard
-6,delphox,655,"['fire', 'psychic']",standard
-6,froakie,656,['water'],standard
-6,frogadier,657,['water'],standard
-6,greninja,658,"['water', 'dark']",standard
-6,bunnelby,659,['normal'],standard
-6,diggersby,660,"['normal', 'ground']",standard
-6,fletchling,661,"['normal', 'flying']",standard
-6,fletchinder,662,"['fire', 'flying']",standard
-6,talonflame,663,"['fire', 'flying']",standard
-6,scatterbug,664,['bug'],standard
-6,spewpa,665,['bug'],standard
-6,vivillon,666,"['bug', 'flying']",standard
-6,litleo,667,"['fire', 'normal']",standard
-6,pyroar,668,"['fire', 'normal']",standard
-6,flabebe,669,['fairy'],standard
-6,floette,670,['fairy'],standard
-6,florges,671,['fairy'],standard
-6,skiddo,672,['grass'],standard
-6,gogoat,673,['grass'],standard
-6,pancham,674,['fighting'],standard
-6,pangoro,675,"['fighting', 'dark']",standard
-6,furfrou,676,['normal'],standard
-6,espurr,677,['psychic'],standard
-6,meowstic,678,['psychic'],standard
-6,honedge,679,"['steel', 'ghost']",standard
-6,doublade,680,"['steel', 'ghost']",standard
-6,aegislash,681,"['steel', 'ghost']",standard
-6,spritzee,682,['fairy'],standard
-6,aromatisse,683,['fairy'],standard
-6,swirlix,684,['fairy'],standard
-6,slurpuff,685,['fairy'],standard
-6,inkay,686,"['dark', 'psychic']",standard
-6,malamar,687,"['dark', 'psychic']",standard
-6,binacle,688,"['rock', 'water']",standard
-6,barbaracle,689,"['rock', 'water']",standard
-6,skrelp,690,"['poison', 'water']",standard
-6,dragalge,691,"['poison', 'dragon']",standard
-6,clauncher,692,['water'],standard
-6,clawitzer,693,['water'],standard
-6,helioptile,694,"['electric', 'normal']",standard
-6,heliolisk,695,"['electric', 'normal']",standard
-6,tyrunt,696,"['rock', 'dragon']",standard
-6,tyrantrum,697,"['rock', 'dragon']",standard
-6,amaura,698,"['rock', 'ice']",standard
-6,aurorus,699,"['rock', 'ice']",standard
-6,sylveon,700,['fairy'],standard
-6,hawlucha,701,"['fighting', 'flying']",standard
-6,dedenne,702,"['electric', 'fairy']",standard
-6,carbink,703,"['rock', 'fairy']",standard
-6,goomy,704,['dragon'],standard
-6,sliggoo,705,['dragon'],standard
-6,goodra,706,['dragon'],standard
-6,klefki,707,"['steel', 'fairy']",standard
-6,phantump,708,"['ghost', 'grass']",standard
-6,trevenant,709,"['ghost', 'grass']",standard
-6,pumpkaboo,710,"['ghost', 'grass']",standard
-6,gourgeist,711,"['ghost', 'grass']",standard
-6,bergmite,712,['ice'],standard
-6,avalugg,713,['ice'],standard
-6,noibat,714,"['flying', 'dragon']",standard
-6,noivern,715,"['flying', 'dragon']",standard
-6,xerneas,716,['fairy'],standard
-6,yveltal,717,"['dark', 'flying']",standard
-6,zygarde,718,"['dragon', 'ground']",standard
-6,diancie,719,"['rock', 'fairy']",standard
-6,hoopa,720,"['psychic', 'ghost']",hoopa confined
-6,hoopa,720,"['psychic', 'dark']",hoopa unbound
-6,volcanion,721,"['fire', 'water']",standard
-7,rowlet,722,"['grass', 'flying']",standard
-7,dartrix,723,"['grass', 'flying']",standard
-7,decidueye,724,"['grass', 'ghost']",standard
-7,litten,725,['fire'],standard
-7,torracat,726,['fire'],standard
-7,incineroar,727,"['fire', 'dark']",standard
-7,popplio,728,['water'],standard
-7,brionne,729,['water'],standard
-7,primarina,730,"['water', 'fairy']",standard
-7,pikipek,731,"['normal', 'flying']",standard
-7,trumbeak,732,"['normal', 'flying']",standard
-7,toucannon,733,"['normal', 'flying']",standard
-7,yungoos,734,['normal'],standard
-7,gumshoos,735,['normal'],standard
-7,grubbin,736,['bug'],standard
-7,charjabug,737,"['bug', 'electric']",standard
-7,vikavolt,738,"['bug', 'electric']",standard
-7,crabrawler,739,['fighting'],standard
-7,crabominable,740,"['fighting', 'ice']",standard
-7,oricorio,741,"['fire', 'flying']",baile style
-7,oricorio,741,"['electric', 'flying']",pom-pom style
-7,oricorio,741,"['psychic', 'flying']",pa'u style
-7,oricorio,741,"['ghost', 'flying']",sensu style
-7,cutiefly,742,"['bug', 'fairy']",standard
-7,ribombee,743,"['bug', 'fairy']",standard
-7,rockruff,744,['rock'],standard
-7,lycanroc,745,['rock'],standard
-7,wishiwashi,746,['water'],standard
-7,mareanie,747,"['poison', 'water']",standard
-7,toxapex,748,"['poison', 'water']",standard
-7,mudbray,749,['ground'],standard
-7,mudsdale,750,['ground'],standard
-7,dewpider,751,"['water', 'bug']",standard
-7,araquanid,752,"['water', 'bug']",standard
-7,fomantis,753,['grass'],standard
-7,lurantis,754,['grass'],standard
-7,morelull,755,"['grass', 'fairy']",standard
-7,shiinotic,756,"['grass', 'fairy']",standard
-7,salandit,757,"['poison', 'fire']",standard
-7,salazzle,758,"['poison', 'fire']",standard
-7,stufful,759,"['normal', 'fighting']",standard
-7,bewear,760,"['normal', 'fighting']",standard
-7,bounsweet,761,['grass'],standard
-7,steenee,762,['grass'],standard
-7,tsareena,763,['grass'],standard
-7,comfey,764,['fairy'],standard
-7,oranguru,765,"['normal', 'psychic']",standard
-7,passimian,766,['fighting'],standard
-7,wimpod,767,"['bug', 'water']",standard
-7,golisopod,768,"['bug', 'water']",standard
-7,sandygast,769,"['ghost', 'ground']",standard
-7,palossand,770,"['ghost', 'ground']",standard
-7,pyukumuku,771,['water'],standard
-7,type: null,772,['normal'],standard
-7,silvally,773,['normal'],standard
-7,minior,774,"['rock', 'flying']",standard
-7,komala,775,['normal'],standard
-7,turtonator,776,"['fire', 'dragon']",standard
-7,togedemaru,777,"['electric', 'steel']",standard
-7,mimikyu,778,"['ghost', 'fairy']",standard
-7,bruxish,779,"['water', 'psychic']",standard
-7,drampa,780,"['normal', 'dragon']",standard
-7,dhelmise,781,"['ghost', 'grass']",standard
-7,jangmo-o,782,['dragon'],standard
-7,hakamo-o,783,"['dragon', 'fighting']",standard
-7,kommo-o,784,"['dragon', 'fighting']",standard
-7,tapu koko,785,"['electric', 'fairy']",standard
-7,tapu lele,786,"['psychic', 'fairy']",standard
-7,tapu bulu,787,"['grass', 'fairy']",standard
-7,tapu fini,788,"['water', 'fairy']",standard
-7,cosmog,789,['psychic'],standard
-7,cosmoem,790,['psychic'],standard
-7,solgaleo,791,"['psychic', 'steel']",standard
-7,lunala,792,"['psychic', 'ghost']",standard
-7,nihilego,793,"['rock', 'poison']",standard
-7,buzzwole,794,"['bug', 'fighting']",standard
-7,pheromosa,795,"['bug', 'fighting']",standard
-7,xurkitree,796,['electric'],standard
-7,celesteela,797,"['steel', 'flying']",standard
-7,kartana,798,"['grass', 'steel']",standard
-7,guzzlord,799,"['dark', 'dragon']",standard
-7,necrozma,800,['psychic'],standard
-7,necrozma,800,"['psychic', 'steel']",dusk mane
-7,necrozma,800,"['psychic', 'ghost']",dawn wings
-7,magearna,801,"['steel', 'fairy']",standard
-7,marshadow,802,"['fighting', 'ghost']",standard
-7,poipole,803,['poison'],standard
-7,naganadel,804,"['poison', 'dragon']",standard
-7,stakataka,805,"['rock', 'steel']",standard
-7,blacephalon,806,"['fire', 'ghost']",standard
-7,zeraora,807,['electric'],standard
-7,meltan,808,['steel'],standard
-7,melmetal,809,['steel'],standard
-8,grookey,810,['grass'],standard
-8,thwackey,811,['grass'],standard
-8,rillaboom,812,['grass'],standard
-8,scorbunny,813,['fire'],standard
-8,raboot,814,['fire'],standard
-8,cinderace,815,['fire'],standard
-8,sobble,816,['water'],standard
-8,drizzile,817,['water'],standard
-8,inteleon,818,['water'],standard
-8,skwovet,819,['normal'],standard
-8,greedent,820,['normal'],standard
-8,rookidee,821,['flying'],standard
-8,corvisquire,822,['flying'],standard
-8,corviknight,823,"['flying', 'steel']",standard
-8,blipbug,824,['bug'],standard
-8,dottler,825,"['bug', 'psychic']",standard
-8,orbeetle,826,"['bug', 'psychic']",standard
-8,nickit,827,['dark'],standard
-8,thievul,828,['dark'],standard
-8,gossifleur,829,['grass'],standard
-8,eldegoss,830,['grass'],standard
-8,wooloo,831,['normal'],standard
-8,dubwool,832,['normal'],standard
-8,chewtle,833,['water'],standard
-8,drednaw,834,"['water', 'rock']",standard
-8,yamper,835,['electric'],standard
-8,boltund,836,['electric'],standard
-8,rolycoly,837,['rock'],standard
-8,carkol,838,"['rock', 'fire']",standard
-8,coalossal,839,"['rock', 'fire']",standard
-8,applin,840,"['grass', 'dragon']",standard
-8,flapple,841,"['grass', 'dragon']",standard
-8,appletun,842,"['grass', 'dragon']",standard
-8,silicobra,843,['ground'],standard
-8,sandaconda,844,['ground'],standard
-8,cramorant,845,"['flying', 'water']",standard
-8,arrokuda,846,['water'],standard
-8,barraskewda,847,['water'],standard
-8,toxel,848,"['electric', 'poison']",standard
-8,toxtricity,849,"['electric', 'poison']",standard
-8,sizzlipede,850,"['fire', 'bug']",standard
-8,centiskorch,851,"['fire', 'bug']",standard
-8,clobbopus,852,['fighting'],standard
-8,grapploct,853,['fighting'],standard
-8,sinistea,854,['ghost'],standard
-8,polteageist,855,['ghost'],standard
-8,hatenna,856,['psychic'],standard
-8,hattrem,857,['psychic'],standard
-8,hatterene,858,"['psychic', 'fairy']",standard
-8,impidimp,859,"['dark', 'fairy']",standard
-8,morgrem,860,"['dark', 'fairy']",standard
-8,grimmsnarl,861,"['dark', 'fairy']",standard
-8,obstagoon,862,"['dark', 'normal']",standard
-8,perrserker,863,['steel'],standard
-8,cursola,864,['ghost'],standard
-8,sirfetch'd,865,['fighting'],standard
-8,mr. rime,866,"['ice', 'psychic']",standard
-8,runerigus,867,"['ground', 'ghost']",standard
-8,milcery,868,['fairy'],standard
-8,alcremie,869,['fairy'],standard
-8,falinks,870,['fighting'],standard
-8,pincurchin,871,['electric'],standard
-8,snom,872,"['ice', 'bug']",standard
-8,frosmoth,873,"['ice', 'bug']",standard
-8,stonjourner,874,['rock'],standard
-8,eiscue,875,['ice'],standard
-8,indeedee,876,"['psychic', 'normal']",standard
-8,morpeko,877,"['electric', 'dark']",standard
-8,cufant,878,['steel'],standard
-8,copperajah,879,['steel'],standard
-8,dracozolt,880,"['electric', 'dragon']",standard
-8,arctozolt,881,"['electric', 'ice']",standard
-8,dracovish,882,"['water', 'dragon']",standard
-8,arctovish,883,"['water', 'ice']",standard
-8,duraludon,884,"['steel', 'dragon']",standard
-8,dreepy,885,"['dragon', 'ghost']",standard
-8,drakloak,886,"['dragon', 'ghost']",standard
-8,dragapult,887,"['dragon', 'ghost']",standard
-8,zacian,888,['fairy'],hero of many battles
-8,zacian,888,"['fairy', 'steel']",crowned sword
-8,zamazenta,889,['fighting'],hero of many battles
-8,zamazenta,889,"['fighting', 'steel']",crowned shield
-8,eternatus,890,"['poison', 'dragon']",standard
-8,kubfu,891,['fighting'],standard
-8,urshifu,892,"['fighting', 'dark']",standard
-8,zarude,893,"['dark', 'grass']",standard
-8,regieleki,894,['electric'],standard
-8,regidrago,895,['dragon'],standard
-8,glastrier,896,['ice'],standard
-8,spectrier,897,['ghost'],standard
-8,calyrex,898,"['psychic', 'grass']",calyrex
-8,calyrex,898,"['psychic', 'ice']",ice rider
-8,calyrex,898,"['psychic', 'ghost']",shadow rider
+generation,name,number,primary_type,secondary_type,type_name
+1,bulbasaur,1,grass,poison,standard
+1,ivysaur,2,grass,poison,standard
+1,venusaur,3,grass,poison,standard
+1,charmander,4,fire,NONE,standard
+1,charmeleon,5,fire,NONE,standard
+1,charizard,6,fire,flying,standard
+1,squirtle,7,water,NONE,standard
+1,wartortle,8,water,NONE,standard
+1,blastoise,9,water,NONE,standard
+1,caterpie,10,bug,NONE,standard
+1,metapod,11,bug,NONE,standard
+1,butterfree,12,bug,flying,standard
+1,weedle,13,bug,poison,standard
+1,kakuna,14,bug,poison,standard
+1,beedrill,15,bug,poison,standard
+1,pidgey,16,normal,flying,standard
+1,pidgeotto,17,normal,flying,standard
+1,pidgeot,18,normal,flying,standard
+1,rattata,19,normal,NONE,standard
+1,rattata,19,dark,normal,alolan
+1,raticate,20,normal,NONE,standard
+1,raticate,20,dark,normal,alolan
+1,spearow,21,normal,flying,standard
+1,fearow,22,normal,flying,standard
+1,ekans,23,poison,NONE,standard
+1,arbok,24,poison,NONE,standard
+1,pikachu,25,electric,NONE,standard
+1,raichu,26,electric,NONE,standard
+1,raichu,26,electric,psychic,alolan
+1,sandshrew,27,ground,NONE,standard
+1,sandshrew,27,ice,steel,alolan
+1,sandslash,28,ground,NONE,standard
+1,sandslash,28,ice,steel,alolan
+1,nidoranf,29,poison,NONE,standard
+1,nidorina,30,poison,NONE,standard
+1,nidoqueen,31,poison,ground,standard
+1,nidoranm,32,poison,NONE,standard
+1,nidorino,33,poison,NONE,standard
+1,nidoking,34,poison,ground,standard
+1,clefairy,35,fairy,NONE,standard
+1,clefable,36,fairy,NONE,standard
+1,vulpix,37,fire,NONE,standard
+1,vulpix,37,ice,NONE,alolan
+1,ninetales,38,fire,NONE,standard
+1,ninetales,38,ice,fairy,alolan
+1,jigglypuff,39,normal,fairy,standard
+1,wigglytuff,40,normal,fairy,standard
+1,zubat,41,poison,flying,standard
+1,golbat,42,poison,flying,standard
+1,oddish,43,grass,poison,standard
+1,gloom,44,grass,poison,standard
+1,vileplume,45,grass,poison,standard
+1,paras,46,bug,grass,standard
+1,parasect,47,bug,grass,standard
+1,venonat,48,bug,poison,standard
+1,venomoth,49,bug,poison,standard
+1,diglett,50,ground,NONE,standard
+1,diglett,50,ground,steel,alolan
+1,dugtrio,51,ground,NONE,standard
+1,dugtrio,51,ground,steel,alolan
+1,meowth,52,normal,NONE,standard
+1,meowth,52,dark,NONE,alolan
+1,meowth,52,steel,NONE,galarian
+1,persian,53,normal,NONE,standard
+1,persian,53,dark,NONE,alolan
+1,psyduck,54,water,NONE,standard
+1,golduck,55,water,NONE,standard
+1,mankey,56,fighting,NONE,standard
+1,primeape,57,fighting,NONE,standard
+1,growlithe,58,fire,NONE,standard
+1,arcanine,59,fire,NONE,standard
+1,poliwag,60,water,NONE,standard
+1,poliwhirl,61,water,NONE,standard
+1,poliwrath,62,water,fighting,standard
+1,abra,63,psychic,NONE,standard
+1,kadabra,64,psychic,NONE,standard
+1,alakazam,65,psychic,NONE,standard
+1,machop,66,fighting,NONE,standard
+1,machoke,67,fighting,NONE,standard
+1,machamp,68,fighting,NONE,standard
+1,bellsprout,69,grass,poison,standard
+1,weepinbell,70,grass,poison,standard
+1,victreebel,71,grass,poison,standard
+1,tentacool,72,water,poison,standard
+1,tentacruel,73,water,poison,standard
+1,geodude,74,rock,ground,standard
+1,geodude,74,rock,electric,alolan
+1,graveler,75,rock,ground,standard
+1,graveler,75,rock,electric,alolan
+1,golem,76,rock,ground,standard
+1,golem,76,rock,electric,alolan
+1,ponyta,77,fire,NONE,standard
+1,ponyta,77,psychic,NONE,galarian
+1,rapidash,78,fire,NONE,standard
+1,rapidash,78,psychic,fairy,galarian
+1,slowpoke,79,water,psychic,standard
+1,slowpoke,79,psychic,NONE,galarian
+1,slowbro,80,water,psychic,standard
+1,slowbro,80,poison,psychic,galarian
+1,magnemite,81,electric,steel,standard
+1,magneton,82,electric,steel,standard
+1,farfetch'd,83,normal,flying,standard
+1,farfetch'd,83,fighting,NONE,galarian
+1,doduo,84,normal,flying,standard
+1,dodrio,85,normal,flying,standard
+1,seel,86,water,NONE,standard
+1,dewgong,87,water,ice,standard
+1,grimer,88,poison,NONE,standard
+1,grimer,88,poison,dark,alolan
+1,muk,89,poison,NONE,standard
+1,muk,89,poison,dark,alolan
+1,shellder,90,water,NONE,standard
+1,cloyster,91,water,ice,standard
+1,gastly,92,ghost,poison,standard
+1,haunter,93,ghost,poison,standard
+1,gengar,94,ghost,poison,standard
+1,onix,95,rock,ground,standard
+1,drowzee,96,psychic,NONE,standard
+1,hypno,97,psychic,NONE,standard
+1,krabby,98,water,NONE,standard
+1,kingler,99,water,NONE,standard
+1,voltorb,100,electric,NONE,standard
+1,electrode,101,electric,NONE,standard
+1,exeggcute,102,grass,psychic,standard
+1,exeggutor,103,grass,psychic,standard
+1,exeggutor,103,grass,dragon,alolan
+1,cubone,104,ground,NONE,standard
+1,marowak,105,ground,NONE,standard
+1,marowak,105,fire,ghost,alolan
+1,hitmonlee,106,fighting,NONE,standard
+1,hitmonchan,107,fighting,NONE,standard
+1,lickitung,108,normal,NONE,standard
+1,koffing,109,poison,NONE,standard
+1,weezing,110,poison,NONE,standard
+1,weezing,110,poison,fairy,galarian
+1,rhyhorn,111,ground,rock,standard
+1,rhydon,112,ground,rock,standard
+1,chansey,113,normal,NONE,standard
+1,tangela,114,grass,NONE,standard
+1,kangaskhan,115,normal,NONE,standard
+1,horsea,116,water,NONE,standard
+1,seadra,117,water,NONE,standard
+1,goldeen,118,water,NONE,standard
+1,seaking,119,water,NONE,standard
+1,staryu,120,water,NONE,standard
+1,starmie,121,water,psychic,standard
+1,mr. mime,122,psychic,fairy,standard
+1,mr. mime,122,ice,psychic,galarian
+1,scyther,123,bug,flying,standard
+1,jynx,124,ice,psychic,standard
+1,electabuzz,125,electric,NONE,standard
+1,magmar,126,fire,NONE,standard
+1,pinsir,127,bug,NONE,standard
+1,tauros,128,normal,NONE,standard
+1,magikarp,129,water,NONE,standard
+1,gyarados,130,water,flying,standard
+1,lapras,131,water,ice,standard
+1,ditto,132,normal,NONE,standard
+1,eevee,133,normal,NONE,standard
+1,vaporeon,134,water,NONE,standard
+1,jolteon,135,electric,NONE,standard
+1,flareon,136,fire,NONE,standard
+1,porygon,137,normal,NONE,standard
+1,omanyte,138,rock,water,standard
+1,omastar,139,rock,water,standard
+1,kabuto,140,rock,water,standard
+1,kabutops,141,rock,water,standard
+1,aerodactyl,142,rock,flying,standard
+1,snorlax,143,normal,NONE,standard
+1,articuno,144,ice,flying,standard
+1,articuno,144,psychic,flying,galarian
+1,zapdos,145,electric,flying,standard
+1,zapdos,145,fighting,flying,galarian
+1,moltres,146,fire,flying,standard
+1,moltres,146,dark,flying,galarian
+1,dratini,147,dragon,NONE,standard
+1,dragonair,148,dragon,NONE,standard
+1,dragonite,149,dragon,flying,standard
+1,mewtwo,150,psychic,NONE,standard
+1,mew,151,psychic,NONE,standard
+2,chikorita,152,grass,NONE,standard
+2,bayleef,153,grass,NONE,standard
+2,meganium,154,grass,NONE,standard
+2,cyndaquil,155,fire,NONE,standard
+2,quilava,156,fire,NONE,standard
+2,typhlosion,157,fire,NONE,standard
+2,totodile,158,water,NONE,standard
+2,croconaw,159,water,NONE,standard
+2,feraligatr,160,water,NONE,standard
+2,sentret,161,normal,NONE,standard
+2,furret,162,normal,NONE,standard
+2,hoothoot,163,normal,flying,standard
+2,noctowl,164,normal,flying,standard
+2,ledyba,165,bug,flying,standard
+2,ledian,166,bug,flying,standard
+2,spinarak,167,bug,poison,standard
+2,ariados,168,bug,poison,standard
+2,crobat,169,poison,flying,standard
+2,chinchou,170,water,electric,standard
+2,lanturn,171,water,electric,standard
+2,pichu,172,electric,NONE,standard
+2,cleffa,173,fairy,NONE,standard
+2,igglybuff,174,normal,fairy,standard
+2,togepi,175,fairy,NONE,standard
+2,togetic,176,fairy,flying,standard
+2,natu,177,psychic,flying,standard
+2,xatu,178,psychic,flying,standard
+2,mareep,179,electric,NONE,standard
+2,flaaffy,180,electric,NONE,standard
+2,ampharos,181,electric,NONE,standard
+2,bellossom,182,grass,NONE,standard
+2,marill,183,water,fairy,standard
+2,azumarill,184,water,fairy,standard
+2,sudowoodo,185,rock,NONE,standard
+2,politoed,186,water,NONE,standard
+2,hoppip,187,grass,flying,standard
+2,skiploom,188,grass,flying,standard
+2,jumpluff,189,grass,flying,standard
+2,aipom,190,normal,NONE,standard
+2,sunkern,191,grass,NONE,standard
+2,sunflora,192,grass,NONE,standard
+2,yanma,193,bug,flying,standard
+2,wooper,194,water,ground,standard
+2,quagsire,195,water,ground,standard
+2,espeon,196,psychic,NONE,standard
+2,umbreon,197,dark,NONE,standard
+2,murkrow,198,dark,flying,standard
+2,slowking,199,water,psychic,standard
+2,slowking,199,poison,psychic,galarian
+2,misdreavus,200,ghost,NONE,standard
+2,unown,201,psychic,NONE,standard
+2,wobbuffet,202,psychic,NONE,standard
+2,girafarig,203,normal,psychic,standard
+2,pineco,204,bug,NONE,standard
+2,forretress,205,bug,steel,standard
+2,dunsparce,206,normal,NONE,standard
+2,gligar,207,ground,flying,standard
+2,steelix,208,steel,ground,standard
+2,snubbull,209,fairy,NONE,standard
+2,granbull,210,fairy,NONE,standard
+2,qwilfish,211,water,poison,standard
+2,scizor,212,bug,steel,standard
+2,shuckle,213,bug,rock,standard
+2,heracross,214,bug,fighting,standard
+2,sneasel,215,dark,ice,standard
+2,teddiursa,216,normal,NONE,standard
+2,ursaring,217,normal,NONE,standard
+2,slugma,218,fire,NONE,standard
+2,magcargo,219,fire,rock,standard
+2,swinub,220,ice,ground,standard
+2,piloswine,221,ice,ground,standard
+2,corsola,222,water,rock,standard
+2,corsola,222,ghost,NONE,galarian
+2,remoraid,223,water,NONE,standard
+2,octillery,224,water,NONE,standard
+2,delibird,225,ice,flying,standard
+2,mantine,226,water,flying,standard
+2,skarmory,227,steel,flying,standard
+2,houndour,228,dark,fire,standard
+2,houndoom,229,dark,fire,standard
+2,kingdra,230,water,dragon,standard
+2,phanpy,231,ground,NONE,standard
+2,donphan,232,ground,NONE,standard
+2,porygon2,233,normal,NONE,standard
+2,stantler,234,normal,NONE,standard
+2,smeargle,235,normal,NONE,standard
+2,tyrogue,236,fighting,NONE,standard
+2,hitmontop,237,fighting,NONE,standard
+2,smoochum,238,ice,psychic,standard
+2,elekid,239,electric,NONE,standard
+2,magby,240,fire,NONE,standard
+2,miltank,241,normal,NONE,standard
+2,blissey,242,normal,NONE,standard
+2,raikou,243,electric,NONE,standard
+2,entei,244,fire,NONE,standard
+2,suicune,245,water,NONE,standard
+2,larvitar,246,rock,ground,standard
+2,pupitar,247,rock,ground,standard
+2,tyranitar,248,rock,dark,standard
+2,lugia,249,psychic,flying,standard
+2,ho-oh,250,fire,flying,standard
+2,celebi,251,psychic,grass,standard
+3,treecko,252,grass,NONE,standard
+3,grovyle,253,grass,NONE,standard
+3,sceptile,254,grass,NONE,standard
+3,torchic,255,fire,NONE,standard
+3,combusken,256,fire,fighting,standard
+3,blaziken,257,fire,fighting,standard
+3,mudkip,258,water,NONE,standard
+3,marshtomp,259,water,ground,standard
+3,swampert,260,water,ground,standard
+3,poochyena,261,dark,NONE,standard
+3,mightyena,262,dark,NONE,standard
+3,zigzagoon,263,normal,NONE,standard
+3,zigzagoon,263,dark,normal,galarian
+3,linoone,264,normal,NONE,standard
+3,linoone,264,dark,normal,galarian
+3,wurmple,265,bug,NONE,standard
+3,silcoon,266,bug,NONE,standard
+3,beautifly,267,bug,flying,standard
+3,cascoon,268,bug,NONE,standard
+3,dustox,269,bug,poison,standard
+3,lotad,270,water,grass,standard
+3,lombre,271,water,grass,standard
+3,ludicolo,272,water,grass,standard
+3,seedot,273,grass,NONE,standard
+3,nuzleaf,274,grass,dark,standard
+3,shiftry,275,grass,dark,standard
+3,taillow,276,normal,flying,standard
+3,swellow,277,normal,flying,standard
+3,wingull,278,water,flying,standard
+3,pelipper,279,water,flying,standard
+3,ralts,280,psychic,fairy,standard
+3,kirlia,281,psychic,fairy,standard
+3,gardevoir,282,psychic,fairy,standard
+3,surskit,283,bug,water,standard
+3,masquerain,284,bug,flying,standard
+3,shroomish,285,grass,NONE,standard
+3,breloom,286,grass,fighting,standard
+3,slakoth,287,normal,NONE,standard
+3,vigoroth,288,normal,NONE,standard
+3,slaking,289,normal,NONE,standard
+3,nincada,290,bug,ground,standard
+3,ninjask,291,bug,flying,standard
+3,shedinja,292,bug,ghost,standard
+3,whismur,293,normal,NONE,standard
+3,loudred,294,normal,NONE,standard
+3,exploud,295,normal,NONE,standard
+3,makuhita,296,fighting,NONE,standard
+3,hariyama,297,fighting,NONE,standard
+3,azurill,298,normal,fairy,standard
+3,nosepass,299,rock,NONE,standard
+3,skitty,300,normal,NONE,standard
+3,delcatty,301,normal,NONE,standard
+3,sableye,302,dark,ghost,standard
+3,mawile,303,steel,fairy,standard
+3,aron,304,steel,rock,standard
+3,lairon,305,steel,rock,standard
+3,aggron,306,steel,rock,standard
+3,meditite,307,fighting,psychic,standard
+3,medicham,308,fighting,psychic,standard
+3,electrike,309,electric,NONE,standard
+3,manectric,310,electric,NONE,standard
+3,plusle,311,electric,NONE,standard
+3,minun,312,electric,NONE,standard
+3,volbeat,313,bug,NONE,standard
+3,illumise,314,bug,NONE,standard
+3,roselia,315,grass,poison,standard
+3,gulpin,316,poison,NONE,standard
+3,swalot,317,poison,NONE,standard
+3,carvanha,318,water,dark,standard
+3,sharpedo,319,water,dark,standard
+3,wailmer,320,water,NONE,standard
+3,wailord,321,water,NONE,standard
+3,numel,322,fire,ground,standard
+3,camerupt,323,fire,ground,standard
+3,torkoal,324,fire,NONE,standard
+3,spoink,325,psychic,NONE,standard
+3,grumpig,326,psychic,NONE,standard
+3,spinda,327,normal,NONE,standard
+3,trapinch,328,ground,NONE,standard
+3,vibrava,329,ground,dragon,standard
+3,flygon,330,ground,dragon,standard
+3,cacnea,331,grass,NONE,standard
+3,cacturne,332,grass,dark,standard
+3,swablu,333,normal,flying,standard
+3,altaria,334,dragon,flying,standard
+3,zangoose,335,normal,NONE,standard
+3,seviper,336,poison,NONE,standard
+3,lunatone,337,rock,psychic,standard
+3,solrock,338,rock,psychic,standard
+3,barboach,339,water,ground,standard
+3,whiscash,340,water,ground,standard
+3,corphish,341,water,NONE,standard
+3,crawdaunt,342,water,dark,standard
+3,baltoy,343,ground,psychic,standard
+3,claydol,344,ground,psychic,standard
+3,lileep,345,rock,grass,standard
+3,cradily,346,rock,grass,standard
+3,anorith,347,rock,bug,standard
+3,armaldo,348,rock,bug,standard
+3,feebas,349,water,NONE,standard
+3,milotic,350,water,NONE,standard
+3,castform,351,normal,NONE,standard
+3,castform,351,fire,NONE,sunny form
+3,castform,351,water,NONE,rainy form
+3,castform,351,ice,NONE,snowy form
+3,kecleon,352,normal,NONE,standard
+3,shuppet,353,ghost,NONE,standard
+3,banette,354,ghost,NONE,standard
+3,duskull,355,ghost,NONE,standard
+3,dusclops,356,ghost,NONE,standard
+3,tropius,357,grass,flying,standard
+3,chimecho,358,psychic,NONE,standard
+3,absol,359,dark,NONE,standard
+3,wynaut,360,psychic,NONE,standard
+3,snorunt,361,ice,NONE,standard
+3,glalie,362,ice,NONE,standard
+3,spheal,363,ice,water,standard
+3,sealeo,364,ice,water,standard
+3,walrein,365,ice,water,standard
+3,clamperl,366,water,NONE,standard
+3,huntail,367,water,NONE,standard
+3,gorebyss,368,water,NONE,standard
+3,relicanth,369,water,rock,standard
+3,luvdisc,370,water,NONE,standard
+3,bagon,371,dragon,NONE,standard
+3,shelgon,372,dragon,NONE,standard
+3,salamence,373,dragon,flying,standard
+3,beldum,374,steel,psychic,standard
+3,metang,375,steel,psychic,standard
+3,metagross,376,steel,psychic,standard
+3,regirock,377,rock,NONE,standard
+3,regice,378,ice,NONE,standard
+3,registeel,379,steel,NONE,standard
+3,latias,380,dragon,psychic,standard
+3,latios,381,dragon,psychic,standard
+3,kyogre,382,water,NONE,standard
+3,groudon,383,ground,NONE,standard
+3,rayquaza,384,dragon,flying,standard
+3,jirachi,385,steel,psychic,standard
+3,deoxys,386,psychic,NONE,standard
+4,turtwig,387,grass,NONE,standard
+4,grotle,388,grass,NONE,standard
+4,torterra,389,grass,ground,standard
+4,chimchar,390,fire,NONE,standard
+4,monferno,391,fire,fighting,standard
+4,infernape,392,fire,fighting,standard
+4,piplup,393,water,NONE,standard
+4,prinplup,394,water,NONE,standard
+4,empoleon,395,water,steel,standard
+4,starly,396,normal,flying,standard
+4,staravia,397,normal,flying,standard
+4,staraptor,398,normal,flying,standard
+4,bidoof,399,normal,NONE,standard
+4,bibarel,400,normal,water,standard
+4,kricketot,401,bug,NONE,standard
+4,kricketune,402,bug,NONE,standard
+4,shinx,403,electric,NONE,standard
+4,luxio,404,electric,NONE,standard
+4,luxray,405,electric,NONE,standard
+4,budew,406,grass,poison,standard
+4,roserade,407,grass,poison,standard
+4,cranidos,408,rock,NONE,standard
+4,rampardos,409,rock,NONE,standard
+4,shieldon,410,rock,steel,standard
+4,bastiodon,411,rock,steel,standard
+4,burmy,412,bug,NONE,standard
+4,wormadam,413,bug,grass,plant cloak
+4,wormadam,413,bug,ground,sandy cloak
+4,wormadam,413,bug,steel,trash cloak
+4,mothim,414,bug,flying,standard
+4,combee,415,bug,flying,standard
+4,vespiquen,416,bug,flying,standard
+4,pachirisu,417,electric,NONE,standard
+4,buizel,418,water,NONE,standard
+4,floatzel,419,water,NONE,standard
+4,cherubi,420,grass,NONE,standard
+4,cherrim,421,grass,NONE,standard
+4,shellos,422,water,NONE,standard
+4,gastrodon,423,water,ground,standard
+4,ambipom,424,normal,NONE,standard
+4,drifloon,425,ghost,flying,standard
+4,drifblim,426,ghost,flying,standard
+4,buneary,427,normal,NONE,standard
+4,lopunny,428,normal,NONE,standard
+4,mismagius,429,ghost,NONE,standard
+4,honchkrow,430,dark,flying,standard
+4,glameow,431,normal,NONE,standard
+4,purugly,432,normal,NONE,standard
+4,chingling,433,psychic,NONE,standard
+4,stunky,434,poison,dark,standard
+4,skuntank,435,poison,dark,standard
+4,bronzor,436,steel,psychic,standard
+4,bronzong,437,steel,psychic,standard
+4,bonsly,438,rock,NONE,standard
+4,mime jr.,439,psychic,fairy,standard
+4,happiny,440,normal,NONE,standard
+4,chatot,441,normal,flying,standard
+4,spiritomb,442,ghost,dark,standard
+4,gible,443,dragon,ground,standard
+4,gabite,444,dragon,ground,standard
+4,garchomp,445,dragon,ground,standard
+4,munchlax,446,normal,NONE,standard
+4,riolu,447,fighting,NONE,standard
+4,lucario,448,fighting,steel,standard
+4,hippopotas,449,ground,NONE,standard
+4,hippowdon,450,ground,NONE,standard
+4,skorupi,451,poison,bug,standard
+4,drapion,452,poison,dark,standard
+4,croagunk,453,poison,fighting,standard
+4,toxicroak,454,poison,fighting,standard
+4,carnivine,455,grass,NONE,standard
+4,finneon,456,water,NONE,standard
+4,lumineon,457,water,NONE,standard
+4,mantyke,458,water,flying,standard
+4,snover,459,grass,ice,standard
+4,abomasnow,460,grass,ice,standard
+4,weavile,461,dark,ice,standard
+4,magnezone,462,electric,steel,standard
+4,lickilicky,463,normal,NONE,standard
+4,rhyperior,464,ground,rock,standard
+4,tangrowth,465,grass,NONE,standard
+4,electivire,466,electric,NONE,standard
+4,magmortar,467,fire,NONE,standard
+4,togekiss,468,fairy,flying,standard
+4,yanmega,469,bug,flying,standard
+4,leafeon,470,grass,NONE,standard
+4,glaceon,471,ice,NONE,standard
+4,gliscor,472,ground,flying,standard
+4,mamoswine,473,ice,ground,standard
+4,porygon-z,474,normal,NONE,standard
+4,gallade,475,psychic,fighting,standard
+4,probopass,476,rock,steel,standard
+4,dusknoir,477,ghost,NONE,standard
+4,froslass,478,ice,ghost,standard
+4,rotom,479,electric,ghost,rotom
+4,rotom,479,electric,ice,frost rotom
+4,rotom,479,electric,fire,heat rotom
+4,rotom,479,electric,grass,mow rotom
+4,rotom,479,electric,flying,fan rotom
+4,rotom,479,electric,water,wash rotom
+4,rotom,479,electric,NONE,rotom dex
+4,uxie,480,psychic,NONE,standard
+4,mesprit,481,psychic,NONE,standard
+4,azelf,482,psychic,NONE,standard
+4,dialga,483,steel,dragon,standard
+4,palkia,484,water,dragon,standard
+4,heatran,485,fire,steel,standard
+4,regigigas,486,normal,NONE,standard
+4,giratina,487,ghost,dragon,standard
+4,cresselia,488,psychic,NONE,standard
+4,phione,489,water,NONE,standard
+4,manaphy,490,water,NONE,standard
+4,darkrai,491,dark,NONE,standard
+4,shaymin,492,grass,NONE,land forme
+4,shaymin,492,grass,flying,sky forme
+4,arceus,493,normal,NONE,standard
+5,victini,494,psychic,fire,standard
+5,snivy,495,grass,NONE,standard
+5,servine,496,grass,NONE,standard
+5,serperior,497,grass,NONE,standard
+5,tepig,498,fire,NONE,standard
+5,pignite,499,fire,fighting,standard
+5,emboar,500,fire,fighting,standard
+5,oshawott,501,water,NONE,standard
+5,dewott,502,water,NONE,standard
+5,samurott,503,water,NONE,standard
+5,patrat,504,normal,NONE,standard
+5,watchog,505,normal,NONE,standard
+5,lillipup,506,normal,NONE,standard
+5,herdier,507,normal,NONE,standard
+5,stoutland,508,normal,NONE,standard
+5,purrloin,509,dark,NONE,standard
+5,liepard,510,dark,NONE,standard
+5,pansage,511,grass,NONE,standard
+5,simisage,512,grass,NONE,standard
+5,pansear,513,fire,NONE,standard
+5,simisear,514,fire,NONE,standard
+5,panpour,515,water,NONE,standard
+5,simipour,516,water,NONE,standard
+5,munna,517,psychic,NONE,standard
+5,musharna,518,psychic,NONE,standard
+5,pidove,519,normal,flying,standard
+5,tranquill,520,normal,flying,standard
+5,unfezant,521,normal,flying,standard
+5,blitzle,522,electric,NONE,standard
+5,zebstrika,523,electric,NONE,standard
+5,roggenrola,524,rock,NONE,standard
+5,boldore,525,rock,NONE,standard
+5,gigalith,526,rock,NONE,standard
+5,woobat,527,psychic,flying,standard
+5,swoobat,528,psychic,flying,standard
+5,drilbur,529,ground,NONE,standard
+5,excadrill,530,ground,steel,standard
+5,audino,531,normal,NONE,standard
+5,timburr,532,fighting,NONE,standard
+5,gurdurr,533,fighting,NONE,standard
+5,conkeldurr,534,fighting,NONE,standard
+5,tympole,535,water,NONE,standard
+5,palpitoad,536,water,ground,standard
+5,seismitoad,537,water,ground,standard
+5,throh,538,fighting,NONE,standard
+5,sawk,539,fighting,NONE,standard
+5,sewaddle,540,bug,grass,standard
+5,swadloon,541,bug,grass,standard
+5,leavanny,542,bug,grass,standard
+5,venipede,543,bug,poison,standard
+5,whirlipede,544,bug,poison,standard
+5,scolipede,545,bug,poison,standard
+5,cottonee,546,grass,fairy,standard
+5,whimsicott,547,grass,fairy,standard
+5,petilil,548,grass,NONE,standard
+5,lilligant,549,grass,NONE,standard
+5,basculin,550,water,NONE,standard
+5,sandile,551,ground,dark,standard
+5,krokorok,552,ground,dark,standard
+5,krookodile,553,ground,dark,standard
+5,darumaka,554,fire,NONE,standard
+5,darumaka,554,ice,NONE,galarian
+5,darmanitan,555,fire,NONE,standard
+5,darmanitan,555,ice,fire,zen mode
+5,darmanitan,555,ice,NONE,galarian
+5,maractus,556,grass,NONE,standard
+5,dwebble,557,bug,rock,standard
+5,crustle,558,bug,rock,standard
+5,scraggy,559,dark,fighting,standard
+5,scrafty,560,dark,fighting,standard
+5,sigilyph,561,psychic,flying,standard
+5,yamask,562,ghost,NONE,standard
+5,yamask,562,ground,ghost,galarian
+5,cofagrigus,563,ghost,NONE,standard
+5,tirtouga,564,water,rock,standard
+5,carracosta,565,water,rock,standard
+5,archen,566,rock,flying,standard
+5,archeops,567,rock,flying,standard
+5,trubbish,568,poison,NONE,standard
+5,garbodor,569,poison,NONE,standard
+5,zorua,570,dark,NONE,standard
+5,zoroark,571,dark,NONE,standard
+5,minccino,572,normal,NONE,standard
+5,cinccino,573,normal,NONE,standard
+5,gothita,574,psychic,NONE,standard
+5,gothorita,575,psychic,NONE,standard
+5,gothitelle,576,psychic,NONE,standard
+5,solosis,577,psychic,NONE,standard
+5,duosion,578,psychic,NONE,standard
+5,reuniclus,579,psychic,NONE,standard
+5,ducklett,580,water,flying,standard
+5,swanna,581,water,flying,standard
+5,vanillite,582,ice,NONE,standard
+5,vanillish,583,ice,NONE,standard
+5,vanilluxe,584,ice,NONE,standard
+5,deerling,585,normal,grass,standard
+5,sawsbuck,586,normal,grass,standard
+5,emolga,587,electric,flying,standard
+5,karrablast,588,bug,NONE,standard
+5,escavalier,589,bug,steel,standard
+5,foongus,590,grass,poison,standard
+5,amoonguss,591,grass,poison,standard
+5,frillish,592,water,ghost,standard
+5,jellicent,593,water,ghost,standard
+5,alomomola,594,water,NONE,standard
+5,joltik,595,bug,electric,standard
+5,galvantula,596,bug,electric,standard
+5,ferroseed,597,grass,steel,standard
+5,ferrothorn,598,grass,steel,standard
+5,klink,599,steel,NONE,standard
+5,klang,600,steel,NONE,standard
+5,klinklang,601,steel,NONE,standard
+5,tynamo,602,electric,NONE,standard
+5,eelektrik,603,electric,NONE,standard
+5,eelektross,604,electric,NONE,standard
+5,elgyem,605,psychic,NONE,standard
+5,beheeyem,606,psychic,NONE,standard
+5,litwick,607,ghost,fire,standard
+5,lampent,608,ghost,fire,standard
+5,chandelure,609,ghost,fire,standard
+5,axew,610,dragon,NONE,standard
+5,fraxure,611,dragon,NONE,standard
+5,haxorus,612,dragon,NONE,standard
+5,cubchoo,613,ice,NONE,standard
+5,beartic,614,ice,NONE,standard
+5,cryogonal,615,ice,NONE,standard
+5,shelmet,616,bug,NONE,standard
+5,accelgor,617,bug,NONE,standard
+5,stunfisk,618,ground,electric,standard
+5,stunfisk,618,ground,steel,galarian
+5,mienfoo,619,fighting,NONE,standard
+5,mienshao,620,fighting,NONE,standard
+5,druddigon,621,dragon,NONE,standard
+5,golett,622,ground,ghost,standard
+5,golurk,623,ground,ghost,standard
+5,pawniard,624,dark,steel,standard
+5,bisharp,625,dark,steel,standard
+5,bouffalant,626,normal,NONE,standard
+5,rufflet,627,normal,flying,standard
+5,braviary,628,normal,flying,standard
+5,vullaby,629,dark,flying,standard
+5,mandibuzz,630,dark,flying,standard
+5,heatmor,631,fire,NONE,standard
+5,durant,632,bug,steel,standard
+5,deino,633,dark,dragon,standard
+5,zweilous,634,dark,dragon,standard
+5,hydreigon,635,dark,dragon,standard
+5,larvesta,636,bug,fire,standard
+5,volcarona,637,bug,fire,standard
+5,cobalion,638,steel,fighting,standard
+5,terrakion,639,rock,fighting,standard
+5,virizion,640,grass,fighting,standard
+5,tornadus,641,flying,NONE,standard
+5,thundurus,642,electric,flying,standard
+5,reshiram,643,dragon,fire,standard
+5,zekrom,644,dragon,electric,standard
+5,landorus,645,ground,flying,standard
+5,kyurem,646,dragon,ice,standard
+5,keldeo,647,water,fighting,standard
+5,meloetta,648,normal,psychic,aria forme
+5,meloetta,648,normal,fighting,pirouette forme
+5,genesect,649,bug,steel,standard
+6,chespin,650,grass,NONE,standard
+6,quilladin,651,grass,NONE,standard
+6,chesnaught,652,grass,fighting,standard
+6,fennekin,653,fire,NONE,standard
+6,braixen,654,fire,NONE,standard
+6,delphox,655,fire,psychic,standard
+6,froakie,656,water,NONE,standard
+6,frogadier,657,water,NONE,standard
+6,greninja,658,water,dark,standard
+6,bunnelby,659,normal,NONE,standard
+6,diggersby,660,normal,ground,standard
+6,fletchling,661,normal,flying,standard
+6,fletchinder,662,fire,flying,standard
+6,talonflame,663,fire,flying,standard
+6,scatterbug,664,bug,NONE,standard
+6,spewpa,665,bug,NONE,standard
+6,vivillon,666,bug,flying,standard
+6,litleo,667,fire,normal,standard
+6,pyroar,668,fire,normal,standard
+6,flabebe,669,fairy,NONE,standard
+6,floette,670,fairy,NONE,standard
+6,florges,671,fairy,NONE,standard
+6,skiddo,672,grass,NONE,standard
+6,gogoat,673,grass,NONE,standard
+6,pancham,674,fighting,NONE,standard
+6,pangoro,675,fighting,dark,standard
+6,furfrou,676,normal,NONE,standard
+6,espurr,677,psychic,NONE,standard
+6,meowstic,678,psychic,NONE,standard
+6,honedge,679,steel,ghost,standard
+6,doublade,680,steel,ghost,standard
+6,aegislash,681,steel,ghost,standard
+6,spritzee,682,fairy,NONE,standard
+6,aromatisse,683,fairy,NONE,standard
+6,swirlix,684,fairy,NONE,standard
+6,slurpuff,685,fairy,NONE,standard
+6,inkay,686,dark,psychic,standard
+6,malamar,687,dark,psychic,standard
+6,binacle,688,rock,water,standard
+6,barbaracle,689,rock,water,standard
+6,skrelp,690,poison,water,standard
+6,dragalge,691,poison,dragon,standard
+6,clauncher,692,water,NONE,standard
+6,clawitzer,693,water,NONE,standard
+6,helioptile,694,electric,normal,standard
+6,heliolisk,695,electric,normal,standard
+6,tyrunt,696,rock,dragon,standard
+6,tyrantrum,697,rock,dragon,standard
+6,amaura,698,rock,ice,standard
+6,aurorus,699,rock,ice,standard
+6,sylveon,700,fairy,NONE,standard
+6,hawlucha,701,fighting,flying,standard
+6,dedenne,702,electric,fairy,standard
+6,carbink,703,rock,fairy,standard
+6,goomy,704,dragon,NONE,standard
+6,sliggoo,705,dragon,NONE,standard
+6,goodra,706,dragon,NONE,standard
+6,klefki,707,steel,fairy,standard
+6,phantump,708,ghost,grass,standard
+6,trevenant,709,ghost,grass,standard
+6,pumpkaboo,710,ghost,grass,standard
+6,gourgeist,711,ghost,grass,standard
+6,bergmite,712,ice,NONE,standard
+6,avalugg,713,ice,NONE,standard
+6,noibat,714,flying,dragon,standard
+6,noivern,715,flying,dragon,standard
+6,xerneas,716,fairy,NONE,standard
+6,yveltal,717,dark,flying,standard
+6,zygarde,718,dragon,ground,standard
+6,diancie,719,rock,fairy,standard
+6,hoopa,720,psychic,ghost,hoopa confined
+6,hoopa,720,psychic,dark,hoopa unbound
+6,volcanion,721,fire,water,standard
+7,rowlet,722,grass,flying,standard
+7,dartrix,723,grass,flying,standard
+7,decidueye,724,grass,ghost,standard
+7,litten,725,fire,NONE,standard
+7,torracat,726,fire,NONE,standard
+7,incineroar,727,fire,dark,standard
+7,popplio,728,water,NONE,standard
+7,brionne,729,water,NONE,standard
+7,primarina,730,water,fairy,standard
+7,pikipek,731,normal,flying,standard
+7,trumbeak,732,normal,flying,standard
+7,toucannon,733,normal,flying,standard
+7,yungoos,734,normal,NONE,standard
+7,gumshoos,735,normal,NONE,standard
+7,grubbin,736,bug,NONE,standard
+7,charjabug,737,bug,electric,standard
+7,vikavolt,738,bug,electric,standard
+7,crabrawler,739,fighting,NONE,standard
+7,crabominable,740,fighting,ice,standard
+7,oricorio,741,fire,flying,baile style
+7,oricorio,741,electric,flying,pom-pom style
+7,oricorio,741,psychic,flying,pa'u style
+7,oricorio,741,ghost,flying,sensu style
+7,cutiefly,742,bug,fairy,standard
+7,ribombee,743,bug,fairy,standard
+7,rockruff,744,rock,NONE,standard
+7,lycanroc,745,rock,NONE,standard
+7,wishiwashi,746,water,NONE,standard
+7,mareanie,747,poison,water,standard
+7,toxapex,748,poison,water,standard
+7,mudbray,749,ground,NONE,standard
+7,mudsdale,750,ground,NONE,standard
+7,dewpider,751,water,bug,standard
+7,araquanid,752,water,bug,standard
+7,fomantis,753,grass,NONE,standard
+7,lurantis,754,grass,NONE,standard
+7,morelull,755,grass,fairy,standard
+7,shiinotic,756,grass,fairy,standard
+7,salandit,757,poison,fire,standard
+7,salazzle,758,poison,fire,standard
+7,stufful,759,normal,fighting,standard
+7,bewear,760,normal,fighting,standard
+7,bounsweet,761,grass,NONE,standard
+7,steenee,762,grass,NONE,standard
+7,tsareena,763,grass,NONE,standard
+7,comfey,764,fairy,NONE,standard
+7,oranguru,765,normal,psychic,standard
+7,passimian,766,fighting,NONE,standard
+7,wimpod,767,bug,water,standard
+7,golisopod,768,bug,water,standard
+7,sandygast,769,ghost,ground,standard
+7,palossand,770,ghost,ground,standard
+7,pyukumuku,771,water,NONE,standard
+7,type: null,772,normal,NONE,standard
+7,silvally,773,normal,NONE,standard
+7,minior,774,rock,flying,standard
+7,komala,775,normal,NONE,standard
+7,turtonator,776,fire,dragon,standard
+7,togedemaru,777,electric,steel,standard
+7,mimikyu,778,ghost,fairy,standard
+7,bruxish,779,water,psychic,standard
+7,drampa,780,normal,dragon,standard
+7,dhelmise,781,ghost,grass,standard
+7,jangmo-o,782,dragon,NONE,standard
+7,hakamo-o,783,dragon,fighting,standard
+7,kommo-o,784,dragon,fighting,standard
+7,tapu koko,785,electric,fairy,standard
+7,tapu lele,786,psychic,fairy,standard
+7,tapu bulu,787,grass,fairy,standard
+7,tapu fini,788,water,fairy,standard
+7,cosmog,789,psychic,NONE,standard
+7,cosmoem,790,psychic,NONE,standard
+7,solgaleo,791,psychic,steel,standard
+7,lunala,792,psychic,ghost,standard
+7,nihilego,793,rock,poison,standard
+7,buzzwole,794,bug,fighting,standard
+7,pheromosa,795,bug,fighting,standard
+7,xurkitree,796,electric,NONE,standard
+7,celesteela,797,steel,flying,standard
+7,kartana,798,grass,steel,standard
+7,guzzlord,799,dark,dragon,standard
+7,necrozma,800,psychic,NONE,standard
+7,necrozma,800,psychic,steel,dusk mane
+7,necrozma,800,psychic,ghost,dawn wings
+7,magearna,801,steel,fairy,standard
+7,marshadow,802,fighting,ghost,standard
+7,poipole,803,poison,NONE,standard
+7,naganadel,804,poison,dragon,standard
+7,stakataka,805,rock,steel,standard
+7,blacephalon,806,fire,ghost,standard
+7,zeraora,807,electric,NONE,standard
+7,meltan,808,steel,NONE,standard
+7,melmetal,809,steel,NONE,standard
+8,grookey,810,grass,NONE,standard
+8,thwackey,811,grass,NONE,standard
+8,rillaboom,812,grass,NONE,standard
+8,scorbunny,813,fire,NONE,standard
+8,raboot,814,fire,NONE,standard
+8,cinderace,815,fire,NONE,standard
+8,sobble,816,water,NONE,standard
+8,drizzile,817,water,NONE,standard
+8,inteleon,818,water,NONE,standard
+8,skwovet,819,normal,NONE,standard
+8,greedent,820,normal,NONE,standard
+8,rookidee,821,flying,NONE,standard
+8,corvisquire,822,flying,NONE,standard
+8,corviknight,823,flying,steel,standard
+8,blipbug,824,bug,NONE,standard
+8,dottler,825,bug,psychic,standard
+8,orbeetle,826,bug,psychic,standard
+8,nickit,827,dark,NONE,standard
+8,thievul,828,dark,NONE,standard
+8,gossifleur,829,grass,NONE,standard
+8,eldegoss,830,grass,NONE,standard
+8,wooloo,831,normal,NONE,standard
+8,dubwool,832,normal,NONE,standard
+8,chewtle,833,water,NONE,standard
+8,drednaw,834,water,rock,standard
+8,yamper,835,electric,NONE,standard
+8,boltund,836,electric,NONE,standard
+8,rolycoly,837,rock,NONE,standard
+8,carkol,838,rock,fire,standard
+8,coalossal,839,rock,fire,standard
+8,applin,840,grass,dragon,standard
+8,flapple,841,grass,dragon,standard
+8,appletun,842,grass,dragon,standard
+8,silicobra,843,ground,NONE,standard
+8,sandaconda,844,ground,NONE,standard
+8,cramorant,845,flying,water,standard
+8,arrokuda,846,water,NONE,standard
+8,barraskewda,847,water,NONE,standard
+8,toxel,848,electric,poison,standard
+8,toxtricity,849,electric,poison,standard
+8,sizzlipede,850,fire,bug,standard
+8,centiskorch,851,fire,bug,standard
+8,clobbopus,852,fighting,NONE,standard
+8,grapploct,853,fighting,NONE,standard
+8,sinistea,854,ghost,NONE,standard
+8,polteageist,855,ghost,NONE,standard
+8,hatenna,856,psychic,NONE,standard
+8,hattrem,857,psychic,NONE,standard
+8,hatterene,858,psychic,fairy,standard
+8,impidimp,859,dark,fairy,standard
+8,morgrem,860,dark,fairy,standard
+8,grimmsnarl,861,dark,fairy,standard
+8,obstagoon,862,dark,normal,standard
+8,perrserker,863,steel,NONE,standard
+8,cursola,864,ghost,NONE,standard
+8,sirfetch'd,865,fighting,NONE,standard
+8,mr. rime,866,ice,psychic,standard
+8,runerigus,867,ground,ghost,standard
+8,milcery,868,fairy,NONE,standard
+8,alcremie,869,fairy,NONE,standard
+8,falinks,870,fighting,NONE,standard
+8,pincurchin,871,electric,NONE,standard
+8,snom,872,ice,bug,standard
+8,frosmoth,873,ice,bug,standard
+8,stonjourner,874,rock,NONE,standard
+8,eiscue,875,ice,NONE,standard
+8,indeedee,876,psychic,normal,standard
+8,morpeko,877,electric,dark,standard
+8,cufant,878,steel,NONE,standard
+8,copperajah,879,steel,NONE,standard
+8,dracozolt,880,electric,dragon,standard
+8,arctozolt,881,electric,ice,standard
+8,dracovish,882,water,dragon,standard
+8,arctovish,883,water,ice,standard
+8,duraludon,884,steel,dragon,standard
+8,dreepy,885,dragon,ghost,standard
+8,drakloak,886,dragon,ghost,standard
+8,dragapult,887,dragon,ghost,standard
+8,zacian,888,fairy,NONE,hero of many battles
+8,zacian,888,fairy,steel,crowned sword
+8,zamazenta,889,fighting,NONE,hero of many battles
+8,zamazenta,889,fighting,steel,crowned shield
+8,eternatus,890,poison,dragon,standard
+8,kubfu,891,fighting,NONE,standard
+8,urshifu,892,fighting,dark,standard
+8,zarude,893,dark,grass,standard
+8,regieleki,894,electric,NONE,standard
+8,regidrago,895,dragon,NONE,standard
+8,glastrier,896,ice,NONE,standard
+8,spectrier,897,ghost,NONE,standard
+8,calyrex,898,psychic,grass,calyrex
+8,calyrex,898,psychic,ice,ice rider
+8,calyrex,898,psychic,ghost,shadow rider

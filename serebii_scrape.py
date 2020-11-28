@@ -38,9 +38,10 @@ for i in range(0,scrape.total_num):
     time.sleep(0.25) 
     indiv_types,name = scrape.get_types_and_variants(hrefs,i)
     gen = scrape.which_generation(i+1)
-
+    
     for key in indiv_types.keys():
-        new_row = {'name': name, 'number': int(i+1), 'generation': int(gen),'type_name':key, 'type': indiv_types[key]}
+        secondary_type = indiv_types[key][1] if len(indiv_types[key]) > 1 else "NONE" 
+        new_row = {'name': name, 'number': int(i+1), 'generation': int(gen),'type_name':key, 'primary_type': indiv_types[key][0], 'secondary_type': secondary_type }
         simple_table = simple_table.append(new_row,ignore_index=True)
 
 #print(simple_table)

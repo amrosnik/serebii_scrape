@@ -3,14 +3,14 @@ import pandas as pd
 import numpy as np
 
 pd.set_option('display.max_row', 1050)
-pd.set_option('display.max_column', 10)
+pd.set_option('display.max_column', 17)
 #### This script file will be used to manipulate the * simple_table * saved in table_outputs/
 #### for the sake of initial data exploration. 
 
 
 #### read in data
 simple_table = pd.read_csv('table_outputs/simple_table.csv',header=0)
-simple_table = simple_table[['name', 'number','type_name','type','generation']]
+simple_table = simple_table[['name', 'number','type_name','primary_type','secondary_type','generation']]
 #simple_table = simple_table.set_index(['name','type_name'])
 #print(simple_table)
 
@@ -61,7 +61,7 @@ bulbas = bulba_table.columns
 
 for name in poke_names:
 #for z in range(897,len(poke_names)):
-#    name = poke_names[z]
+    #name = poke_names[z]
     joined_table = join_simple_bulba(name)
     ## if we have Mega Evolution data, let's drop it for now.
     ## maybe I'll include it at some point, but my assumption 
@@ -94,7 +94,7 @@ for name in poke_names:
                 joined_table[x].fillna(value=standard_form_row[x].values[0],inplace=True)
         elif len(standard_form_row) == 0:
             print("WARNING: We don't have a standard form row. Will need to look to some other row for filling in these data for ",name)
-
+    
     ## EXCEPTION HANDLING
     # Giratina (#487) has no standard form, but rather two forms (Altered and Origin). Counterintuitively, the Altered form is the more common one.
     # so let's delete the "standard type" row with NaNs in the form entries
@@ -111,7 +111,10 @@ for name in poke_names:
     # Need to copy the Galarian type data to the Galarian Zen form.
     if name == "darmanitan":
         joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type_name']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type_name']].replace("standard","galarian form, zen mode")
-        joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['type']].replace("['fire']","['ice', 'fire']")
+        joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['primary_type']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['primary_type']].replace("fire","ice")
+        joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['secondary_type']] = joined_table.loc[joined_table['form_name']=='galarian form, zen mode', ['secondary_type']].replace("NONE","fire")
+        joined_table.loc[joined_table['form_name']=='zen mode', ['primary_type']] = joined_table.loc[joined_table['form_name']=='zen mode', ['primary_type']].replace("ice","fire")
+        joined_table.loc[joined_table['form_name']=='zen mode', ['secondary_type']] = joined_table.loc[joined_table['form_name']=='zen mode', ['secondary_type']].replace("fire","psychic")
     # The Gen V legendaries have two forms, Incarnate or Therian. There is no "standard" form, 
     # so let's drop the sad attempt to make a standard form. Note the type is the same for both forms. 
     if name == "tornadus" or name == "thundurus" or name == "landorus":
@@ -170,7 +173,7 @@ for name in poke_names:
     if name == "calyrex":
         joined_table['type_name'].replace(to_replace='^calyrex',value='standard',regex=True,inplace=True)
         joined_table = joined_table.drop(joined_table[joined_table['type_name'].isna()].index)
-
+    
     ## Drop any duplicate standard/normal rows. I found these for
         # Deoxys
         # Darmanitan
@@ -180,13 +183,16 @@ for name in poke_names:
     if len(standard_rows) > 1:
         print("WARNING! there are multiple standard/normal rows for ",name)
         joined_table = joined_table.drop(standard_rows.index[1])
-    
+
     big_joined_table = big_joined_table.append(joined_table,ignore_index=True)
 
-#print(big_joined_table.iloc[:,np.r_[1:3,5,7:9]])
 big_joined_table = big_joined_table.drop(['#'], axis=1)
+big_joined_table = big_joined_table.drop(['Pokémon'], axis=1)
 big_joined_table['number'] = big_joined_table['number'].astype('int32')
 big_joined_table['generation'] = big_joined_table['generation'].astype('int32')
+#print(big_joined_table[['name','type_name','primary_type','secondary_type']])
+print(big_joined_table)
+#exit(0)
 big_joined_table.to_pickle("./joined_table_pickle.pkl")
 
 ### notes: 
