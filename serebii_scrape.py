@@ -6,14 +6,6 @@ import re
 import pokescrape as scrape 
 import pandas as pd 
 
-## TEST: ensure we have all 893 Pokemon
-if len(scrape.hrefs) < scrape.total_num: 
-    print("Uh oh, we didn't catch 'em all!")
-    exit()
-elif len(scrape.hrefs) > scrape.total_num: 
-    print("Either there's more than "+str(scrape.total_num)+" Pokemon now, or we're actually scraping Digimon data...")
-    exit()
-
 ## we need to loop through *all* Pokemon listed on this page. 
 #for i in range(0,len(hrefs)):
 misfits = [350, 412, 478, 491, 554, 647, 719, 740, 799, 887, 888]
@@ -30,12 +22,21 @@ misfits = [350, 412, 478, 491, 554, 647, 719, 740, 799, 887, 888]
     # Wormadam, 413
     # Castform, 351
 
-
 ## let's make a very simple table of all the Pokemon so we can start with some basic exploration. 
+hrefs = scrape.get_master_list()
+## TEST: ensure we have all 893 Pokemon
+if len(hrefs) < scrape.total_num: 
+    print("Uh oh, we didn't catch 'em all!")
+    exit()
+elif len(hrefs) > scrape.total_num: 
+    print("Either there's more than "+str(scrape.total_num)+" Pokemon now, or we're actually scraping Digimon data...")
+    exit()
+
 
 simple_table = pd.DataFrame()
 for i in range(0,scrape.total_num):
-    indiv_types,name = scrape.get_types_and_variants(i)
+    time.sleep(0.25) 
+    indiv_types,name = scrape.get_types_and_variants(hrefs,i)
     gen = scrape.which_generation(i+1)
 
     for key in indiv_types.keys():
@@ -51,7 +52,7 @@ exit(0)
 
 ## below is for playing around with adding functionality. will clean up later 
 
-for i in range(24,26):
+for i in range(892,899):
 
     ## get Pokedex number 
     ## remember, Python indexes start at ONE, so the actual pokedex index is...i+1

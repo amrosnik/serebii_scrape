@@ -169,8 +169,11 @@ generation,name,number,type,type_name
 1,aerodactyl,142,"['rock', 'flying']",standard
 1,snorlax,143,['normal'],standard
 1,articuno,144,"['ice', 'flying']",standard
+1,articuno,144,"['psychic', 'flying']",galarian
 1,zapdos,145,"['electric', 'flying']",standard
+1,zapdos,145,"['fighting', 'flying']",galarian
 1,moltres,146,"['fire', 'flying']",standard
+1,moltres,146,"['dark', 'flying']",galarian
 1,dratini,147,['dragon'],standard
 1,dragonair,148,['dragon'],standard
 1,dragonite,149,"['dragon', 'flying']",standard
@@ -224,6 +227,7 @@ generation,name,number,type,type_name
 2,umbreon,197,['dark'],standard
 2,murkrow,198,"['dark', 'flying']",standard
 2,slowking,199,"['water', 'psychic']",standard
+2,slowking,199,"['poison', 'psychic']",galarian
 2,misdreavus,200,['ghost'],standard
 2,unown,201,['psychic'],standard
 2,wobbuffet,202,['psychic'],standard
@@ -947,3 +951,10 @@ generation,name,number,type,type_name
 8,kubfu,891,['fighting'],standard
 8,urshifu,892,"['fighting', 'dark']",standard
 8,zarude,893,"['dark', 'grass']",standard
+8,regieleki,894,['electric'],standard
+8,regidrago,895,['dragon'],standard
+8,glastrier,896,['ice'],standard
+8,spectrier,897,['ghost'],standard
+8,calyrex,898,"['psychic', 'grass']",calyrex
+8,calyrex,898,"['psychic', 'ice']",ice rider
+8,calyrex,898,"['psychic', 'ghost']",shadow rider
