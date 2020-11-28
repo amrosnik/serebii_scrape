@@ -184,6 +184,9 @@ for name in poke_names:
     big_joined_table = big_joined_table.append(joined_table,ignore_index=True)
 
 #print(big_joined_table.iloc[:,np.r_[1:3,5,7:9]])
+big_joined_table = big_joined_table.drop(['#'], axis=1)
+big_joined_table['number'] = big_joined_table['number'].astype('int32')
+big_joined_table['generation'] = big_joined_table['generation'].astype('int32')
 big_joined_table.to_pickle("./joined_table_pickle.pkl")
 
 ### notes: 
