@@ -1,6 +1,7 @@
 import pandas as pd
 import pokescrape as scrape
 import numpy as np
+import re 
 
 pd.set_option('display.max_row', 1050)
 pd.set_option('display.max_column', 16)
@@ -35,17 +36,44 @@ for i in range(len(df)):
           print(old_df.loc[i,'number'],old_df.loc[i,'type'],stripped_1,stripped_2)
 exit(0)
 """
+def form_or_type(df):
+    formStandard = typeStandard = False
+    regexp = re.compile(r'standard|normal|average|50|midday')
+    if regexp.search(df['form_name']):
+        formStandard = True 
+    if regexp.search(df['type_name']):
+        typeStandard = True
+    if formStandard and typeStandard:
+        variant = 'standard'
+    elif formStandard and not typeStandard:
+        variant = df['type_name']
+    elif not formStandard and typeStandard:
+        variant = df['form_name']
+    else:
+        variant = df['type_name']
+    return(variant)
+#TODO: test this code's logic on something other than use cases from best_and_worst()
 
-## best and worst in each category
-## TODO: figure out a way to print this out better
-stat_categories = df.columns.values.tolist()[-8:]
-"""
-for stat in stat_categories:
-    print("********** POKEMON WITH HIGHEST ",stat," **********")
-    print(df.iloc[df[stat].idxmax()])
-    print("********** POKEMON WITH LOWEST ",stat," **********")
-    print(df.iloc[df[stat].idxmin()])
-"""
+def best_and_worst(df):
+    ## best and worst in each category
+    stat_categories = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed', 'Total','Average']
+    best_worst_stats = pd.DataFrame()
+    for stat in stat_categories:
+        best = df.iloc[df[stat].idxmax()]
+        worst = df.iloc[df[stat].idxmin()]
+        best_variant = form_or_type(best)
+        worst_variant = form_or_type(worst)
+        new_row = {'stat': stat, 'best_variant': best_variant, 'best': best['name'], 'best_value': best[stat], 'worst_variant': worst_variant, 'worst': worst['name'], 'worst_value': worst[stat] }
+        best_worst_stats = best_worst_stats.append(new_row,ignore_index=True)
+    best_worst_stats = best_worst_stats[['stat','best_variant','best','best_value','worst_variant','worst','worst_value']]
+    best_worst_stats['best_value'] = best_worst_stats['best_value'].astype('int32')
+    best_worst_stats['worst_value'] = best_worst_stats['worst_value'].astype('int32')
+    return(best_worst_stats)
+
+best_worst = best_and_worst(df)
+print("********* BEST AND WORST PER STAT ACROSS ALL POKEMON **********")
+print(best_worst)
+#exit(0)
 
 ## let's double-check that the Total and Average columns are correct
 df['amr_total'] = df.iloc[:, -8:-2].sum(axis=1)
@@ -62,23 +90,52 @@ if len(diff_mean) > 1:
 if len(diff_total) == 1 and len(diff_mean) == 1:
     df = df.drop(['amr_mean','amr_total'], axis=1)
 
-## most even keel (lowest stdev)
+## stdev perspective
 df['stdev'] = df.iloc[:, -8:-2].std(axis=1) 
 df['stdev'] = round(df['stdev'],1)
-print(df.iloc[df['stdev'].idxmax()])
+print("********* MOST AND LEAST WELL-ROUNDED ACROSS ALL POKEMON **********")
 print(df.iloc[df['stdev'].idxmin()])
+print(df.iloc[df['stdev'].idxmax()])
 
-## REALLY FUN TIME: let's look at best/worst by type.
-## AND THEN average + stdev by type. and see which pokemon is closest to the average picture for its type.
-## (try grouping pokemon with same primary + secondary types) 
-## (also do the first approximation with only using the primary type) 
-## (also do "pure" vs. "mixed" types for each type. "pure" meaning, pokemon with only one type. "mixed" otherwise.)
-
-## look for patterns in stat distributions for each type.
-
+## let's look at best/worst by type.
+simple_stats = pd.DataFrame()
 for x in scrape.possible_types:
     print("********* NOW GROUPING FOR TYPE ",x," **********")
     primary_type_grouping = df[df['primary_type'].str.contains(x,regex=True,na=False)]
+    primary_type_grouping = primary_type_grouping.reset_index()
     secondary_type_grouping = df[df['secondary_type'].str.contains(x,regex=True,na=False)]
-    print(primary_type_grouping[['name','type_name','primary_type','secondary_type','form_name']])
-    print(secondary_type_grouping[['name','type_name','primary_type','secondary_type','form_name']])
+    secondary_type_grouping = secondary_type_grouping.reset_index()
+    ## get the type totals per each generation
+    for j in range(1,9):
+       generation_grp_1 = primary_type_grouping[(primary_type_grouping['generation']==j) & (primary_type_grouping['primary_type'] == x)]
+       generation_grp_2 = secondary_type_grouping[(secondary_type_grouping['generation']==j) & (secondary_type_grouping['secondary_type'] == x)]
+       new_row = {'type': x, 'primary': len(generation_grp_1), 'secondary': len(generation_grp_2), 'generation':j }
+       simple_stats = simple_stats.append(new_row,ignore_index=True)
+
+    ## append new row for total of each type across all generations
+    new_row = {'type': x, 'primary': len(primary_type_grouping), 'secondary': len(secondary_type_grouping), 'generation': 999 }
+    simple_stats = simple_stats.append(new_row,ignore_index=True)
+
+    best_worst_1 = best_and_worst(primary_type_grouping)
+    print(best_worst_1)
+    print("********* NOW GROUPING FOR SECONDARY TYPE ",x," **********")
+    best_worst_2 = best_and_worst(secondary_type_grouping)
+    print(best_worst_2)
+
+    #TODO: calculate the "average" Pokemon per type (+ calc stdev for stats, too!) 
+    #TODO:see which pokemon is closest to the average picture for its type.
+    ## first, do to  first approximation with only using the primary type, so only primary_type_grouping
+    ## THEN group primary+secondary groupings together and repeat the calc  
+
+    #TODO: look for patterns in stat distributions for each type.
+    #TODO: make bar graphs to visualize the base stats for best/worst, avg, closest-to-avg by type.
+
+simple_stats['primary'] = simple_stats['primary'].astype('int32')
+simple_stats['secondary'] = simple_stats['secondary'].astype('int32')
+simple_stats['generation'] = simple_stats['generation'].astype('int32')
+simple_stats = simple_stats[['type','primary','secondary','generation']]
+#print(simple_stats)
+#TODO: plot the numbers of each primary and secondary type (bar graph) and how many of each type per generation
+
+
+
