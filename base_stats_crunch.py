@@ -89,6 +89,46 @@ if len(diff_mean) > 1:
     print("uh oh, means were calculated incorrectly.")
 if len(diff_total) == 1 and len(diff_mean) == 1:
     df = df.drop(['amr_mean','amr_total'], axis=1)
+#TODO: transform this into a unit test of some kind
+
+def avg_stdev_per_type(grp):
+    ## calculate the average and stdev of each base stat for a given type 
+    stat_categories = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed', 'Total','Average']
+  
+    # copy the structure of a Pokemon in the group, so that the average profile
+    # can be outputted in the same format 
+    avg_poke = grp.iloc[0].copy()
+    avg_poke['name'] = 'AVERAGE_PROFILE_'+avg_poke['primary_type']
+    avg_poke['number'] = 999 
+    avg_poke['type_name'] = 'standard'
+    avg_poke['secondary_type'] = 'NONE'
+    avg_poke['generation'] = 999 
+    avg_poke['form_name'] = 'standard'
+    for stat in stat_categories:
+       std_name = stat +"_stdev"
+       avg_poke[stat] = grp[stat].mean()
+       avg_poke[stat] = round(avg_poke[stat],1)
+       avg_poke[std_name] = grp[stat].std()
+       avg_poke[std_name] = round(avg_poke[std_name],1)
+    avg_poke['stdev'] = avg_poke[stat_categories[:-2]].std() 
+    avg_poke['stdev'] = round(avg_poke['stdev'],1)
+    return(avg_poke)
+  
+def find_most_avg(grp, avg_poke):
+    ## find the Pokemon in a particular type grouping that 
+    ## most resembles the average profile
+    
+    # calculate diffs between any given stat and the stat from avg_poke 
+    stat_categories = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed', 'Total','Average']
+    grp['diff_sum'] = 0 
+    for stat in stat_categories:
+       diff_name = stat +"_diff"
+       std_name = stat +"_stdev"
+       grp[diff_name] = abs(grp[stat] - avg_poke[stat]) 
+       grp['diff_sum'] = grp['diff_sum'] + grp[diff_name]
+
+    most_avg = grp.iloc[grp['diff_sum'].idxmin()]
+    return(most_avg)
 
 ## stdev perspective
 df['stdev'] = df.iloc[:, -8:-2].std(axis=1) 
@@ -117,15 +157,21 @@ for x in scrape.possible_types:
     simple_stats = simple_stats.append(new_row,ignore_index=True)
 
     best_worst_1 = best_and_worst(primary_type_grouping)
-    print(best_worst_1)
-    print("********* NOW GROUPING FOR SECONDARY TYPE ",x," **********")
+    #print(best_worst_1)
+    #print("********* NOW GROUPING FOR SECONDARY TYPE ",x," **********")
     best_worst_2 = best_and_worst(secondary_type_grouping)
-    print(best_worst_2)
+    #print(best_worst_2)
 
-    #TODO: calculate the "average" Pokemon per type (+ calc stdev for stats, too!) 
-    #TODO:see which pokemon is closest to the average picture for its type.
-    ## first, do to  first approximation with only using the primary type, so only primary_type_grouping
-    ## THEN group primary+secondary groupings together and repeat the calc  
+    ## see which pokemon is closest to the average picture for its type.
+    avg_poke = avg_stdev_per_type(primary_type_grouping)
+    most_avg = find_most_avg(primary_type_grouping,avg_poke)
+    
+    ## group primary+secondary groupings together: avg, closest to avg Pokemon  
+    primary_and_secondary = pd.concat([primary_type_grouping, secondary_type_grouping], ignore_index=True)
+    avg_poke12 = avg_stdev_per_type(primary_and_secondary)
+    most_avg12 = find_most_avg(primary_and_secondary,avg_poke)
+    print(avg_poke12)
+    print(most_avg12)
 
     #TODO: look for patterns in stat distributions for each type.
     #TODO: make bar graphs to visualize the base stats for best/worst, avg, closest-to-avg by type.
