@@ -3,6 +3,7 @@ import pokescrape as scrape
 import numpy as np
 import re 
 import matplotlib.pyplot as plt
+from itertools import chain 
 
 pd.set_option('display.max_row', 1050)
 pd.set_option('display.max_column', 16)
@@ -253,7 +254,16 @@ simple_stats = simple_stats[['type','primary','secondary','generation']]
 #plot the numbers of each primary and secondary type per generation
 for gen in simple_stats['generation'].unique():
      gen_data = simple_stats[simple_stats['generation'] == gen]
-
+     gen_data = gen_data.reset_index()
+   
+     # most common types per generation
+     max_primary = gen_data.iloc[gen_data['primary'].idxmax()]
+     max_secondary = gen_data.iloc[gen_data['secondary'].idxmax()]
+     print(gen,max_primary['type'],max_secondary['type'])
+     min_primary = gen_data.iloc[gen_data['primary'].idxmin()]
+     min_secondary = gen_data.iloc[gen_data['secondary'].idxmin()]
+     print(gen,min_primary['type'],min_secondary['type'])
+  
      ## plot all types for a given generation
      primary_vals = gen_data[['primary']].values
      primary_vals = [y for x in primary_vals for y in x]
@@ -286,11 +296,38 @@ for gen in simple_stats['generation'].unique():
      ax2.set_yticks(np.arange(mn/gen_size*100,mx/gen_size*100,2))
      ax2.set_ylabel("Percentage of Generation Total Count")
      fig.tight_layout()
+     #plt.show()
+     plt.close()
+
+#plot the numbers of each type as its count changes over generations
+for t in scrape.possible_types:
+     primary_data = simple_stats[simple_stats['type'] == t]
+     ## plot all types for a given generation
+     primary_vals = primary_data[['primary']].values
+     primary_vals = [y for x in primary_vals for y in x]
+     secondary_vals = primary_data[['secondary']].values
+     secondary_vals = [y for x in secondary_vals for y in x]
+
+     generations = np.arange(1,len(primary_vals),1)
+     fig, ax1 = plt.subplots()
+     ax1.set_xlabel("Generation")
+     ax1.set_ylabel("Count")
+     mn,mx = ax1.set_ylim(0,max(chain(primary_vals[:-1],secondary_vals[:-1])))
+     ax1.set_yticks(np.arange(0,max(chain(primary_vals[:-1],secondary_vals[:-1])),2))
+     plt.title("Totals for type "+t+" per generation",wrap=True)
+     ax1.plot(generations,primary_vals[:-1],color='b',label='primary type',marker='.')
+     ax1.plot(generations,secondary_vals[:-1],color='g',label='secondary type',marker='.')
+     ax1.legend(loc='best')
+     fig.tight_layout()
      plt.show()
+     plt.close()
+
+# TODO: mean, median, mode style questions 
+# which primary + secondary (non-NONE) combo is most common?
+# do this by making (temporary) new column that's a concatenated string of primary + secondary, where
+# NONE is not concatenated if that is the secondary type. Then, do mode on that new column.
 
 # TODO: miscellaneous questions to ask 
-# which primary + secondary (non-NONE) combo is most common?
-# which type was the most common in each generation? the least common? 
 # do Pokemon of a given type follow a pattern for relative magnitudes of base stats? 
 # does including Pokemon w/ secondary type significantly shift a base stat distribution? hypothesis: it does for types that are usually present as secondary types / that have low primary:secondary ratios. 
 # for Pokemon with multiple variants/forms, how does that change the base stats? same total, different individual stats? are there trends for how stats change among Alolan or Galarian variants? 
