@@ -250,24 +250,43 @@ simple_stats['generation'] = simple_stats['generation'].astype('int32')
 simple_stats = simple_stats[['type','primary','secondary','generation']]
 #print(simple_stats)
 
-#TODO: plot the numbers of each primary and secondary type (bar graph) and how many of each type per generation
+#plot the numbers of each primary and secondary type per generation
 for gen in simple_stats['generation'].unique():
-    print(gen)
-exit(0)
-primary_vals = simple_stats[['primary']].values
-secondary_vals = simple_stats[['secondary']].values
-x_pos = np.arange(len(scrape.possible_types)) 
-print(primary_vals,x_pos)
-#plt.bar(x_pos,primary_vals)
-#plt.bar(x_pos + 0.3,secondary_vals)
-#plt.bar(x_pos+ width, y2_vals, width=width,color='g',label=labels[1])
-#plt.xlabel("Type")
-#plt.ylabel("Count")
-#plt.title("Base stat values for "+ descriptor,wrap=True)
-#plt.xticks(x_pos, scrape.possible_types)
-#plt.show()
+     gen_data = simple_stats[simple_stats['generation'] == gen]
 
-
+     ## plot all types for a given generation
+     primary_vals = gen_data[['primary']].values
+     primary_vals = [y for x in primary_vals for y in x]
+     secondary_vals = gen_data[['secondary']].values
+     secondary_vals = [y for x in secondary_vals for y in x]
+     if gen == 1:
+        gen_size = max(scrape.generations[gen-1]) - min(scrape.generations[gen-1])
+     elif gen > 1 and gen < 999: 
+        gen_size = max(scrape.generations[gen-1]) - min(scrape.generations[gen-1]) + 1
+     else:
+         gen_size = scrape.total_num
+     x_pos = np.arange(len(scrape.possible_types))
+     fig, ax1 = plt.subplots()
+     ax1.set_xlabel("Type")
+     ax1.set_ylabel("Count")
+     plt.xticks(x_pos, scrape.possible_types)
+     plt.xticks(rotation=90)
+     mn,mx = ax1.set_ylim(0,max(primary_vals)+6)
+     if gen != 999:
+        ax1.set_yticks(np.arange(0,max(primary_vals)+6,2))
+        plt.title("Type totals for generation "+str(gen),wrap=True)
+     else: 
+        ax1.set_yticks(np.arange(0,max(primary_vals)+6,10))
+        plt.title("Type totals for all generations",wrap=True)
+     ax1.bar(x_pos,primary_vals,color='b',label='primary type')
+     ax1.bar(x_pos + 0.1,secondary_vals,color='g',label='secondary type')
+     ax1.legend(loc='best')
+     ax2 = ax1.twinx()
+     ax2.set_ylim(mn/gen_size*100, mx/gen_size*100)
+     ax2.set_yticks(np.arange(mn/gen_size*100,mx/gen_size*100,2))
+     ax2.set_ylabel("Percentage of Generation Total Count")
+     fig.tight_layout()
+     plt.show()
 
 # TODO: miscellaneous questions to ask 
 # which primary + secondary (non-NONE) combo is most common?
