@@ -1,0 +1,28 @@
+,7
+index,931
+name,cramorant
+number,845
+type_name,standard
+primary_type,flying
+secondary_type,water
+generation,8
+form_name,standard
+HP,70.0
+Attack,85.0
+Defense,55.0
+Sp. Attack,85.0
+Sp. Defense,95.0
+Speed,85.0
+Total,475.0
+Average,79.2
+stdev,14.3
+primary+secondary,flying water
+diff_sum,98.70000000000002
+HP_diff,0.4000000000000057
+Attack_diff,9.900000000000006
+Defense_diff,9.400000000000006
+Sp. Attack_diff,11.099999999999994
+Sp. Defense_diff,25.0
+Speed_diff,2.0
+Total_diff,35.0
+Average_diff,5.900000000000006

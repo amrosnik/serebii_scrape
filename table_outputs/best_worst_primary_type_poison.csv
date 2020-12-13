@@ -1,0 +1,9 @@
+stat,best_variant,best,best_value,worst_variant,worst,worst_value
+HP,eternamax,eternatus,255,standard,ekans,35
+Attack,eternamax,eternatus,115,standard,gulpin,43
+Defense,eternamax,eternatus,250,standard,zubat,35
+Sp. Attack,standard,eternatus,145,standard,zubat,30
+Sp. Defense,eternamax,eternatus,250,standard,nidoranf,40
+Speed,standard,crobat,130,standard,grimer,25
+Total,eternamax,eternatus,1125,standard,zubat,245
+Average,eternamax,eternatus,187,standard,zubat,40

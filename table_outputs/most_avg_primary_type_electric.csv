@@ -1,0 +1,28 @@
+,27
+index,523
+name,rotom
+number,479
+type_name,standard
+primary_type,electric
+secondary_type,ghost
+generation,4
+form_name,standard
+HP,50.0
+Attack,50.0
+Defense,77.0
+Sp. Attack,95.0
+Sp. Defense,77.0
+Speed,91.0
+Total,440.0
+Average,73.3
+stdev,19.5
+primary+secondary,electric ghost
+diff_sum,73.19999999999999
+HP_diff,11.700000000000003
+Attack_diff,24.299999999999997
+Defense_diff,11.5
+Sp. Attack_diff,7.200000000000003
+Sp. Defense_diff,5.900000000000006
+Speed_diff,4.5
+Total_diff,6.899999999999977
+Average_diff,1.2000000000000028

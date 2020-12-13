@@ -1,0 +1,28 @@
+,69
+index,797
+name,dartrix
+number,723
+type_name,standard
+primary_type,grass
+secondary_type,flying
+generation,7
+form_name,standard
+HP,78.0
+Attack,75.0
+Defense,75.0
+Sp. Attack,70.0
+Sp. Defense,70.0
+Speed,52.0
+Total,420.0
+Average,70.0
+stdev,9.4
+primary+secondary,grass flying
+diff_sum,38.4
+HP_diff,11.700000000000003
+Attack_diff,1.5
+Defense_diff,4.200000000000003
+Sp. Attack_diff,3.0999999999999943
+Sp. Defense_diff,1.0999999999999943
+Speed_diff,6.899999999999999
+Total_diff,8.5
+Average_diff,1.4000000000000057

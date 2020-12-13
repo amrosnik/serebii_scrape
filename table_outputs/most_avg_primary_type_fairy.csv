@@ -1,0 +1,28 @@
+,1
+index,41
+name,clefable
+number,36
+type_name,standard
+primary_type,fairy
+secondary_type,NONE
+generation,1
+form_name,standard
+HP,95.0
+Attack,70.0
+Defense,73.0
+Sp. Attack,95.0
+Sp. Defense,90.0
+Speed,60.0
+Total,483.0
+Average,80.5
+stdev,14.8
+primary+secondary,fairy
+diff_sum,94.69999999999999
+HP_diff,22.0
+Attack_diff,1.9000000000000057
+Defense_diff,2.5
+Sp. Attack_diff,16.0
+Sp. Defense_diff,0.7999999999999972
+Speed_diff,0.5
+Total_diff,43.69999999999999
+Average_diff,7.299999999999997

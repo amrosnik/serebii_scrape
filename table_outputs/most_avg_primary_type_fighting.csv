@@ -1,0 +1,28 @@
+,1
+index,69
+name,primeape
+number,57
+type_name,standard
+primary_type,fighting
+secondary_type,NONE
+generation,1
+form_name,standard
+HP,65.0
+Attack,105.0
+Defense,60.0
+Sp. Attack,60.0
+Sp. Defense,70.0
+Speed,95.0
+Total,455.0
+Average,75.8
+stdev,19.3
+primary+secondary,fighting
+diff_sum,74.00000000000003
+HP_diff,8.299999999999997
+Attack_diff,3.9000000000000057
+Defense_diff,12.900000000000006
+Sp. Attack_diff,4.299999999999997
+Sp. Defense_diff,2.200000000000003
+Speed_diff,25.400000000000006
+Total_diff,14.600000000000023
+Average_diff,2.3999999999999915

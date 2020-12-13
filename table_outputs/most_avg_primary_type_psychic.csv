@@ -1,0 +1,28 @@
+,55
+index,817
+name,oricorio
+number,741
+type_name,pa'u style
+primary_type,psychic
+secondary_type,flying
+generation,7
+form_name,standard
+HP,75.0
+Attack,70.0
+Defense,70.0
+Sp. Attack,98.0
+Sp. Defense,70.0
+Speed,93.0
+Total,476.0
+Average,79.3
+stdev,12.8
+primary+secondary,psychic flying
+diff_sum,42.79999999999998
+HP_diff,1.7999999999999972
+Attack_diff,3.0999999999999943
+Defense_diff,2.0
+Sp. Attack_diff,2.5999999999999943
+Sp. Defense_diff,16.200000000000003
+Speed_diff,16.299999999999997
+Total_diff,0.6999999999999886
+Average_diff,0.10000000000000853

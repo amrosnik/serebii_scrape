@@ -1,0 +1,28 @@
+,60
+index,442
+name,bibarel
+number,400
+type_name,standard
+primary_type,normal
+secondary_type,water
+generation,4
+form_name,standard
+HP,79.0
+Attack,85.0
+Defense,60.0
+Sp. Attack,55.0
+Sp. Defense,60.0
+Speed,71.0
+Total,410.0
+Average,68.3
+stdev,12.0
+primary+secondary,normal water
+diff_sum,33.19999999999999
+HP_diff,2.4000000000000057
+Attack_diff,10.599999999999994
+Defense_diff,0.20000000000000284
+Sp. Attack_diff,1.2999999999999972
+Sp. Defense_diff,3.200000000000003
+Speed_diff,2.5
+Total_diff,11.199999999999989
+Average_diff,1.7999999999999972

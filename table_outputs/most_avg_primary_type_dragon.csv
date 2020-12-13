@@ -1,0 +1,28 @@
+,3
+index,368
+name,altaria
+number,334
+type_name,standard
+primary_type,dragon
+secondary_type,flying
+generation,3
+form_name,standard
+HP,75.0
+Attack,70.0
+Defense,90.0
+Sp. Attack,70.0
+Sp. Defense,105.0
+Speed,80.0
+Total,490.0
+Average,81.7
+stdev,13.7
+primary+secondary,dragon flying
+diff_sum,114.1
+HP_diff,9.299999999999997
+Attack_diff,31.5
+Defense_diff,11.0
+Sp. Attack_diff,13.700000000000003
+Sp. Defense_diff,25.299999999999997
+Speed_diff,0.9000000000000057
+Total_diff,19.19999999999999
+Average_diff,3.200000000000003

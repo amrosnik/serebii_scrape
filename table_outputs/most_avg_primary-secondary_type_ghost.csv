@@ -1,0 +1,28 @@
+,3
+index,231
+name,misdreavus
+number,200
+type_name,standard
+primary_type,ghost
+secondary_type,NONE
+generation,2
+form_name,standard
+HP,60.0
+Attack,60.0
+Defense,60.0
+Sp. Attack,85.0
+Sp. Defense,85.0
+Speed,85.0
+Total,435.0
+Average,72.5
+stdev,13.7
+primary+secondary,ghost
+diff_sum,74.29999999999998
+HP_diff,5.0
+Attack_diff,11.900000000000006
+Defense_diff,20.099999999999994
+Sp. Attack_diff,3.9000000000000057
+Sp. Defense_diff,6.700000000000003
+Speed_diff,23.9
+Total_diff,2.3999999999999773
+Average_diff,0.4000000000000057

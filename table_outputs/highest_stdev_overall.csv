@@ -1,0 +1,17 @@
+,244
+name,shuckle
+number,213
+type_name,standard
+primary_type,bug
+secondary_type,rock
+generation,2
+form_name,standard
+HP,20.0
+Attack,10.0
+Defense,230.0
+Sp. Attack,10.0
+Sp. Defense,230.0
+Speed,5.0
+Total,505.0
+Average,84.2
+stdev,113.1

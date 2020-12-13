@@ -1,0 +1,9 @@
+stat,best_variant,best,best_value,worst_variant,worst,worst_value
+HP,standard,lanturn,125,alolan,geodude,40
+Attack,standard,zekrom,150,standard,chinchou,38
+Defense,alolan,golem,130,standard,chinchou,38
+Sp. Attack,standard,vikavolt,145,alolan,geodude,30
+Sp. Defense,standard,zekrom,100,alolan,geodude,30
+Speed,standard,galvantula,108,alolan,geodude,20
+Total,standard,zekrom,680,alolan,geodude,300
+Average,standard,zekrom,113,alolan,geodude,50

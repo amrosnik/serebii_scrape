@@ -1,0 +1,28 @@
+,16
+index,656
+name,klang
+number,600
+type_name,standard
+primary_type,steel
+secondary_type,NONE
+generation,5
+form_name,standard
+HP,60.0
+Attack,80.0
+Defense,95.0
+Sp. Attack,70.0
+Sp. Defense,85.0
+Speed,50.0
+Total,440.0
+Average,73.3
+stdev,16.6
+primary+secondary,steel
+diff_sum,75.50000000000001
+HP_diff,9.599999999999994
+Attack_diff,9.400000000000006
+Defense_diff,13.799999999999997
+Sp. Attack_diff,0.0
+Sp. Defense_diff,10.900000000000006
+Speed_diff,2.799999999999997
+Total_diff,24.80000000000001
+Average_diff,4.200000000000003

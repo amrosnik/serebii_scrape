@@ -1,0 +1,28 @@
+,48
+index,855
+name,minior
+number,774
+type_name,standard
+primary_type,rock
+secondary_type,flying
+generation,7
+form_name,standard
+HP,60.0
+Attack,60.0
+Defense,100.0
+Sp. Attack,60.0
+Sp. Defense,100.0
+Speed,60.0
+Total,440.0
+Average,73.3
+stdev,20.7
+primary+secondary,rock flying
+diff_sum,71.19999999999999
+HP_diff,6.900000000000006
+Attack_diff,28.5
+Defense_diff,1.9000000000000057
+Sp. Attack_diff,0.6000000000000014
+Sp. Defense_diff,28.0
+Speed_diff,5.100000000000001
+Total_diff,0.19999999999998863
+Average_diff,0.0

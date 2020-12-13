@@ -1,0 +1,28 @@
+,37
+index,889
+name,poipole
+number,803
+type_name,standard
+primary_type,poison
+secondary_type,NONE
+generation,7
+form_name,standard
+HP,67.0
+Attack,73.0
+Defense,67.0
+Sp. Attack,73.0
+Sp. Defense,67.0
+Speed,73.0
+Total,420.0
+Average,70.0
+stdev,3.3
+primary+secondary,poison
+diff_sum,55.69999999999999
+HP_diff,8.0
+Attack_diff,3.0999999999999943
+Defense_diff,9.700000000000003
+Sp. Attack_diff,4.0
+Sp. Defense_diff,5.700000000000003
+Speed_diff,7.099999999999994
+Total_diff,15.5
+Average_diff,2.5999999999999943

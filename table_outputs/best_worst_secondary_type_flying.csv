@@ -1,0 +1,9 @@
+stat,best_variant,best,best_value,worst_variant,worst,worst_value
+HP,standard,drifblim,150,standard,combee,30
+Attack,standard,rayquaza,150,standard,ledyba,20
+Defense,standard,skarmory,140,standard,spearow,30
+Sp. Attack,standard,rayquaza,150,standard,zubat,30
+Sp. Defense,standard,lugia,154,standard,taillow,30
+Speed,standard,ninjask,160,standard,togetic,40
+Total,standard,lugia,680,standard,combee,244
+Average,standard,lugia,113,standard,combee,40

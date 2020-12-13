@@ -1,0 +1,28 @@
+,11
+index,388
+name,castform
+number,351
+type_name,snowy form
+primary_type,ice
+secondary_type,NONE
+generation,3
+form_name,standard
+HP,70.0
+Attack,70.0
+Defense,70.0
+Sp. Attack,70.0
+Sp. Defense,70.0
+Speed,70.0
+Total,420.0
+Average,70.0
+stdev,0.0
+primary+secondary,ice
+diff_sum,34.80000000000001
+HP_diff,1.7999999999999972
+Attack_diff,7.299999999999997
+Defense_diff,3.299999999999997
+Sp. Attack_diff,1.2000000000000028
+Sp. Defense_diff,4.099999999999994
+Speed_diff,4.200000000000003
+Total_diff,11.100000000000023
+Average_diff,1.7999999999999972

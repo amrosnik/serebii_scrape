@@ -1,0 +1,9 @@
+stat,best_variant,best,best_value,worst_variant,worst,worst_value
+HP,standard,obstagoon,93,alolan,rattata,30
+Attack,standard,obstagoon,90,galarian,zigzagoon,30
+Defense,standard,obstagoon,101,standard,helioptile,33
+Sp. Attack,standard,pyroar,109,alolan,rattata,25
+Sp. Defense,female,indeedee,105,alolan,rattata,35
+Speed,standard,heliolisk,109,galarian,zigzagoon,60
+Total,standard,obstagoon,520,galarian,zigzagoon,240
+Average,standard,obstagoon,86,galarian,zigzagoon,40

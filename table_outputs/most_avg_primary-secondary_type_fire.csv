@@ -1,0 +1,28 @@
+,27
+index,386
+name,castform
+number,351
+type_name,sunny form
+primary_type,fire
+secondary_type,NONE
+generation,3
+form_name,standard
+HP,70.0
+Attack,70.0
+Defense,70.0
+Sp. Attack,70.0
+Sp. Defense,70.0
+Speed,70.0
+Total,420.0
+Average,70.0
+stdev,0.0
+primary+secondary,fire
+diff_sum,62.900000000000006
+HP_diff,1.0
+Attack_diff,12.599999999999994
+Defense_diff,3.5
+Sp. Attack_diff,12.799999999999997
+Sp. Defense_diff,0.29999999999999716
+Speed_diff,4.0
+Total_diff,24.600000000000023
+Average_diff,4.099999999999994

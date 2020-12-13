@@ -1,0 +1,28 @@
+,58
+index,970
+name,dracozolt
+number,880
+type_name,standard
+primary_type,electric
+secondary_type,dragon
+generation,8
+form_name,standard
+HP,90.0
+Attack,100.0
+Defense,90.0
+Sp. Attack,80.0
+Sp. Defense,70.0
+Speed,75.0
+Total,505.0
+Average,84.2
+stdev,11.1
+primary+secondary,electric dragon
+diff_sum,42.400000000000006
+HP_diff,5.700000000000003
+Attack_diff,1.5
+Defense_diff,11.0
+Sp. Attack_diff,3.700000000000003
+Sp. Defense_diff,9.700000000000003
+Speed_diff,5.900000000000006
+Total_diff,4.199999999999989
+Average_diff,0.7000000000000028

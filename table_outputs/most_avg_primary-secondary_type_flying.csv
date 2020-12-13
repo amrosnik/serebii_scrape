@@ -1,0 +1,28 @@
+,16
+index,49
+name,golbat
+number,42
+type_name,standard
+primary_type,poison
+secondary_type,flying
+generation,1
+form_name,standard
+HP,75.0
+Attack,80.0
+Defense,70.0
+Sp. Attack,65.0
+Sp. Defense,75.0
+Speed,90.0
+Total,455.0
+Average,75.8
+stdev,8.6
+primary+secondary,poison flying
+diff_sum,50.30000000000001
+HP_diff,5.400000000000006
+Attack_diff,4.900000000000006
+Defense_diff,5.599999999999994
+Sp. Attack_diff,8.900000000000006
+Sp. Defense_diff,5.0
+Speed_diff,3.0
+Total_diff,15.0
+Average_diff,2.5

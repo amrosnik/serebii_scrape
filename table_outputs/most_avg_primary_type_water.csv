@@ -1,0 +1,28 @@
+,64
+index,387
+name,castform
+number,351
+type_name,rainy form
+primary_type,water
+secondary_type,NONE
+generation,3
+form_name,standard
+HP,70.0
+Attack,70.0
+Defense,70.0
+Sp. Attack,70.0
+Sp. Defense,70.0
+Speed,70.0
+Total,420.0
+Average,70.0
+stdev,0.0
+primary+secondary,water
+diff_sum,12.799999999999983
+HP_diff,0.09999999999999432
+Attack_diff,2.5
+Defense_diff,0.9000000000000057
+Sp. Attack_diff,2.9000000000000057
+Sp. Defense_diff,0.09999999999999432
+Speed_diff,4.700000000000003
+Total_diff,1.3999999999999773
+Average_diff,0.20000000000000284

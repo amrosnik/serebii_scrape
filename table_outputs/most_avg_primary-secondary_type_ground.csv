@@ -1,0 +1,28 @@
+,48
+index,225
+name,quagsire
+number,195
+type_name,standard
+primary_type,water
+secondary_type,ground
+generation,2
+form_name,standard
+HP,95.0
+Attack,85.0
+Defense,85.0
+Sp. Attack,65.0
+Sp. Defense,65.0
+Speed,35.0
+Total,430.0
+Average,71.7
+stdev,21.6
+primary+secondary,water ground
+diff_sum,72.90000000000002
+HP_diff,24.099999999999994
+Attack_diff,9.099999999999994
+Defense_diff,0.5
+Sp. Attack_diff,10.399999999999999
+Sp. Defense_diff,0.7000000000000028
+Speed_diff,26.799999999999997
+Total_diff,1.1000000000000227
+Average_diff,0.20000000000000284

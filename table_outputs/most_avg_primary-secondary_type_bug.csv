@@ -1,0 +1,28 @@
+,26
+index,303
+name,dustox
+number,269
+type_name,standard
+primary_type,bug
+secondary_type,poison
+generation,3
+form_name,standard
+HP,60.0
+Attack,50.0
+Defense,70.0
+Sp. Attack,50.0
+Sp. Defense,90.0
+Speed,65.0
+Total,385.0
+Average,64.2
+stdev,15.0
+primary+secondary,bug poison
+diff_sum,68.99999999999999
+HP_diff,3.6000000000000014
+Attack_diff,16.5
+Defense_diff,0.09999999999999432
+Sp. Attack_diff,6.899999999999999
+Sp. Defense_diff,26.4
+Speed_diff,3.6000000000000014
+Total_diff,10.199999999999989
+Average_diff,1.7000000000000028

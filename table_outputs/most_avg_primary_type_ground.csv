@@ -1,0 +1,28 @@
+,1
+index,32
+name,sandslash
+number,28
+type_name,standard
+primary_type,ground
+secondary_type,NONE
+generation,1
+form_name,standard
+HP,75.0
+Attack,100.0
+Defense,110.0
+Sp. Attack,45.0
+Sp. Defense,55.0
+Speed,65.0
+Total,450.0
+Average,75.0
+stdev,25.5
+primary+secondary,ground
+diff_sum,78.59999999999997
+HP_diff,4.099999999999994
+Attack_diff,5.900000000000006
+Defense_diff,24.5
+Sp. Attack_diff,9.600000000000001
+Sp. Defense_diff,9.299999999999997
+Speed_diff,3.200000000000003
+Total_diff,18.899999999999977
+Average_diff,3.0999999999999943

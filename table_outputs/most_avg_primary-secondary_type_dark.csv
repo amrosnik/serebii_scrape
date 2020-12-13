@@ -1,0 +1,28 @@
+,11
+index,294
+name,mightyena
+number,262
+type_name,standard
+primary_type,dark
+secondary_type,NONE
+generation,3
+form_name,standard
+HP,70.0
+Attack,90.0
+Defense,70.0
+Sp. Attack,60.0
+Sp. Defense,60.0
+Speed,70.0
+Total,420.0
+Average,70.0
+stdev,11.0
+primary+secondary,dark
+diff_sum,44.10000000000002
+HP_diff,0.5
+Attack_diff,9.599999999999994
+Defense_diff,5.400000000000006
+Sp. Attack_diff,8.700000000000003
+Sp. Defense_diff,6.0
+Speed_diff,6.200000000000003
+Total_diff,6.600000000000023
+Average_diff,1.0999999999999943
