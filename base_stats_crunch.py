@@ -4,6 +4,8 @@ import numpy as np
 import re 
 import matplotlib.pyplot as plt
 from itertools import chain 
+import os 
+import basestats as bs
 
 pd.set_option('display.max_row', 1050)
 pd.set_option('display.max_column', 16)
@@ -12,179 +14,12 @@ pd.set_option('display.max_column', 16)
 
 df = pd.read_pickle("./joined_table_pickle.pkl")
 
-"""
-## paranoid check to make sure the new data structure is consistent with the old one
-## will delete eventually
-## good news, everyone: they are consistent! and I actually found an error in the old one.
-
-old_df = pd.read_pickle("../../Downloads/early_joined_table_pickle.pkl")
-for i in range(len(df)):
-   #print(old_df.loc[i,'number'],old_df.loc[i,'type'],df.loc[i,'primary_type'],df.loc[i,'secondary_type'])
-   stripped_old = old_df.loc[i,'type'].replace('[,\[\]]','')
-   stripped_1 = df.loc[i,'primary_type'].replace('[,\[\]]','')
-   stripped_2 = df.loc[i,'secondary_type'].replace('[,\[\]]','')
-   if stripped_2 == "NONE":
-       stripped_2 = " " 
-   stripped_new = stripped_1 + " " + stripped_2
-   if stripped_1 in str(old_df.loc[i,'type']):
-       yay = 1 
-   else:
-       print("missing primary type")
-       print(old_df.loc[i,'number'],old_df.loc[i,'type'],stripped_1,stripped_2)
-   if stripped_2 != " ":
-      if stripped_2 in str(old_df.loc[i,'type']):
-          yay = 1 
-      else:
-          print("missing secondary type")
-          print(old_df.loc[i,'number'],old_df.loc[i,'type'],stripped_1,stripped_2)
-exit(0)
-"""
-
-# ********** ********** # 
-# ********** FUNCTION DEFINITIONS ********** # 
-# ********** ********** # 
-
-def form_or_type(df):
-    formStandard = typeStandard = False
-    regexp = re.compile(r'standard|normal|average|50|midday')
-    if regexp.search(df['form_name']):
-        formStandard = True 
-    if regexp.search(df['type_name']):
-        typeStandard = True
-    if formStandard and typeStandard:
-        variant = 'standard'
-    elif formStandard and not typeStandard:
-        variant = df['type_name']
-    elif not formStandard and typeStandard:
-        variant = df['form_name']
-    else:
-        variant = df['type_name']
-    return(variant)
-#TODO: test this code's logic on something other than use cases from best_and_worst()
-
-def best_and_worst(df):
-    ## best and worst in each category
-    stat_categories = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed', 'Total','Average']
-    best_worst_stats = pd.DataFrame()
-    for stat in stat_categories:
-        best = df.iloc[df[stat].idxmax()]
-        worst = df.iloc[df[stat].idxmin()]
-        best_variant = form_or_type(best)
-        worst_variant = form_or_type(worst)
-        new_row = {'stat': stat, 'best_variant': best_variant, 'best': best['name'], 'best_value': best[stat], 'worst_variant': worst_variant, 'worst': worst['name'], 'worst_value': worst[stat] }
-        best_worst_stats = best_worst_stats.append(new_row,ignore_index=True)
-    best_worst_stats = best_worst_stats[['stat','best_variant','best','best_value','worst_variant','worst','worst_value']]
-    best_worst_stats['best_value'] = best_worst_stats['best_value'].astype('int32')
-    best_worst_stats['worst_value'] = best_worst_stats['worst_value'].astype('int32')
-    return(best_worst_stats)
-
-def avg_stdev_per_type(grp):
-    ## calculate the average and stdev of each base stat for a given type 
-    stat_categories = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed', 'Total','Average']
-  
-    # copy the structure of a Pokemon in the group, so that the average profile
-    # can be outputted in the same format 
-    avg_poke = grp.iloc[0].copy()
-    avg_poke['name'] = 'AVERAGE_PROFILE_'+avg_poke['primary_type']
-    avg_poke['number'] = 999 
-    avg_poke['type_name'] = 'standard'
-    avg_poke['secondary_type'] = 'NONE'
-    avg_poke['generation'] = 999 
-    avg_poke['form_name'] = 'standard'
-    for stat in stat_categories:
-       std_name = stat +"_stdev"
-       avg_poke[stat] = grp[stat].mean()
-       avg_poke[stat] = round(avg_poke[stat],1)
-       avg_poke[std_name] = grp[stat].std()
-       avg_poke[std_name] = round(avg_poke[std_name],1)
-    avg_poke['stdev'] = avg_poke[stat_categories[:-2]].std() 
-    avg_poke['stdev'] = round(avg_poke['stdev'],1)
-    return(avg_poke)
-  
-def find_most_avg(grp, avg_poke):
-    ## find the Pokemon in a particular type grouping that 
-    ## most resembles the average profile
-    
-    # calculate diffs between any given stat and the stat from avg_poke 
-    stat_categories = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed', 'Total','Average']
-    grp['diff_sum'] = 0 
-    for stat in stat_categories:
-       diff_name = stat +"_diff"
-       std_name = stat +"_stdev"
-       grp[diff_name] = abs(grp[stat] - avg_poke[stat]) 
-       grp['diff_sum'] = grp['diff_sum'] + grp[diff_name]
-
-    most_avg = grp.iloc[grp['diff_sum'].idxmin()]
-    return(most_avg)
-
-def base_stat_plot(df,descriptor,avg_profile=False):
-    ## make a scatter or line plot of the base stats for a dataFrame row
-    base_stats = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed']
-    y_vals = df.loc[base_stats].values
-    x_pos = np.arange(len(base_stats)) 
-    if avg_profile:
-      base_std = ['HP_stdev','Attack_stdev','Defense_stdev','Sp. Attack_stdev','Sp. Defense_stdev', 'Speed_stdev']
-      y_std = df.loc[base_std].values
-      plt.bar(x_pos,y_vals,yerr=y_std)
-    else:
-      plt.bar(x_pos,y_vals)
-    plt.xlabel("Base Stats")
-    plt.ylabel("Value")
-    plt.title("Base stat values for "+ descriptor,wrap=True)
-    plt.xticks(x_pos, base_stats)
-    plt.show()
-    # TODO: prettify plots, save them to files 
-
-def double_plot(df1,df2,descriptor,avg_profile=[False,False],labels=['df1','df2']):
-    ## make a scatter or line plot of the base stats for a dataFrame row
-    base_stats = ['HP','Attack','Defense','Sp. Attack','Sp. Defense', 'Speed']
-    y1_vals = df1.loc[base_stats].values
-    y2_vals = df2.loc[base_stats].values
-    x_pos = np.arange(len(base_stats)) 
-    width = 0.3
-    base_std = ['HP_stdev','Attack_stdev','Defense_stdev','Sp. Attack_stdev','Sp. Defense_stdev', 'Speed_stdev']
-    if avg_profile[0]:
-        y1_std = df1.loc[base_std].values
-        plt.bar(x_pos, y1_vals, yerr= y1_std, width=width,color='b',label=labels[0])
-    else:
-        plt.bar(x_pos, y1_vals, width=width,color='b',label=labels[0])
-
-    if avg_profile[1]:
-        y2_std = df2.loc[base_std].values
-        plt.bar(x_pos+ width, y2_vals, yerr= y2_std, width=width,color='g',label=labels[1])
-    else:
-        plt.bar(x_pos+ width, y2_vals, width=width,color='g',label=labels[1])
-    plt.xlabel("Base Stats")
-    plt.ylabel("Value")
-    plt.title("Base stat values for "+ descriptor,wrap=True)
-    plt.xticks(x_pos, base_stats)
-    plt.legend(loc='best')
-    plt.show()
-    # TODO: prettify plots, save them to files 
-
-
 # ********** ********** # 
 # ********** MESSING AROUND WITH MAIN DATASET ********** # 
 # ********** ********** # 
 #print("********* BEST AND WORST PER STAT ACROSS ALL POKEMON **********")
 #best_worst = best_and_worst(df)
 #best_worst.to_csv('table_outputs/best_worst_overall.csv',index=False)
-
-## let's double-check that the Total and Average columns are correct
-df['amr_total'] = df.iloc[:, -8:-2].sum(axis=1)
-df['Average'] = round(df['Average'],1)
-df['amr_mean'] = df.iloc[:, -9:-3].mean(axis=1) 
-df['amr_mean'] = round(df['amr_mean'],1)
-diff_total = np.where(df['amr_total'] != df['Total'])
-diff_mean = np.where(df['amr_mean'] != df['Average'])
-## these are expected to be (array([], dtype=int64),), so len=1
-if len(diff_total) > 1:
-    print("uh oh, totals were calculated incorrectly.")
-if len(diff_mean) > 1:
-    print("uh oh, means were calculated incorrectly.")
-if len(diff_total) == 1 and len(diff_mean) == 1:
-    df = df.drop(['amr_mean','amr_total'], axis=1)
-#TODO: transform this into a unit test of some kind
 
 ## stdev perspective
 df['stdev'] = df.iloc[:, -8:-2].std(axis=1) 
@@ -203,7 +38,6 @@ print("Most common primary+secondary type combo: ",df['primary+secondary'].mode(
 # ********** ********** # 
 # ********** TYPE BY TYPE ********** # 
 # ********** ********** # 
-## let's look at best/worst by type.
 simple_stats = pd.DataFrame()
 for x in scrape.possible_types:
     print("********* NOW GROUPING FOR TYPE ",x," **********")
@@ -227,30 +61,30 @@ for x in scrape.possible_types:
     simple_stats = simple_stats.append(new_row,ignore_index=True)
 
     ## best and worst by grouping
-    best_worst_1 = best_and_worst(primary_type_grouping)
-    best_worst_2 = best_and_worst(secondary_type_grouping)
+    best_worst_1 = bs.best_and_worst(primary_type_grouping)
+    best_worst_2 = bs.best_and_worst(secondary_type_grouping)
     #print(best_worst_1)
     #print(best_worst_2)
     #best_worst_1.to_csv('table_outputs/best_worst_primary_type_'+x+'.csv',index=False)
     #best_worst_2.to_csv('table_outputs/best_worst_secondary_type_'+x+'.csv',index=False)
 
     ## see which pokemon is closest to the average picture for its type.
-    avg_poke = avg_stdev_per_type(primary_type_grouping)
-    most_avg = find_most_avg(primary_type_grouping,avg_poke)
-    #base_stat_plot(avg_poke,"Average profile of primary type "+x,avg_profile=True)
+    avg_poke = bs.avg_stdev_per_type(primary_type_grouping)
+    most_avg = bs.find_most_avg(primary_type_grouping,avg_poke)
+    bs.base_stat_plot(avg_poke,"Average profile of primary type "+x,avg_profile=True,save_plots=True,path=os.getcwd()+"/base_stat_plots/")
     #print("Most average primary "+x+" type Pokemon:",most_avg)
     #pd.DataFrame(most_avg).to_csv('table_outputs/most_avg_primary_type_'+x+'.csv',index=True)
     
     ## group primary+secondary groupings together: avg, closest to avg Pokemon  
     primary_and_secondary = pd.concat([primary_type_grouping, secondary_type_grouping], ignore_index=True)
-    avg_poke12 = avg_stdev_per_type(primary_and_secondary)
-    most_avg12 = find_most_avg(primary_and_secondary,avg_poke)
+    avg_poke12 = bs.avg_stdev_per_type(primary_and_secondary)
+    most_avg12 = bs.find_most_avg(primary_and_secondary,avg_poke)
     #print(avg_poke12)
     #print("Most average primary OR secondary "+x+" type Pokemon:",most_avg12)
     #pd.DataFrame(most_avg12).to_csv('table_outputs/most_avg_primary-secondary_type_'+x+'.csv',index=True)
 
-    #double_plot(avg_poke,avg_poke12,"Average profiles of "+x+" type",avg_profile=[True,True],labels=['primary type','primary+secondary type'])
-    #base_stat_plot(avg_poke12,"Average profile of mixed type "+x,avg_profile=True)
+    bs.double_plot(avg_poke,avg_poke12,"Average profiles of "+x+" type",avg_profile=[True,True],labels=['primary type','primary + secondary type'],save_plots=True,path=os.getcwd()+"/base_stat_plots/")
+    #bs.base_stat_plot(avg_poke12,"Average profile of mixed type "+x,avg_profile=True)
 
     #TODO: PLOTSSSS 
     # (bar graph) base stats for best/worst for each type (primary, primary+secondary)
