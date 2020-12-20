@@ -31,6 +31,7 @@ print_level = 3
 ## print level 1: just status updates for how certain loops are proceeding. 
 ## print level 2: level 1 stuff + print to screen some tiny analysis results. 
 ## print level 3: level 2 stuff + print all results out for Type-by-type loop. 
+## print level 4: level 3 stuff + print simple_stats
 
 
 # ********** ********** # 
@@ -150,7 +151,8 @@ simple_stats['primary'] = simple_stats['primary'].astype('int32')
 simple_stats['secondary'] = simple_stats['secondary'].astype('int32')
 simple_stats['generation'] = simple_stats['generation'].astype('int32')
 simple_stats = simple_stats[['type','primary','secondary','generation']]
-#print(simple_stats)
+if print_level >= 4:
+    print(simple_stats)
 exit(0)
 
 #plot the numbers of each primary and secondary type per generation
