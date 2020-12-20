@@ -138,7 +138,7 @@ for x in scrape.possible_types:
         pd.DataFrame(most_avg12).to_csv('table_outputs/most_avg_primary-secondary_type_'+x+'.csv',index=True)
 
     bs.double_plot(avg_poke,avg_poke12,"Average profiles of "+x+" type",avg_profile=[True,True],labels=['primary type','primary + secondary type'],save_plots=save_all_plots,path=os.getcwd()+"/base_stat_plots/")
-    #bs.base_stat_plot(avg_poke12,"Average profile of mixed type "+x,avg_profile=True)
+    #bs.base_stat_plot(avg_poke12,"Average profile of mixed type "+x,avg_profile=True) #keeping this commented out because the results are insignificant. 
 
     #TODO: PLOTSSSS 
     # (bar graph) base stats for best/worst for each type (primary, primary+secondary)
@@ -155,7 +155,7 @@ if print_level >= 4:
     print(simple_stats)
 exit(0)
 
-#plot the numbers of each primary and secondary type per generation
+## plot the numbers of each primary and secondary type per generation
 for gen in simple_stats['generation'].unique():
      gen_data = simple_stats[simple_stats['generation'] == gen]
      gen_data = gen_data.reset_index()
@@ -163,11 +163,14 @@ for gen in simple_stats['generation'].unique():
      # most common types per generation
      max_primary = gen_data.iloc[gen_data['primary'].idxmax()]
      max_secondary = gen_data.iloc[gen_data['secondary'].idxmax()]
-     print("Most common primary and secondary types in gen "+str(gen)+": ",max_primary['type'],max_secondary['type'])
+     if print_level >= 2:
+        print("Most common primary and secondary types in gen "+str(gen)+": ",max_primary['type'],max_secondary['type'])
      min_primary = gen_data.iloc[gen_data['primary'].idxmin()]
      min_secondary = gen_data.iloc[gen_data['secondary'].idxmin()]
-     print("Least common primary and secondary types in gen "+str(gen)+": ",min_primary['type'],min_secondary['type'])
+     if print_level >= 2:
+        print("Least common primary and secondary types in gen "+str(gen)+": ",min_primary['type'],min_secondary['type'])
   
+    # TODO: turn this into a basestats function 
      ## plot all types for a given generation
      primary_vals = gen_data[['primary']].values
      primary_vals = [y for x in primary_vals for y in x]
@@ -213,6 +216,7 @@ for t in scrape.possible_types:
      secondary_vals = [y for x in secondary_vals for y in x]
 
      # TODO: normalize these values by gen total 
+     # TODO: turn this into a basestats function 
      generations = np.arange(1,len(primary_vals),1)
      fig, ax1 = plt.subplots()
      ax1.set_xlabel("Generation")
