@@ -7,40 +7,82 @@ from itertools import chain
 import os 
 import basestats as bs
 
-pd.set_option('display.max_row', 1050)
-pd.set_option('display.max_column', 16)
 #### This script file will be used to manipulate the * simple_table * saved in table_outputs/
 #### for the sake of initial data exploration. 
+
+pd.set_option('display.max_row', 1050)
+pd.set_option('display.max_column', 16)
 
 df = pd.read_pickle("./joined_table_pickle.pkl")
 
 # ********** ********** # 
+# ********** PRINT LEVELS ********** # 
+# ********** ********** # 
+
+## there's a lot of data processing in this script.
+## so, I think it's wise to do an old school thing
+## of creating print levels
+## so that certain things are calculated 
+## only as desired, based on the print level. 
+## higher print level --> higher level of detail. 
+
+print_level = 3
+
+## print level 1: just status updates for how certain loops are proceeding. 
+## print level 2: level 1 stuff + print to screen some tiny analysis results. 
+## print level 3: level 2 stuff + print all results out for Type-by-type loop. 
+
+
+# ********** ********** # 
+# ********** SAVE LEVELS ********** # 
+# ********** ********** # 
+
+## similar to print levels, there's a lot of data getting saved here. 
+## I don't want to rewrite plot files all the time, 
+## so this is a more macro way of controlling when stuff gets saved.
+
+save_all_plots = False 
+save_all_csvs = False
+
+# ********** ********** # 
 # ********** MESSING AROUND WITH MAIN DATASET ********** # 
 # ********** ********** # 
-#print("********* BEST AND WORST PER STAT ACROSS ALL POKEMON **********")
-#best_worst = best_and_worst(df)
-#best_worst.to_csv('table_outputs/best_worst_overall.csv',index=False)
+
+## best and worst Pokemon overall 
+best_worst = bs.best_and_worst(df)
+if print_level >= 2:
+    print("********* BEST AND WORST PER STAT ACROSS ALL POKEMON **********")
+    print(best_worst)
+if save_all_csvs: 
+    best_worst.to_csv('table_outputs/best_worst_overall.csv',index=False)
 
 ## stdev perspective
 df['stdev'] = df.iloc[:, -8:-2].std(axis=1) 
 df['stdev'] = round(df['stdev'],1)
-#print("********* MOST AND LEAST WELL-ROUNDED ACROSS ALL POKEMON **********")
-#print(pd.DataFrame(df.iloc[df['stdev'].idxmin()]))
-#print(pd.DataFrame(df.iloc[df['stdev'].idxmax()]))
-#pd.DataFrame(df.iloc[df['stdev'].idxmin()]).to_csv('table_outputs/lowest_stdev_overall.csv',index=True)
-#pd.DataFrame(df.iloc[df['stdev'].idxmax()]).to_csv('table_outputs/highest_stdev_overall.csv',index=True)
+if print_level >= 2: 
+    print("********* MOST AND LEAST WELL-ROUNDED ACROSS ALL POKEMON **********")
+    print(pd.DataFrame(df.iloc[df['stdev'].idxmin()]))
+    print(pd.DataFrame(df.iloc[df['stdev'].idxmax()]))
+if save_all_csvs:
+    pd.DataFrame(df.iloc[df['stdev'].idxmin()]).to_csv('table_outputs/lowest_stdev_overall.csv',index=True)
+    pd.DataFrame(df.iloc[df['stdev'].idxmax()]).to_csv('table_outputs/highest_stdev_overall.csv',index=True)
 
 # which primary + secondary (non-NONE) combo is most common?
 df['primary+secondary'] = df['primary_type'] + " " + df['secondary_type']
 df['primary+secondary'] = df['primary+secondary'].str.replace(" NONE","")
-print("Most common primary+secondary type combo: ",df['primary+secondary'].mode())
+if print_level >= 2:
+    print("Most common primary+secondary type combo: ",df['primary+secondary'].mode())
 
 # ********** ********** # 
 # ********** TYPE BY TYPE ********** # 
 # ********** ********** # 
+
 simple_stats = pd.DataFrame()
+
 for x in scrape.possible_types:
-    print("********* NOW GROUPING FOR TYPE ",x," **********")
+    if print_level >= 1: 
+        print("********* NOW GROUPING FOR TYPE ",x," **********")
+    
     primary_type_grouping = df[df['primary_type'].str.contains(x,regex=True,na=False)]
     primary_type_grouping = primary_type_grouping.reset_index()
     secondary_type_grouping = df[df['secondary_type'].str.contains(x,regex=True,na=False)]
@@ -63,27 +105,38 @@ for x in scrape.possible_types:
     ## best and worst by grouping
     best_worst_1 = bs.best_and_worst(primary_type_grouping)
     best_worst_2 = bs.best_and_worst(secondary_type_grouping)
-    #print(best_worst_1)
-    #print(best_worst_2)
-    #best_worst_1.to_csv('table_outputs/best_worst_primary_type_'+x+'.csv',index=False)
-    #best_worst_2.to_csv('table_outputs/best_worst_secondary_type_'+x+'.csv',index=False)
+    if print_level >= 3: 
+        print("**** Best and worst for primary type "+x+" ****")
+        print(best_worst_1)
+        print("**** Best and worst for secondary type "+x+" ****")
+        print(best_worst_2)
+    if save_all_csvs:
+        best_worst_1.to_csv('table_outputs/best_worst_primary_type_'+x+'.csv',index=False)
+        best_worst_2.to_csv('table_outputs/best_worst_secondary_type_'+x+'.csv',index=False)
 
     ## see which pokemon is closest to the average picture for its type.
     avg_poke = bs.avg_stdev_per_type(primary_type_grouping)
     most_avg = bs.find_most_avg(primary_type_grouping,avg_poke)
-    bs.base_stat_plot(avg_poke,"Average profile of primary type "+x,avg_profile=True,save_plots=True,path=os.getcwd()+"/base_stat_plots/")
-    #print("Most average primary "+x+" type Pokemon:",most_avg)
-    #pd.DataFrame(most_avg).to_csv('table_outputs/most_avg_primary_type_'+x+'.csv',index=True)
+    bs.base_stat_plot(avg_poke,"Average profile of primary type "+x,avg_profile=True,save_plots=save_all_plots,path=os.getcwd()+"/base_stat_plots/")
+    if print_level >= 3: 
+        print("**** Avg and stdev for primary type "+x+" ****")
+        print(avg_poke)
+        print("Most average primary "+x+" type Pokemon:",most_avg)
+    if save_all_csvs:
+        pd.DataFrame(most_avg).to_csv('table_outputs/most_avg_primary_type_'+x+'.csv',index=True)
     
     ## group primary+secondary groupings together: avg, closest to avg Pokemon  
     primary_and_secondary = pd.concat([primary_type_grouping, secondary_type_grouping], ignore_index=True)
     avg_poke12 = bs.avg_stdev_per_type(primary_and_secondary)
     most_avg12 = bs.find_most_avg(primary_and_secondary,avg_poke)
-    #print(avg_poke12)
-    #print("Most average primary OR secondary "+x+" type Pokemon:",most_avg12)
-    #pd.DataFrame(most_avg12).to_csv('table_outputs/most_avg_primary-secondary_type_'+x+'.csv',index=True)
+    if print_level >= 3:
+        print("**** Avg and stdev for primary + secondary type "+x+" ****")
+        print(avg_poke12)
+        print("Most average primary OR secondary "+x+" type Pokemon:",most_avg12)
+    if save_all_csvs:
+        pd.DataFrame(most_avg12).to_csv('table_outputs/most_avg_primary-secondary_type_'+x+'.csv',index=True)
 
-    bs.double_plot(avg_poke,avg_poke12,"Average profiles of "+x+" type",avg_profile=[True,True],labels=['primary type','primary + secondary type'],save_plots=True,path=os.getcwd()+"/base_stat_plots/")
+    bs.double_plot(avg_poke,avg_poke12,"Average profiles of "+x+" type",avg_profile=[True,True],labels=['primary type','primary + secondary type'],save_plots=save_all_plots,path=os.getcwd()+"/base_stat_plots/")
     #bs.base_stat_plot(avg_poke12,"Average profile of mixed type "+x,avg_profile=True)
 
     #TODO: PLOTSSSS 
